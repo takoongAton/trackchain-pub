@@ -57,16 +57,18 @@ body header {display:-ms-flexbox; display:flex;  align-items:center; position:fi
 body header .inner {display:-ms-flexbox; display:flex; justify-content:space-between;  align-items:flex-end; width:100%; max-width:1280px; margin:0 auto; padding:0 20px;}
 body header .inner div.nav {display:-ms-flexbox; display:flex;}
 body header .logo {flex:1;}
-body header .logo h1 {display:inline-flex; align-items:center; width:115px; height:48px;}
+body header .logo h1 {display:inline-flex; align-items:center; width:115px; height:48px; background:url('../images/index/logo_track_w.png') no-repeat left center / contain; overflow:hidden; color:transparent;}
 body header div.nav {position:static; top:auto; right:auto; bottom:auto; background-color:rgba(0,0,0,0);}
 
 body header ul {display:none;}
 body header ul li {display:-ms-flexbox; display:flex; align-items:center; font-size:14px;}
-body header ul li a {display:inline-block; position:relative; padding:43px 20px 16px; color:#000; font-weight:bold; text-decoration:none; transition:color 0.2s; letter-spacing:-0.05em;}
+body header ul li a {display:inline-block; position:relative; padding:43px 20px 16px; color:#fff; font-weight:bold; text-decoration:none; transition:color 0.2s; letter-spacing:-0.05em;}
 body header ul li a::before {content:""; display:block; position:absolute; left:50%; top:33px; width:8px; height:8px; background-color:#ff6d2b; border-radius:100%; overflow:hidden; transform: translateX(-50%); opacity:0; transition:all 0.2s ease;}
 body header ul li.active a {}
 body header ul li.active a::before {top:23px; opacity:1;}
 body header.active {background-color:#fff; z-index:20;}
+body header.active .logo h1 {background-image:url('../images/index/logo_track.png');}
+body header.active ul li a {color:#000}
 
 
 
@@ -79,7 +81,7 @@ body header.active {background-color:#fff; z-index:20;}
 /* 가로 768이상 ~ */
 @media only screen and (min-width:768px) {
 	body header {height:auto; padding-top:48px; transition:all 0.2s ease-in;}
-	body header .logo h1 {width:216px; height:auto;}
+	body header .logo h1 {width:216px; height:60px;}
 	body header ul {display:-ms-flexbox; display:flex;}
 	body header .inner {padding:0 20px;}
 	body header.active {padding:10px 0;}
@@ -112,9 +114,9 @@ body header.active {background-color:#fff; z-index:20;}
 
 .btn_menu_toggle {display:flex; justify-content:center; align-items:center; width:36px; height:36px;}
 .btn_menu_toggle button {position:relative; width:20px; height:14px;}
-.btn_menu_toggle button span {font-size:0; display:block; position:absolute; top:50%; left:50%; width:100%; height:2px; background-color:#000; border-radius:2px; transform:translate(-50%,-50%); transition:all 0.2s;}
+.btn_menu_toggle button span {font-size:0; display:block; position:absolute; top:50%; left:50%; width:100%; height:2px; background-color:#fff; border-radius:2px; transform:translate(-50%,-50%); transition:all 0.2s;}
 .btn_menu_toggle button::before,
-.btn_menu_toggle button::after {content:""; display:block; position:absolute; left:50%; width:100%; height:2px; background-color:#000; border-radius:2px; transform:translateX(-50%); transition:all 0.2s;}
+.btn_menu_toggle button::after {content:""; display:block; position:absolute; left:50%; width:100%; height:2px; background-color:#fff; border-radius:2px; transform:translateX(-50%); transition:all 0.2s;}
 .btn_menu_toggle button::before {top:0%;}
 .btn_menu_toggle button::after {bottom:0%}
 

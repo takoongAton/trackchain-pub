@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>trackchain</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/trackchain.css">
+	<link rel="stylesheet" type="text/css" href="../css/fullpage.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+
+	<!-- 공유하기 상단 이미지 -->
+	<!-- <meta property="og:image" content="../images/common/open_graph_logo.png"> -->
+
+	<!-- 아이폰 홈 화면 추가-->
+	<!-- <link rel="apple-touch-icon-precomposed" href="../images/common/mobile_ios_iphone_120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/common/mobile_ios_iphone_180.png"> -->
+
+	<!-- 파비콘 -->
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/common/favicon.ico"> -->
+<style>
+.fp-auto-height .fp-tableCell {height:auto !important;}
+
+.main_txt {position:relative; width:100%; color:#000; text-align:center;}
+.main_txt p {font-size:14px; line-height:1.63636em;}
+.main_txt p strong {font-size:28px; line-height:1.21875em;}
+.main_txt p + p {margin-top:16px;}
+.main_scrollDown {position:absolute; bottom:36px; left:50%; width:92px; transform:translateX(-50%);}
+.main_scrollDown img {position:relative; width:100%; animation: aniSD 0.4s infinite alternate ease-out;}
+@media only screen and (min-width:768px) {
+	.main_txt {}
+	.main_txt p {font-size:22px; text-shadow:0 0 3px rgba(255,255,255,1);}
+	.main_txt p strong {font-size:64px;}
+	.main_txt p + p {margin-top:16px;}
+	.main_scrollDown {bottom:60px; width:148px;}
+}
+.main_bg img,
+video {
+	position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@keyframes aniSD {
+	0% {bottom:0;}
+	100% {bottom:-10px;}
+}
+@keyframes mainBgAni {
+	0% {transform:translateY(-50%) scale(1); filter:contrast(100%);}
+	50% {transform:translateY(-50%) scale(1.02); filter:contrast(104%);}
+	100% {transform:translateY(-50%) scale(1); filter:contrast(100%);}
+}
+.main_bg img {animation: mainBgAni 10s infinite alternate ease-out;}
+</style>
+</head>
+
+<body>
+<header>
+	<div class="inner">
+		<div class="logo"><h1><img src="../images/index/logo.png" alt="TRACKCHAIN"></h1></div>
+		<div class="nav">
+			<ul class="gnb" id="menu">
+				<li data-menuanchor="page1"><a href="#page1"><strong>MAIN</strong></a></li>
+				<li data-menuanchor="page2"><a href="#page2"><strong>VALUE & VISION</strong></a></li>
+				<li data-menuanchor="page3"><a href="#page3"><strong>BUSINESS</strong></a></li>
+				<li data-menuanchor="page4"><a href="#page4"><strong>PRESS</strong></a></li>
+				<li data-menuanchor="page5"><a href="#page5"><strong>PARTNERS</strong></a></li>
+				<li data-menuanchor="page6"><a href="#page6"><strong>CONTACT US</strong></a></li>
+			</ul>
+		</div>
+		<div class="btn_menu_toggle"><button type="button"><span>모바일 메뉴열기</span></button></div>
+	</div>
+</header>
+
+<div class="guide_fullpage">
+
+	<div class="section" id="section0" >
+
+		<div class="section_inner_wrap" style="position:relative;">
+
+			<!-- <video class="nectar-video-bg" preload="auto" loop="" autoplay="" muted="" playsinline="" style="height:100vh">
+				<source src="../images/index/aton_intro_00.mp4" type="video/mp4">
+			</video> -->
+			
+			<div class="main_bg">
+				<img src="../images/index/main_bg.png" alt="">
+				<span class="ani01"></span>
+				<span class="ani02"></span>
+				<span class="ani03"></span>
+			</div>
+
+			<div class="inner_wrap" style="display:flex; align-items:center; position:relative; height:100vh; z-index:2;">
+				<div class="main_txt">
+					<p><strong>혁신적인 금융과<br />기술의 접목</strong></p>
+					<p>전통 금융과 디지털 금융을 연결하고, 기존 사업에 블록체인 기술을 접목하는<br />
+						새로운 여정에 트랙체인이 함께합니다.</p>
+				</div>
+			</div>
+			<!-- // inner_wrap -->
+
+			<div class="main_scrollDown">
+				<img src="../images/index/icon_sd.png" alt="SCROLL DOWN" />
+			</div>
+
+		</div>
+		<!-- // section_inner_wrap -->
+
+	</div><!-- // #section0 -->
+
+
+	<div class="section" id="section1">
+
+		<div class="section_inner_wrap">
+
+			<div class="inner_wrap">
+
+				<div class="vnv_wrap">
+					<div class="section_tit">
+						<div class="tit">
+							<strong>value & vision</strong>
+						</div>
+					</div>
+						
+					<div class="vnv_list">
+						<div class="item">
+							<span class="icon">
+								<picture>
+									<source media="(min-width: 768px)" srcset="../images/index/img_value01.gif" />
+									<img src="../images/index/img_value01.gif" alt="이미지">
+								</picture>
+							</span>
+								
+								
+							<div class="txt_wrap">
+								<dl>
+									<dt><strong>WEB 3.0의 열린 세계</strong></dt>
+									<dd><p>WEB 3.0에 누구나 접근할 수 있는 세상을 만듭니다.</p></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="item">
+							<span class="icon">
+								<picture>
+									<source media="(min-width: 768px)" srcset="../images/index/img_value02.gif" />
+									<img src="../images/index/img_value02.gif" alt="이미지">
+								</picture>
+							</span>
+							<div class="txt_wrap">
+								<dl>
+									<dt><strong>기술과 비즈니스의 연결</strong></dt>
+									<dd><p>기술로 WEB 2.0 — WEB 3.0 비즈니스의 연결을 실현하고, 산업 내 다양한
+										플레이어가 협력할 수 있는 플랫폼을 만들고 있습니다.</p></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="item">
+							<span class="icon">
+								<picture>
+									<source media="(min-width: 768px)" srcset="../images/index/img_value03.gif" />
+									<img src="../images/index/img_value03.gif" alt="이미지">
+								</picture>
+							</span>
+							<div class="txt_wrap">
+								<dl>
+									<dt><strong>금융과 기술의 혁신적인 접목</strong></dt>
+									<dd><p>전통 금융과 디지털 금융을 연결하고, 기존 사업에 블록체인 기술을 접목하는
+										새로운 여정에 트랙체인이 함께합니다. </p></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // vnv_wrap -->
+				
+			</div>
+			<!-- // inner_wrap -->
+
+		</div>
+		<!-- // section_inner_wrap -->
+		
+	</div><!-- // #section1 -->
+
+	<div class="section" id="section2">
+
+		<div class="section_inner_wrap">
+
+			<div class="inner_wrap">
+
+				<div class="business_wrap">
+					<div class="section_tit">
+						<div class="tit">
+							<strong>business</strong>
+						</div>
+					</div>
+					<div class="business_tab_wrap">
+						<div class="business_tab">
+							<ul>
+								<li><button type="button" class="active"><strong>redart</strong></button></li>
+								<li><button type="button"><strong>Pick</strong></button></li>
+								<li><button type="button"><strong>TC Wallet</strong></button></li>
+							</ul>
+						</div>
+						<div class="business_con">
+							<div class="tab_content">
+								<div class="info">
+									<span class="icon"><img src="../images/index/ico_redart_72.png" alt="레드아트 아이콘"></span>
+									<div class="tit">레드아트</div>
+									<p class="txt"><strong>작가와 대중이 소통할 수 있는<br />
+										가장 쉬운 아트 & 테크 모바일 플랫폼</strong></p>
+									<p class="summary">전시 관람객은 관람 전부터 전시 현장, 
+										관람 후까지 전 과정에서 레드아트를 
+										통해 작가, 전시, 작품과 긴밀하게 
+										소통할 수 있습니다.</p>
+									<div class="store">
+										<button type="button"><span><img src="../images/index/ico_download_aos.png" alt="플레이스토어"></span></button>
+										<button type="button"><span><img src="../images/index/ico_download_ios.png" alt="앱스토어"></span></button>
+									</div>
+								</div>
+								<div class="img"><img src="../images/index/img_business01.png" alt="레드아트 캡쳐화면"></div>
+							</div>
+							<div class="tab_content">
+								<div class="info">
+									<span class="icon"><img src="../images/index/ico_pick_72.png" alt="픽 아이콘"></span>
+									<div class="tit">픽</div>
+									<p class="txt"><strong>디지털 자산 포트폴리오, 흩어져 있는<br />
+										자산을 한 눈에 통합 조회·관리</strong></p>
+									<p class="summary">다양한 유형의 디지털 자산 월렛(중앙형, 
+										개인형)부터 WEB3 금융 서비스(DeFi)
+										까지 간단하게 액세스하고, 디지털 자산
+										포트폴리오를 한 눈에 파악하세요.</p>
+								</div>
+								<div class="img"><img src="../images/index/img_business02.png" alt="픽 캡쳐화면"></div>
+							</div>
+							<div class="tab_content">
+								<div class="info">
+									<span class="icon"><img src="../images/index/ico_tcwallet_80.png" alt="TC 월렛 아이콘"></span>
+									<div class="tit">TC 월렛</div>
+									<p class="txt"><strong>전통 금융 서비스와 Web3 
+										생태계를 연결하는 게이트웨이</strong></p>
+									<p class="summary">WEB3 생태계 및 서비스에
+										액세스 허가를 위한 첫 관문,  디지털 월렛! 
+										간편한 탈중앙형 월렛, TC 월렛으로
+										시작하세요.</p>
+								</div>
+								<div class="img"><img src="../images/index/img_business03.png" alt="TC월렛 캡쳐화면"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // inner_wrap -->
+
+		</div>
+		<!-- // section_inner_wrap -->
+
+	</div><!-- // #section2 -->
+
+
+	<div class="section" id="section3" >
+
+		<div class="section_inner_wrap">
+
+			<div class="inner_wrap">
+
+				<div class="press_wrap">
+					<div class="section_tit">
+						<div class="tit">
+							<strong>press</strong>
+						</div>
+					</div>
+
+					<div class="list">
+						<div class="item">
+							<div class="cate"><strong>언론사</strong></div>
+							<div class="txt_wrap">
+								<div class="tit"><strong>“웹3.0 기반 디지털 아트뱅킹 강화위해 협력” 하나은행-트랙체인 MOU</strong></div>
+							</div>
+							<span class="date">2023.07.04</span>
+						</div>
+						<div class="item">
+							<div class="cate"><strong>언론사</strong></div>
+							<div class="txt_wrap">
+								<div class="tit"><strong>트랙체인, NH농협과 NFT 발행</strong></div>
+							</div>
+							<span class="date">2023.07.04</span>
+						</div>
+						<div class="item">
+							<div class="cate"><strong>언론사</strong></div>
+							<div class="txt_wrap">
+								<div class="tit"><strong>하나은행, 트랙체인과 웹3.0 기반 디지털 협약</strong></div>
+							</div>
+							<span class="date">2023.07.04</span>
+						</div>
+						<div class="item">
+							<div class="cate"><strong>언론사</strong></div>
+							<div class="txt_wrap">
+								<div class="tit"><strong>“웹3.0 기반 디지털 아트뱅킹 강화위해 협력” 하나은행-트랙체인 MOU</strong></div>
+							</div>
+							<span class="date">2023.07.04</span>
+						</div>
+					</div>
+					<div class="btn_press" style="text-align:center;">
+						<button type="button" class="btn_prev"><span><img src="../images/index/ico_prev.png" alt="이전"></span></button>
+						<button type="button" class="btn_next"><span><img src="../images/index/ico_next.png" alt="다음"></span></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- // section_inner_wrap -->
+
+	</div><!-- // #section3 -->
+
+
+
+	<div class="section fp-auto-height" id="section4">
+
+		<div class="section_inner_wrap">
+
+			<div class="inner_wrap" >
+				<div class="partners_wrap">
+					<div class="section_tit">
+						<div class="tit">
+							<strong>partners</strong>
+						</div>
+					</div>
+					<div class="list">
+						<div class="item"><img src="../images/temp/img_logo1.png" alt="이미지"></div>
+						<div class="item"><img src="../images/temp/img_logo2.png" alt="이미지"></div>
+						<div class="item"><img src="../images/temp/img_logo3.png" alt="이미지"></div>
+						<div class="item"><img src="../images/temp/img_logo4.png" alt="이미지"></div>
+						<div class="item"><img src="../images/temp/img_logo5.png" alt="이미지"></div>
+					</div>
+					<div class="tools">
+						<button type="button" class="btn_partners btn_prev"><span><img src="../images/index/ico_prev_w.png" alt="이전"></span></button>
+						<button type="button" class="btn_partners btn_next"><span><img src="../images/index/ico_next_w.png" alt="다음"></span></button>
+					</div>
+				</div>
+			</div>
+			<!-- // inner_wrap -->
+
+		</div>
+		<!-- // section_inner_wrap -->
+		
+	</div><!-- // #section4 -->
+
+	<div class="section fp-auto-height" id="section5">
+
+		<div class="section_inner_wrap">
+
+			<div class="inner_wrap">
+
+				<div class="contact_wrap">
+					<div class="con_row">
+						<div class="section_tit">
+							<div class="tit">
+								<strong>contact us</strong>
+							</div>
+							<p class="txt">트랙체인과 함께하고 싶거나 궁금한 점이 있으시다면<br />
+								메일을 보내주세요.</p>
+						</div>
+						<div class="form">
+							<div>
+								<select name="" id="">
+									<option value="문의 유형">문의 유형</option>
+									<option value="문의 유형">문의 유형</option>
+									<option value="문의 유형">문의 유형</option>
+									<option value="문의 유형">문의 유형</option>
+								</select>
+							</div>
+							<div class="input"><input type="text" placeholder="example@trackchaincorp.com"></div>
+							<button type="button"><span>보내기</span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- // inner_wrap -->
+
+		</div>
+		<!-- // section_inner_wrap -->
+		
+	</div><!-- // #section5 -->
+
+
+	
+	<div class="section fp-auto-height" id="section6">
+		<div class="footer_wrap">
+			<div class="footer">
+
+				<div class="flexGroup">
+					<div class="inner">
+						<div class="col">
+							<div class="logo"><img src="../images/index/img_logo_footer.png" alt="trackchain"></div>
+							<div class="private">
+								<a href="javascript:openPopup_login('./privacy01.html', 'privacy', '600', '480');">서비스 이용약관</a>
+								<a href="#g" target="_blank">개인정보처리방침</a>
+								<a href="javascript:openPopup_login('./privacy03.html', 'privacy', '600', '480');">마케팅정보수신동의</a>
+							</div>
+						</div>
+						<div class="col">
+							<div class="apps">
+								<button type="button"><span><img src="../images/index/btm_badge_instagram.png" alt="인스타그램"></span></button>
+								<button type="button"><span><img src="../images/index/btm_ico_download_aos.png" alt="플레이스토어"></span></button>
+								<button type="button"><span><img src="../images/index/btm_ico_download_ios.png" alt="앱스토어"></span></button>
+							</div>
+							<address>서울특별시 영등포구 여의대로 108 파크원 타워I 26층</address>
+							<div class="company">
+								<p>대표: 함성진</p>
+								<p>사업자등록번호: 383-86-02358</p>
+							</div>
+							<div class="copyright">ⓒ 트랙체인</div>
+						</div>
+					</div>
+				</div><!-- // flexGroup -->
+
+			</div>
+		</div><!-- // footer_wrap -->
+		
+	</div><!-- // #section6 -->
+
+</div><!-- // guide_fullpage -->
+
+
+<style>
+div.aside {display:flex; align-items:center; position:fixed; top:0; right:0; bottom:0; left:0; padding:0 20px; background-color:#000; z-index:3; transform:translateX(100%); z-index:30; transition:all 0.2s ease;;}
+div.aside.active {opacity:1; transform: translateX(0px);}
+div.aside ul {display:flex; flex-direction:column; gap:28px;}
+div.aside ul li {}
+div.aside ul li a {display:inline-block; text-decoration:none;}
+div.aside ul li a span {display:block; color:#555; font-size:24px; line-height:1em;}
+div.aside ul li a.active span {color:#ff6d2b;}
+
+div.aside .btn_close {position:absolute; top:5px; right:20px; width:36px; height:36px; z-index:50;}
+div.aside .btn_close button {width:100%; height:100%;}
+div.aside .btn_close button::before,
+div.aside .btn_close button::after {content:""; display:block; position:absolute; left:50%; top:50%; width:62%; height:2px; background-color: #fff; border-radius:2px;}
+div.aside .btn_close button::before {transform:translate(-50%,-50%) rotate(45deg);}
+div.aside .btn_close button::after {transform:translate(-50%,-50%) rotate(-45deg);}
+div.aside .btn_close span {display:block; width:100%; height:100%; opacity:0;}
+</style>
+
+<div class="aside">
+	<!-- <div class="btn-close"><button type="button"><span>메뉴닫기</span></button></div> -->
+	<ul>
+		<li><a href="#section0" class="active"><span>MAIN</span></a></li>
+		<li><a href="#section1"><span>TRACKCHAIN</span></a></li>
+		<li><a href="#section2"><span>PARTNERS</span></a></li>
+		<li><a href="#section3"><span>PRESS</span></a></li>
+		<li><a href="#section4"><span>CONTACT US</span></a></li>
+	</ul>
+	<div class="btn_close">
+		<button type="button"><span>닫기</span></button>
+	</div>
+</div>
+
+
+
+<div class="dim" style="display: none;"></div>
+<div class="layer partner" style="display:none;">
+	<div class="group">
+		<p class="tit"><span>간편본인확인 이용문의</span></p>
+		<ul>
+			<li><a href="http://www.niceinfo.co.kr/main.nice" target="_blank" class="niceinfo"><span>NICE 평가정보</span></a></li>
+			<li><a href="https://www.sci.co.kr/cio/index.do" target="_blank" class="sci"><span>SCI 평가정보</span></a></li>
+			<li><a href="https://www.kcp.co.kr/main.do" target="_blank" class="kcp"><span>NHN 한국사이버 결제</span></a></li>
+			<li><a href="https://www.dreamsecurity.com/" target="_blank" class="dreamsecurity"><span>드림 시큐리티</span></a></li>
+			<li><a href="http://www.koreacb.com/" target="_blank" class="koreacb"><span>코리아 크레딧 뷰로</span></a></li>
+			<li><a href="https://www.mobilians.co.kr/" target="_blank" class="mobilians"><span>KG 모빌리언스</span></a></li>
+			<li><a href="https://www.kmcert.com/" target="_blank" class="kmcert"><span>한국 모바일 인증</span></a></li>
+			<li><a href="https://www.danalpay.com/main/main.aspx" target="_blank" class="danalpay"><span>다날</span></a></li>
+		</ul>
+	</div>
+	<div class="group">
+		<p class="tit"><span>PASS인증서 제휴 문의</span></p>
+		<ul>
+			<li><a href="https://www.passauth.co.kr/alliance" target="_blank" class="passauth"><span>패스인증서</span></a></li>
+		</ul>
+	</div>
+	<div class="group">
+		<p class="tit"><span>모바일운전면허 확인서비스 이용문의</span></p>
+		<ul>
+			<li><a href="http://www.niceinfo.co.kr/main.nice" target="_blank" class="niceinfo"><span>NICE 평가정보</span></a></li>
+			<li><a href="http://www.kisvan.co.kr/" target="_blank" class="kis"><span>KIS정보통신</span></a></li>
+			<li><a href="https://www.kicc.co.kr/" target="_blank" class="kicc"><span>한국정보통신</span></a></li>
+			<li><a href="http://www.koreacb.com/" target="_blank" class="koreacb"><span>코리아 크레딧 뷰로</span></a></li>
+		</ul>
+	</div>
+	
+	<div class="close"><button type="close"><span>닫기</span></button></div>
+</div>
+
+
+<div class="layer event" style="display:none;">
+	<div class="event_slide">
+		<div class="item"><a href="#g"><img src="../images/banner/event_img.png" alt=""></a></div>
+		<div class="item"><img src="../images/banner/event_img.png" alt=""></div>
+		<div class="item"><img src="../images/banner/event_img.png" alt=""></div>
+	</div>
+	<div class="today">
+		<label><input type="checkbox" class="chk_today"><span class="checkmark"></span><span class="txt">하루 보지않기</span></label>
+		<div class="close"><button type="button"><span>닫기</span></button></div>
+	</div>
+</div>
+
+
+<!-- <div class="aside">
+	<div class="btn-close"><button type="button"><span>메뉴닫기</span></button></div>
+	<ul>
+		<li><a href="#section1">간편본인확인</a></li>
+		<li><a href="#section2">PASS 인증서</a></li>
+		<li><a href="#section3">모바일 신분증</a></li>
+		<li><a href="#section4">스마트티켓</a></li>
+		<li><a href="#section5">전자문서</a></li>
+	</ul>
+	<div>
+		<span class="btn"><a href="http://ocline.co.kr/aton/passbyU_new/app/html/magazine/magazine_card.html" target="_blank"><span>공지사항</span></a></span>
+		<span class="btn"><a href="http://ocline.co.kr/aton/passbyU_new/app/html/magazine/magazine_card.html" target="_blank"><span>매거진</span></a></span>
+		<span class="btn"><button type="button" class="open_partner"><span>제휴문의</span></button></span>
+	</div>
+</div> -->
+
+<style>
+#fp-nav {}
+#fp-nav ul {}
+#fp-nav ul li {}
+#fp-nav ul li a {position:relative;}
+#fp-nav ul li a::before {content:""; display:block; position:absolute; top:50%; left:23px; height:33px; padding:0; background-color:#ff6d2b; border-radius:33px; color:#fff; font-size:16px; line-height:33px; font-family:'Spoqa Han Sans'; font-weight:bold; opacity:0; white-space:nowrap; transform:translateY(-50%); transition:all 0.2s ease;}
+#fp-nav ul li a.active::before {opacity:1; padding:0 16px;; left:33px;}
+#fp-nav ul li:nth-child(1) a::before {content:"MAIN";}
+#fp-nav ul li:nth-child(2) a::before {content:"VALUE & VISION";}
+#fp-nav ul li:nth-child(3) a::before {content:"BUSINESS";}
+#fp-nav ul li:nth-child(4) a::before {content:"PRESS";}
+#fp-nav ul li:nth-child(5) a::before {content:"PARTNERS"; background-color:#fff; color:#ff6d2b;}
+#fp-nav ul li:nth-child(6) a::before {content:"CONTACT US"; background-color:#fff; color:#ff6d2b;}
+#fp-nav ul li:nth-child(7) a::before {content:"TRACKCHAIN"; background-color:#fff; color:#ff6d2b;}
+/* #fp-nav ul li:nth-child(5) ~ li a::before {display:none;} */
+
+</style>
+
+
+
+<script type="text/javascript" src="../js/temp.js"></script>
+
+<script>
+/* 가입/해지 탭 */
+let signTabs = document.querySelectorAll(".business_tab button");
+let tabContents = document.querySelectorAll(".business_con .tab_content");
+
+signTabs.forEach(function (item, index) {
+  item.addEventListener("click", function () {
+    console.log(index);
+    for (let i = 0; i < signTabs.length; i++) {
+      tabContents[i].style.display = "none";
+	  tabContents[i].classList.remove("active");
+      signTabs[i].classList.remove("active");
+    }
+
+    tabContents[index].classList.add("active");
+	tabContents[index].style.display = "flex";
+    signTabs[index].classList.add("active");
+  });
+});
+
+let ddd = document.querySelector(".business_tab button.active"); // 처음에 보여지고 싶은거.
+ddd.click();
+/* 가입/해지 탭 */
+
+
+
+function openPopup_login(url, popupName, _width, _height) {
+  if(_width == undefined){
+    _width = '600';
+  }
+  if(_height == undefined){
+    _height = '780';
+  }
+  // 팝업을 가운데 위치시키기 위해 아래와 같이 값 구하기
+  var _left = Math.ceil(( window.screen.width - _width )/2);
+  var _top = Math.ceil(( window.screen.height - _height )/2);
+
+  window.open(url, popupName, "resizable=no, width=" + _width + ", height=" + _height + ", left=" + _left + ", top=" + _top);
+}
+
+
+let aside = document.querySelector(".aside");
+let asideLink = aside.querySelectorAll("a");
+asideLink.forEach(function(item){
+	item.addEventListener("click", function(){
+		aside.classList.remove("active");
+	})
+})
+
+let xxx = aside.querySelector(".btn_close");
+xxx.addEventListener("click", function(){
+	aside.classList.remove("active");
+})
+
+
+let gnbLink = document.querySelectorAll("body header ul li a");
+gnbLink.forEach(function(item){
+item.addEventListener("click", function(){
+	// item.classList.add("active");
+})
+})
+</script>
+
+
+</body>
+</html>

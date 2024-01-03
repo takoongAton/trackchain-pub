@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>출석체크 이벤트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/upluspass.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" rel="stylesheet" type="text/css">
+
+<style>
+@font-face {
+	font-family: 'yg-jalnan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ev_wrap {font-family:'Noto Sans KR';}
+.ev_header {
+	background-image:url('../../images/event/210630_attend/ev_210630_top_bg.png');
+	background-repeat:repeat-x;
+	background-position:center top;
+}
+
+.ev_section {}
+.ev_section .section_group {}
+.ev_section .section_group div.sec_tit {padding:2.01851em 0 0.5em; color:#000; font-family: 'yg-jalnan'; font-size:5.00092vw; line-height:1.31481em;; text-align:center;}
+.ev_section .section_group p.sec_txt {color:#444; font-size:3.7037vw; text-align:center; line-height:1.55em;}
+
+
+.ev_wrap .ev_footer {padding:2em 0; background-color:#3c3d3a;}
+.ev_wrap .ev_footer dl {padding:0 5.55555vw; color:rgba(255,255,255,0.5);}
+.ev_wrap .ev_footer dl dt {padding-bottom:0.5em; font-size:3.7037vw;}
+.ev_wrap .ev_footer dl dd p {position:relative; padding-left:0.75em; word-break:keep-all; line-height:1.625em; font-size:3.33333vw;}
+.ev_wrap .ev_footer dl dd p::before {content:"·"; display:block; position:absolute; top:0; left:0; line-height:inherit;}
+
+
+.ev_wrap .section_group.date {padding:1em 0 2em; background-color:#eee;}
+.ev_wrap .section_group.date dl {display:flex; justify-content:flex-start; padding:0 5.55555vw; font-size:3.33333vw;}
+.ev_wrap .section_group.date dl + dl {margin-top:0.75em;}
+.ev_wrap .section_group.date dl dt {color:#000;}
+.ev_wrap .section_group.date dl dd {margin-left:1em; color:#444; letter-spacing:-0.05em;}
+
+.ev_wrap .section_group.ticket_pass {padding:9.25925vw 0 0 0; text-align:center;}
+.ev_wrap .section_group.ticket_pass img {width:auto; max-width:auto; margin:0 auto;}
+.ev_wrap .section_group.ticket_pass .img1 {display:inline-block; width:23.14814vw;;}
+.ev_wrap .section_group.ticket_pass .img2 {display:inline-block; width:88.88888vw;}
+.ev_wrap .section_group.ticket_pass p.sec_txt {padding:1em 0 2em;}
+
+.ev_wrap .giveaway {text-align:center;}
+
+.ev_wrap .giveaway_group {display:flex; justify-content:space-between; width:95.55555vw; margin:9.81481vw auto 0;}
+.ev_wrap .giveaway_group div {position:relative; width:30.83333vw; border:1px solid #bcbcbc; border-radius:3px;}
+.ev_wrap .giveaway_group div dl {padding:8.14814vw 0;}
+.ev_wrap .giveaway_group div dl dt {display:inline-flex; justify-content:center; align-items:center; position:absolute; top:0; left:50%; width:25vw; height:6.11111vw; background-color:#eee; border-radius:3px; transform:translate(-50%, -50%); font-weight:bold;}
+.ev_wrap .giveaway_group div dl dt span {color:#444; font-size:3.14814vw;}
+.ev_wrap .giveaway_group div dl dd.img {}
+.ev_wrap .giveaway_group div dl dd.list {}
+.ev_wrap .giveaway_group div dl dd.list p {margin-top:0.875em; font-size:2.22222vw; line-height:1.25em; letter-spacing:-0.05em;}
+
+.ev_wrap .send {}
+.ev_wrap .send p.txt {text-align:center;}
+
+.ev_wrap .step {}
+.ev_wrap .step dl {margin-bottom:6.11111vw; padding:0 5.55555vw;}
+.ev_wrap .step dl + dl {margin-top:30px;}
+.ev_wrap .step dl dt {display:flex; justify-content:flex-start; align-items:center; color:#444; padding-bottom:10px; font-size:3.14814vw; line-height:1.88235em;}
+.ev_wrap .step dl dt span {display:inline-block; padding:0 15px; background-color:#eee; font-weight:bold; align-self:flex-start; line-height:inherit; border-radius:2px;}
+.ev_wrap .step dl dt strong {display:inline-block; flex:1; margin-left:1em; line-height:inherit; text-align:left;}
+.ev_wrap .step dl dd {}
+.ev_wrap .step dl dd p {position:relative; padding-left:0.75em; color:#999; font-size:3.33333vw; line-height:1.5em; word-break:keep-all; letter-spacing:-0.05em;}
+.ev_wrap .step dl dd p::before {content:"·"; display:block; position:absolute; top:0; left:0; line-height:inherit;}
+
+.ev_wrap .step div.btn {margin-bottom:6.11111vw; padding:0 5.55555vw;}
+.ev_wrap .step div.btn button {display:block; width:100%; height:12.03703vw; background-color:#ff3782; color:#fff; border-radius:100px; box-shadow:0 5px 10px rgba(0,0,0,0.2); font-size:5vw;}
+
+
+.ev_wrap .mobile {display:block;}
+.ev_wrap .pc {display:none;}
+@media screen and (min-width: 720px) {
+	.ev_section .section_group div.sec_tit {font-size:36px;}
+	.ev_section .section_group p.sec_txt {font-size:26.66666px;}
+
+	.section_group > div.tit {font-size:36px;}
+	.ev_wrap .ev_footer dl {width:560px; margin:0 auto; padding:0;}
+	.ev_wrap .ev_footer dl dt {font-size:26.66666px;}
+	.ev_wrap .ev_footer dl dd p {font-size:24px;}
+	
+	.ev_wrap .section_group.date dl {margin:0 auto; font-size:24px;}
+
+	.ev_wrap .section_group.ticket_pass {padding-top:54px; text-align:center;}
+	.ev_wrap .section_group.ticket_pass img {width:auto; max-width:auto; margin:0 auto;}
+	.ev_wrap .section_group.ticket_pass .img1 {display:inline-block; width:150px;}
+	.ev_wrap .section_group.ticket_pass .img2 {display:inline-block; width:572px;}
+	.ev_wrap .section_group.ticket_pass p.sec_txt {padding:1em 0 2em;}
+
+	.ev_wrap .giveaway_group {width:690px; margin-top:66px;}
+	.ev_wrap .giveaway_group div {width:224px;}
+	.ev_wrap .giveaway_group div dl {padding:60px 0;}
+	.ev_wrap .giveaway_group div dl dt {width:180px; height:44px;}
+	.ev_wrap .giveaway_group div dl dt span {font-size:22.66666px;}
+	.ev_wrap .giveaway_group div dl dd.img {}
+	.ev_wrap .giveaway_group div dl dd.list p {font-size:16px;}
+
+	.ev_wrap .step dl {margin-bottom:44px;}
+	.ev_wrap .step dl dt {font-size:22.66666px;}
+	.ev_wrap .step dl dd p {font-size:24px;}
+	.ev_wrap .step div.btn {margin-bottom:44px; padding:0 40px;}
+	.ev_wrap .step div.btn button {width:460px; height:66px; margin:0 auto; font-size:36px; font-family:'Noto Sans KR';}
+}
+
+
+@media screen and (min-width: 810px) {
+	.ev_wrap .mobile {display:none;}
+	.ev_wrap .pc {display:block; width:658px; margin:0 auto;}
+
+	.ev_section .section_group div.sec_tit {font-size:30px;}
+	.ev_section .section_group p.sec_txt {font-size:20px;}
+
+	.ev_wrap .section_group.date dl {width:480px; padding:0; font-size:18px;}
+	
+	.ev_wrap .giveaway_group {width:810px; grid-template-columns:250px 250px 250px; grid-gap:30px; margin-top:51px;}
+	.ev_wrap .giveaway_group div {width:250px;}
+	.ev_wrap .giveaway_group div dl {padding:35px 0 60px}
+	.ev_wrap .giveaway_group div dl dt {height:38px;}
+	.ev_wrap .giveaway_group div dl dt span {font-size:18px;}
+	.ev_wrap .giveaway_group div dl dd.list p {font-size:14px;}
+
+	.ev_wrap .step {text-align:center;}
+	
+	/* .ev_wrap .step dl.step3 {width:380px; margin:0 auto; padding:0}
+	.ev_wrap .step dl.step3 dd {text-align:left;} */
+	.ev_wrap .step dl dt {display:inline-flex; font-size:18px;}
+	.ev_wrap .step dl dt span {}
+	.ev_wrap .step dl dd p {padding:0; font-size:18px;}
+	.ev_wrap .step dl dd p::before {content:"·"; display:none; position:absolute; top:0; left:0; line-height:inherit;}
+	/* .ev_wrap .step dl.step3 dd p {padding-left:0.75em;}
+	.ev_wrap .step dl.step3 dd p::before {display:block;} */
+
+	.ev_wrap .step div.btn button {font-size:28px}
+
+	.ev_wrap .ev_footer dl dt {font-size:20px;}
+	.ev_wrap .ev_footer dl dd p {font-size:16px;}
+}
+
+</style>
+
+</head>
+<body>
+
+	<div class="ev_wrap">
+		<div class="ev_header">
+			<div class="pc"><img src="../../images/event/210630_attend/ev_210630_attend_img1_pc.png" alt=""></div>
+			<div class="mobile"><img src="../../images/event/210630_attend/ev_210630_attend_img1.png" alt=""></div>
+		</div>
+		
+		<div class="ev_section">
+
+			<div class="section_group date">
+				<dl>
+					<dt><strong>기&nbsp;&nbsp;&nbsp;간</strong></dt>
+					<dd>2021년 7월 17일(토) ~ 8월 15일(일)</dd>
+				</dl>
+				<dl>
+					<dt><strong>대&nbsp;&nbsp;&nbsp;상</strong></dt>
+					<dd>U+PASS 앱에서 출석체크 참여한 전체 고객</dd>
+				</dl>
+			</div>
+
+			<div class="section_group ticket_pass">
+				<div class="img1"><img src="../../images/event/210630_attend/ev_210630_attend_img2.png" alt="티켓"></div>
+				<p class="sec_txt">연속 출석할수록 점점 더 늘어나는 티켓!</p>
+				<div class="img2"><img src="../../images/event/210630_attend/ev_210630_attend_img3.png" alt="추석할수록 늘어나는 티켓."></div>
+			</div>
+
+			<div class="section_group giveaway">
+				<div class="sec_tit">경품 안내</div>
+				<p class="sec_txt">PASS 티켓으로 받을 수 있는 7,092개의 선물 리스트</p>
+
+				<div class="giveaway_group">
+					<div>
+						<dl>
+							<dt><span>티켓 5장 사용시</span></dt>
+							<dd class="img"><img src="../../images/event/210628_reward/ev_210721_reward_img2.png" alt="이미지"></dd>
+							<dd class="list">
+								<p>아이패드 프로12(128G)  2명</p>
+								<p>애플워치 SE  5명</p>
+								<p>에어팟 프로  5명</p>
+								<p>신세계 이마트 5만원 상품권 80명</p>
+								<p>신세계 이마트 2만원 상품권 100명</p>
+								<p>신세계 이마트 1만원 상품권 200명</p>
+								<p>문화상품권 1만원권 200명</p>
+							</dd>
+						</dl>
+					</div>
+
+					<div>
+						<dl>
+							<dt><span>티켓 3장 사용시</span></dt>
+							<dd class="img"><img src="../../images/event/210628_reward/ev_210721_reward_img3.png" alt="이미지"></dd>
+							<dd class="list">
+								<p>스타벅스 아메리카노<br />톨사이즈 교환권  1,000명</p>
+								<p>문화상품권 5천원권 500명</p>
+								<p>싱글킹 아이스크림 1000명</p>
+							</dd>
+						</dl>
+					</div>
+
+					<div>
+						<dl>
+							<dt><span>티켓 1장 사용시</span></dt>
+							<dd class="img"><img src="../../images/event/210628_reward/ev_210721_reward_img4.png" alt="이미지"></dd>
+							<dd class="list">
+								<p>광동 비타500 100ML  1,000명</p>
+								<p>빙그레 바나나우유240ML  1,000명</p>
+								<p>CU 3000원권  2,000명</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="section_group send">
+				<div class="sec_tit">경품 발송</div>
+				<p class="sec_txt">9/15 ~ 9/16 응모 시 입력한 <i class="mobile"></i>	휴대폰번호로 문자메시지 개별 발송 </p>
+					
+			</div>
+
+			<div class="section_group step">
+				<div class="sec_tit">참여방법</div>
+
+				<dl class="step1">
+					<dt>
+						<span>1단계</span>
+						<strong>PASS앱 설치하기</strong>
+					</dt>
+					<dd>
+						<p>구글 플레이 스토어 또는 애플 앱스토어에서 'PASS' 검색 후 앱 설치하기</p>
+					</dd>
+				</dl>
+
+				<div class="btn">
+					<button type="button"><span>PASS 앱 설치하기</span></button>
+				</div>
+
+				<dl class="step2">
+					<dt>
+						<span>2단계</span>
+						<strong>PASS앱 매일 매일 출석체크</strong>
+					</dt>
+					<dd>
+						<p>PASS앱에서 이벤트 > 출석체크 이벤트에서  ‘출석체크하기’ 버튼을 <i class="pc"></i>선택해주세요</p>
+					</dd>
+				</dl>
+				
+				<dl class="step3">
+					<dt>
+						<span>3단계</span>
+						<strong>출석체크 이벤트로 받은 PASS티켓으로 럭키박스 티켓 받기</strong>
+					</dt>
+					<dd>
+						<p>PASS 앱 홈화면 맨 아래 'PASS 서비스 가입 및 이용 시 티켓을 드려요!'<i class="pc"></i>
+							배너 누르기 → [리워드 지급받기] 선택→<i class="pc"></i><i class="mobile"></i>
+							티켓을 사용하여 럭키박스 열고 선물 확인하기 </p>
+					</dd>
+				</dl>
+			</div>
+
+<style>
+.section_group.tip {padding-bottom:7.5vw; background-color:#eeeeee;}
+.section_group.tip div.sec_tit {}
+.section_group.tip div.sec_tit span {display:block; font-size:0.7037em;}
+.section_group.tip p.sec_txt2 {color:#999; font-size:3.33333vw; text-align:center;}
+
+.section_group.tip .tipStep {padding-top:7.22222vw;}
+.section_group.tip dl {display:flex; flex-direction:column; position:relative; width:91.66666vw; height:32.40741vw; margin:0 auto; padding:7.4074vw 29.62962vw 0 4.62962vw; background-color:#fff; border-radius:3.7037vw;}
+.section_group.tip dl dt {padding-bottom:0.5em}
+.section_group.tip dl dt span {display:inline-flex; justify-content:center; position:absolute; top:-0.64814vw; left:4.62962vw; width:6.11111vw; height:7.5vw; padding-top:1.3vw; background-color:#ffcf67; border-radius:3px; font-size:3.33333vw; font-family:'Roboto'; font-weight:700; overflow:hidden;}
+.section_group.tip dl dt span::after {content:""; position:absolute; bottom:-50%; left:50%; width:0px; height:0px; transform:translateX(-50%); 
+	border-top:6vw solid none; border-right:12vw solid transparent; border-bottom:6vw solid #fff; border-left:12vw solid  transparent;
+}
+.section_group.tip dl dt strong {color:#000; font-size:3.61111vw; font-weight:700;}
+.section_group.tip dl dd.txt {}
+.section_group.tip dl dd.txt p {position:relative; padding-left:0.5em; color:#999; font-size:3vw; line-height:1.33333em; word-break:keep-all; letter-spacing:-0.075em; transform:scaleX(0.98); transform-origin:0 0;}
+.section_group.tip dl dd.txt p::before {content:"·"; display:block; position:absolute; top:0; left:0; font-size:1.25em; line-height:inherit;}
+.section_group.tip dl dd.img {position:absolute; right:3.14814vw; bottom:0; width:26.57407vw; font-size:0;}
+.section_group.tip dl dd.img img {vertical-align:top;}
+.section_group.tip dl + dl {margin-top:3.33333vw;}
+.section_group.tip dl + dl dd.txt p {line-height:1.5em;}
+@media screen and (min-width: 720px) {
+	/* 66x81 */
+
+	.section_group.tip {padding-bottom:54px; background-color:#eeeeee;}
+	.section_group.tip p.sec_txt2 {font-size:24px;}
+
+	.section_group.tip .tipStep {padding-top:52px;}
+	.section_group.tip dl {width:660px; height:233px; padding:64px 214px 0 40px; border-radius:28px;}
+	.section_group.tip dl dt {padding-bottom:0.5em}
+	.section_group.tip dl dt span {top:-4.6px; left:33px; width:44px; height:54px; padding-top:7px; border-radius:3px; font-size:24px;}
+	.section_group.tip dl dt span::after {
+		border-top:43.2px solid none; border-right:86.2px solid transparent; border-bottom:43.2px solid #fff; border-left:86.2px solid  transparent;
+	}
+	.section_group.tip dl dt strong {font-size:26px;}
+	.section_group.tip dl dd.txt {}
+	.section_group.tip dl dd.txt p {font-size:20px;}
+	.section_group.tip dl dd.img {right:22px; width:191px;}
+	.section_group.tip dl dd.img img {}
+	.section_group.tip dl + dl {margin-top:20px;}
+}
+
+@media screen and (min-width: 810px) {
+	.section_group.tip {padding-bottom:52px; background-color:#eeeeee;}
+	.section_group.tip p.sec_txt2 {font-size:18px;}
+
+	.section_group.tip .tipStep {padding-top:42px;}
+	.section_group.tip dl {width:638px; height:180px; padding:48px 176px 0 30px; border-radius:28px;}
+	.section_group.tip dl dt {padding-bottom:0.5em}
+	.section_group.tip dl dt span {top:-3px; left:30px; width:33px; height:39px; padding-top:8px; border-radius:3px; font-size:18.4px;}
+	.section_group.tip dl dt span::after {
+		border-top:30px solid none; border-right:60px solid transparent; border-bottom:30px solid #fff; border-left:30px solid  transparent;
+	}
+	.section_group.tip dl dt strong {font-size:19.94px;}
+	.section_group.tip dl dd.txt {}
+	.section_group.tip dl dd.txt p {font-size:16px;}
+	.section_group.tip dl dd.img {right:30px; width:146px;}
+	.section_group.tip dl dd.img img {}
+	.section_group.tip dl + dl {margin-top:20px;}
+}
+</style>
+			<div class="section_group tip">
+				<div class="sec_tit"><span>TIP.</span>
+					럭키박스를 열수 있는<br />티켓을 얻는 방법!
+				</div>
+				<p class="sec_txt2">유료부가서비스 내에 숨겨진 리워드 티켓을 찾아보세요!</p>
+
+				<div class="tipStep">
+					<dl>
+						<dt>
+							<span>01</span>
+							<strong>유료 부가서비스 가입하기</strong>
+						</dt>
+						<dd class="txt">
+							<p>PASS 앱 설치 및 실행 후 [MY서비스] → ‘가입한 부가서비스’
+								<i class="pc"></i>아래 신용관리, 스탁, 건강지키미, 부동산지키미, 더치트프리미엄 등
+								<i class="pc"></i>총 12개 부가서비스 중 한가지 선택 → 유료가입하기 </p>
+						</dd>
+						<dd class="img"><img src="../../images/event/210630_attend/ev_210630_attend_img4.png" alt=""></dd>
+					</dl>
+					<dl>
+						<dt>
+							<span>02</span>
+							<strong>럭키박스 열 티켓 받기</strong>
+						</dt>
+						<dd class="txt">
+							<p>기존 또는 신규 가입 고객에게 기본 3장 제공</p>
+						</dd>
+						<dd class="txt">
+							<p>PASS앱 내 유료서비스 이용하면 매일 1장 추가 제공</p>
+						</dd>
+						<dd class="img"><img src="../../images/event/210630_attend/ev_210630_attend_img5.png" alt=""></dd>
+					</dl>
+				</div>
+
+			</div>
+
+		</div><!-- // ev_section -->
+		
+		<div class="ev_footer">
+			<dl>
+				<dt>꼭 확인하세요!</dt>
+				<dd>
+					<p>이벤트에 당첨되었더라도 선물 발송 전 U+모바일 서비스를 해지하거나
+						휴대폰번호, 명의를 변경하는 경우 당첨이 취소 됩니다.</p>
+				</dd>
+				<dd>
+					<p>LG유플러스 사정에 의해 별도 공지 없이 조기 종료되거나
+						이벤트 내용이 변경될 수 있습니다. 더 자세한 사항은
+						LG유플러스 고객센터 114(무료)로 문의해 주세요.</p>
+				</dd>
+			</dl>
+		</div>
+	</div><!-- // ev_wrap -->
+
+<script>
+$("a.link1").on("click", function(){
+	alert("PASS앱에서 확인하기")
+})
+</script>
+
+</body>
+</html>

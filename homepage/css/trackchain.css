@@ -53,7 +53,7 @@ body {
 
 
 /* header */
-body header {display:-ms-flexbox; display:flex;  align-items:center; position:fixed; top:0; left:0; width:100%; height:48px; z-index:2; transition:all 0.2s ease;}
+body header {display:-ms-flexbox; display:flex;  align-items:center; position:fixed; top:0; left:0; width:100%; height:48px; z-index:10; transition:all 0.2s ease;}
 body header .inner {display:-ms-flexbox; display:flex; justify-content:space-between;  align-items:flex-end; width:100%; max-width:1280px; margin:0 auto; padding:0 20px;}
 body header .inner div.nav {display:-ms-flexbox; display:flex;}
 body header .logo {flex:1;}

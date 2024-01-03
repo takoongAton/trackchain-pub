@@ -29,7 +29,7 @@
 <style>
 .fp-auto-height .fp-tableCell {height:auto !important;}
 
-.main_txt {position:relative; width:100%; color:#000; text-align:center;}
+.main_txt {position:relative; width:100%; color:#fff; text-align:center;}
 .main_txt p {font-size:14px; line-height:1.63636em;}
 .main_txt p strong {font-size:28px; line-height:1.21875em;}
 .main_txt p + p {margin-top:16px;}
@@ -37,11 +37,12 @@
 .main_scrollDown img {position:relative; width:100%; animation: aniSD 0.4s infinite alternate ease-out;}
 @media only screen and (min-width:768px) {
 	.main_txt {}
-	.main_txt p {font-size:22px; text-shadow:0 0 3px rgba(255,255,255,1);}
+	.main_txt p {font-size:22px; text-shadow:0 0 3px rgba(0,0,0,0.11);}
 	.main_txt p strong {font-size:64px;}
 	.main_txt p + p {margin-top:16px;}
 	.main_scrollDown {bottom:60px; width:148px;}
 }
+body {overflow-x:hidden;}
 .main_bg img,
 video {
 	position: absolute;
@@ -93,16 +94,16 @@ video {
 
 		<div class="section_inner_wrap" style="position:relative;">
 
-			<!-- <video class="nectar-video-bg" preload="auto" loop="" autoplay="" muted="" playsinline="" style="height:100vh">
-				<source src="../images/index/aton_intro_00.mp4" type="video/mp4">
-			</video> -->
+			<video class="nectar-video-bg" preload="auto" loop="" autoplay="" muted="" playsinline="" style="height:100vh">
+				<source src="../images/index/trackchain_bg.mp4" type="video/mp4">
+			</video>
 			
-			<div class="main_bg">
+			<!-- <div class="main_bg">
 				<img src="../images/index/main_bg.png" alt="">
 				<span class="ani01"></span>
 				<span class="ani02"></span>
 				<span class="ani03"></span>
-			</div>
+			</div> -->
 
 			<div class="inner_wrap" style="display:flex; align-items:center; position:relative; height:100vh; z-index:2;">
 				<div class="main_txt">

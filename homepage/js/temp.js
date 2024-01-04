@@ -84,9 +84,10 @@ window.addEventListener("scroll", function(){
 
 
 /* 컨텐츠 슬라이드 추가작업용 샘플 */
-if(document.querySelector(".slide_slick")){
-	$(".slide_slick").slick({
-		autoplay: true,
+if(document.querySelector(".press_slick_wrap")){
+	console.log("press_slick_wrap")
+	$(".press_slick_wrap").slick({
+		autoplay: false,
 		autoplaySpeed: 5000,
 		speed: 300,
 		infinite:false,
@@ -96,10 +97,29 @@ if(document.querySelector(".slide_slick")){
 		// pauseOnHover: true,
 		adaptiveHeight: true,
 		swipe: true,
-		arrows: false,
-		dots: true
+		arrows: true,
+		// dots: true,
 	});
 }
+
+if(document.querySelector(".partners_slick_wrap")){
+	console.log("partners_slick_wrap")
+	$(".partners_slick_wrap").slick({
+		autoplay: false,
+		autoplaySpeed: 5000,
+		speed: 300,
+		infinite:false,
+		draggable: true,
+		swipeToSlide: true,
+		touchMove: true,
+		// pauseOnHover: true,
+		adaptiveHeight: true,
+		swipe: true,
+		arrows: true,
+		// dots: true,
+	});
+}
+
 
 
 

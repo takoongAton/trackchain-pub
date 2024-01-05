@@ -383,8 +383,8 @@ animation: identifier 0.25s 1 forwards;
 }
 
 .press_slick_wrap .slick-arrow {position:absolute; bottom:0; width:28px;height:28px; background:no-repeat left top / contain; z-index:1; color:transparent; overflow:hidden;}
-.press_slick_wrap .slick-arrow.slick-prev {right:50%; background-image:url('../images/index/ico_prev.png'); transform:translate(-25%, 200%);}
-.press_slick_wrap .slick-arrow.slick-next {left:50%; background-image:url('../images/index/ico_next.png'); transform:translate(25%, 200%);}
+.press_slick_wrap .slick-arrow.slick-prev {right:50%; background-image:url('../images/index/ico_prev.png'); transform:translate(-25%, 180%);}
+.press_slick_wrap .slick-arrow.slick-next {left:50%; background-image:url('../images/index/ico_next.png'); transform:translate(25%, 180%);}
 /* 가로 768이상 ~ */
 @media only screen and (min-width:768px) {
 	.press_slick_wrap .slick-arrow {width:48px; height:48px;}

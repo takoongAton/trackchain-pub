@@ -9,6 +9,11 @@ trackchain
 
 let pos;
 let header = document.querySelector("header");
+let videoTag = document.getElementById("track_video");
+
+window.addEventListener("load", function(){
+	window.scrollY = 0;
+})
 
 var fullPage_layout;
 fullPage_layout = {
@@ -25,8 +30,8 @@ fullPage_layout = {
 			slidesNavPosition: 'bottom',
 			loopHorizontal : false,
 			scrollingSpeed: 500,
-			autoScrolling: true,
-			dragAndMove: true,
+			// autoScrolling: true,
+			// dragAndMove: true,
 			cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
 
 			// 이동 시작시
@@ -37,6 +42,7 @@ fullPage_layout = {
 					header.classList.add("active");
 				} else {
 					header.classList.remove("active");
+					videoTag.play();
 				}
 				if(destination > 5) {
 					document.querySelector("#fp-nav").classList.add("active");
@@ -104,21 +110,27 @@ if(document.querySelector(".press_slick_wrap")){
 
 if(document.querySelector(".partners_slick_wrap")){
 	console.log("partners_slick_wrap")
-	$(".partners_slick_wrap").slick({
-		autoplay: false,
-		autoplaySpeed: 5000,
-		speed: 300,
-		infinite:false,
-		draggable: true,
-		swipeToSlide: true,
-		touchMove: true,
-		// pauseOnHover: true,
-		adaptiveHeight: true,
-		swipe: true,
-		arrows: true,
-		// dots: true,
-	});
+	let partnersSlickItems = document.querySelectorAll(".partners_slick_wrap .partners_slick_item");
+	if(partnersSlickItems.length > 1) {
+		$(".partners_slick_wrap").slick({
+			autoplay: false,
+			autoplaySpeed: 5000,
+			speed: 300,
+			infinite:false,
+			draggable: true,
+			swipeToSlide: true,
+			touchMove: true,
+			// pauseOnHover: true,
+			adaptiveHeight: true,
+			swipe: true,
+			arrows: true,
+			// dots: true,
+		});
+	}
 }
+
+
+
 
 
 

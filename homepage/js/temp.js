@@ -27,26 +27,24 @@ fullPage_layout = {
 			slidesNavPosition: 'bottom',
 			loopHorizontal : false,
 			scrollingSpeed: 500,
-			// autoScrolling: true,
-			// dragAndMove: true,
+			autoScrolling: true,
+			dragAndMove: true,
 			cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
 
 			// 이동 시작시
 			onLeave: function(origin, destination, direction){
-				// console.log("destination : " + destination)
-				// console.log("direction" + direction)
-				if(destination > 1) {
+				if(destination.index > 0) {
 					header.classList.add("active");
 				} else {
 					header.classList.remove("active");
 					videoTag.play();
 				}
-				if(destination > 5) {
+				if(destination.index > 5) {
 					document.querySelector("#fp-nav").classList.add("active");
 				} else {
 					document.querySelector("#fp-nav").classList.remove("active");
 				}
-			}
+			},
 		});	
 	},
 	reset : function(){

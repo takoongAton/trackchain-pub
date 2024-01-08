@@ -11,9 +11,6 @@ let pos;
 let header = document.querySelector("header");
 let videoTag = document.getElementById("track_video");
 
-window.addEventListener("load", function(){
-	window.scrollY = 0;
-})
 
 var fullPage_layout;
 fullPage_layout = {
@@ -78,7 +75,7 @@ window.addEventListener("resize", function(){
 /* 스크롤시 컨텐츠 배경색에 따라 로고, 햄버거버튼 색상 변경 */
 window.addEventListener("scroll", function(){
 	pos = window.scrollY;
-	// console.log(pos);
+	console.log(pos);
 	let header_h = header.clientHeight;
 	if (pos > header_h) {
 		header.classList.add("active");

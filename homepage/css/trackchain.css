@@ -111,7 +111,7 @@ div.aside .btn_close span {display:block; width:100%; height:100%; opacity:0;}
 #section5 .section_inner_wrap,
 #section6 .section_inner_wrap {padding:90px 0;}
 
-.section_inner_wrap {display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%;}
+.section_inner_wrap {display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; overflow:hidden;}
 .section_inner_wrap > div:first-of-type {width:100%;}
 .section_inner_wrap .inner_wrap {max-width:1240px; padding:0 20px;}
 

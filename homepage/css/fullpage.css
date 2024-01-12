@@ -152,8 +152,8 @@
  .fp-slidesNav ul li:hover a.active span{
 	 height: 10px;
 	 width: 10px;
-	 background-color:rgba(255,109,43,1);
 	 border-radius: 100%;
+	 background-color:rgba(255,109,43,1);
   }
 
   #fp-nav.active ul li a.active span,

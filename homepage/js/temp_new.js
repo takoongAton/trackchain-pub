@@ -12,48 +12,7 @@ let header = document.querySelector("header");
 let videoTag = document.getElementById("track_video");
 
 
-var fullPage_layout;
-fullPage_layout = {
-	action : function(){
-		$('.guide_fullpage').fullpage({
-			verticalCentered: true,
-			menu: '#menu',
-			navigationPosition: 'left',
-			lockAnchors: false,
-			anchors: ['page1','page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
-			navigation: true,
-			controlArrows:true,
-			css3: true,
-			slidesNavigation: false,
-			slidesNavPosition: 'bottom',
-			loopHorizontal : false,
-			scrollingSpeed: 500,
-			autoScrolling: true,
-			dragAndMove: true,
-			cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
 
-			// 이동 시작시
-			onLeave: function(origin, destination, direction){
-				if(destination > 0) {
-					header.classList.add("active");
-				} else {
-					header.classList.remove("active");
-					videoTag.play();
-				}
-				if(destination > 5) {
-					document.querySelector("#fp-nav").classList.add("active");
-				} else {
-					document.querySelector("#fp-nav").classList.remove("active");
-				}
-			},
-		});	
-	},
-	reset : function(){
-
-	}
-}
-
-fullPage_layout.action();
 
 /* 화면 최소 사이즈 */
 window.addEventListener("load", function(){
@@ -131,34 +90,6 @@ if(document.querySelector(".partners_slick_wrap")){
 
 
 
-
-
-/* 모바일용 토글메뉴 */
-let aside = document.querySelector(".aside");
-let btnMenuToggle = document.querySelector(".btn_menu_toggle");
-let asideLinks = aside.querySelectorAll("a");
-
-btnMenuToggle.addEventListener("click", function(){
-	aside.classList.add("active");
-})
-/* 모바일 메뉴 닫기 */
-
-asideLinks.forEach(function(item,index){
-	item.addEventListener("click", function(){
-		for(let i = 0; i< asideLinks.length;i++){
-			asideLinks[i].classList.remove("active");
-		}
-		this.classList.add("active");
-		aside.classList.remove("active");
-	})
-})
-
-/* 모바일 메뉴 닫기 */
-let btnAsideClose = aside.querySelector(".btn_close");
-btnAsideClose.addEventListener("click", function(){
-	aside.classList.remove("active");
-})
-/* // 모바일 메뉴 닫기 */
 
 
 

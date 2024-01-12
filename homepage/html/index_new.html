@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/trackchain.css">
-	<link rel="stylesheet" type="text/css" href="../css/fullpage.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.css">
 	<link rel="stylesheet" type="text/css" href="../css/slick.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	
@@ -38,7 +38,7 @@
 	</div>
 </header>
 
-<div class="guide_fullpage">
+<div class="guide_fullpage" id="fullpage">
 
 	<div class="section" id="section0" >
 
@@ -479,10 +479,46 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="../js/temp.js"></script>
+<script type="text/javascript" src="../js/temp_new.js"></script>
 
 <script>
-	
+var fullPage_layout;
+	fullPage_layout = {
+		action : function(){
+			$('#fullpage').fullpage({
+				verticalCentered: true,
+				menu: '#menu',
+				navigationPosition: 'left',
+				lockAnchors: false,
+				anchors: ['page1','page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+				navigation: true,
+				controlArrows:true,
+				css3: true,
+				loopHorizontal : false,
+				scrollingSpeed: 500,
+				autoScrolling: true,
+				dragAndMove: true,
+				cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+			
+				onLeave: function(origin, destination, direction){
+					if(destination > 1) {
+						header.classList.add("active");
+					} else {
+						header.classList.remove("active");
+						videoTag.play();
+					}
+					if(destination > 5) {
+						document.querySelector("#fp-nav").classList.add("active");
+					} else {
+						document.querySelector("#fp-nav").classList.remove("active");
+					}
+				},
+			});	
+		}
+	}
+
+	fullPage_layout.action();
 </script>
 
 </body>

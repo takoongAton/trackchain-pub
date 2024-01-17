@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+body {position:fixed;}
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+
+		<!-- <div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>탈퇴하기</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div> -->
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="page_center">
+				
+				<div class="error_page">
+					<p><strong>불편을 드려 죄송합니다.<br />
+						잠시후 다시 시도해 주세요.</strong></p>
+					<div class="img"><img src="../../images/etc/img_error.png" alt="에러 이미지"></div>
+					<div class="btnGroup">
+						<div>
+							<button type="button" class="btn fill"><span>다음</span></button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- // page_center -->
+
+		</div>
+		<!-- // container_wrap -->
+
+		<!-- <div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div> -->
+	</div><!-- // wrap -->
+
+
+	<div class="layer dim" style="display: block;"></div>
+
+	<div class="layer slideUpPop active">
+		<div class="drag" id="draggable-element">드래그영역</div>
+		<div class="inner">
+		
+			<div class="top">
+				<div class="tit">
+					<strong>작품필터</strong>
+					<span>중복 선택 가능</span>
+				</div>
+				<div class="ico">
+					<span><img src="../../images/common/ico_notice_48.png" alt="아이콘"></span>
+				</div>
+				<div class="txt">
+					간편하게 로그인하고<br />
+					다양한 서비스를 즐겨보세요
+				</div>
+			</div>
+			<div class="mid">
+				<ul class="layer_filter_list">
+					<li><label><input type="checkbox" name="filter01" checked><span class="txt">작가소장품</span></label></li>
+					<li><label><input type="checkbox" name="filter01"><span class="txt">구매 가능 작품</span></label></li>
+					<li><label><input type="checkbox" name="filter01"><span class="txt">판매 완료 작품</span></label></li>
+				</ul>
+			</div>
+		</div>
+
+		<button type="button" class="btn_close"><span>닫기</span></button>
+	</div>
+	<!-- // .layer.slideUpPop -->
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+
+<style>
+.drag {position:absolute; top:0; left:0; width:100%; height:20px; background-color:transparent; z-index:100; cursor:grab;}
+</style>
+
+
+
+
+
+
+
+<script>
+  // 드래그 가능한 요소를 선택합니다.
+  const draggableElement = document.getElementById('draggable-element');
+
+  // 드래그 시작 시 초기 터치 위치와 요소 위치를 저장할 변수를 정의합니다.
+  let touchStartY, initialElementY;
+  
+  let deltaY;
+
+  // 드래그 상태를 나타내는 변수를 정의합니다.
+  let isDragging = false;
+
+  // 터치 시작 이벤트를 설정합니다.
+  draggableElement.addEventListener('touchstart', function (e) {
+	isDragging = true;
+
+	// 터치 시작 시 초기 터치 위치와 요소 위치를 저장합니다.
+	touchStartY = e.touches[0].clientY
+	
+	initialElementY = draggableElement.offsetTop;
+
+	// 드래그 가능한 커서 모양으로 변경합니다.
+	draggableElement.style.cursor = 'grabbing';
+  });
+
+  // 터치 이동 이벤트를 설정합니다.
+  document.addEventListener('touchmove', function (e) {
+	if (!isDragging) return;
+
+	// 세로 방향으로만 드래그 가능하도록 가로 방향 이동을 제한합니다.
+	deltaY = e.touches[0].clientY - touchStartY ;
+
+	if(initialElementY < deltaY) {
+		document.querySelector(".layer.slideUpPop").style.transform = `translateY(${deltaY}px)`;
+	}
+  });
+
+  // 터치 종료 이벤트를 설정합니다.
+  document.addEventListener('touchend', function () {
+	draggableElement.style.top = 0 + 'px';
+	
+
+	// 드래그 가능한 커서 모양으로 변경합니다.
+	draggableElement.style.cursor = 'grab';
+	
+	if(initialElementY < deltaY && (deltaY - initialElementY > 50)) {
+		document.querySelector(".layer.slideUpPop").classList.remove("active")
+		document.querySelector(".layer.slideUpPop").removeAttribute("style");
+		document.querySelector(".layer.dim").style.display = "none";
+	}
+	else {
+		document.querySelector(".layer.slideUpPop").removeAttribute("style");
+	}
+	isDragging = false;
+  });
+</script>
+
+
+<script>
+
+/* select focus in,out */
+let selectItems = document.querySelectorAll(".set_select select");
+if(selectItems.length > 0) {
+	selectItems.forEach(function(item,index){
+		item.addEventListener("focusin", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.add("active")
+		})
+		item.addEventListener("focusout", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.remove("active")
+		})
+	})
+}
+
+let layersBtn = document.querySelectorAll(".layer button");
+layersBtn.forEach(function(item){
+	item.addEventListener("click", function(){
+		item.closest(".layer").style.display = "none"
+	})
+})
+</script>
+
+
+</body>
+</html>

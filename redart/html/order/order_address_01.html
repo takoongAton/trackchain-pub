@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=block&subset=korean" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+
+	<link rel="stylesheet" href="../../css/redart_2.5.css" />
+	
+	<link rel="stylesheet" href="../../css/slick.css" />
+	<link rel="stylesheet" href="../../css/swiper.min.css" />
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="util-btn">
+				<button type="button"><span><img src="../../images/common/ico_back.png" alt="뒤로가기"></span></button>
+			</div>
+			<div class="inner">
+				<div class="header">
+					<!-- <h1>배송지 목록</h1> -->
+				</div>
+			</div>
+			<!-- <div class="tools-btn">
+				<button type="button"><span><img src="../../images/common/ico_top_home.png" alt="홈으로 가기"></span></button>
+			</div> -->
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+
+	<div class="container_wrap" id="container_wrap">
+		<div class="page_default">
+
+			<div class="divide_wrap">
+				<div class="page_mid">
+
+					<!-- 주문/결제 -->
+					<div class="order_info_wrap">
+
+						<!-- 배송지 목록-->
+						<div class="order_box">
+							<div class="order_title_wrap">
+								<div class="tit"><strong>신규등록</strong></div>
+							</div>
+
+							<div class="order_content">
+
+								<div class="address_input_wrap">
+									<div class="input_wrap_tit"><strong class="tit">배송지명</strong></div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" placeholder="예) 집, 회사">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="address_input_wrap">
+									<div class="input_wrap_tit"><strong class="tit">수령인</strong></div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" placeholder="이름을 입려해 주세요">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // address_input_wrap -->
+
+
+								<div class="address_input_wrap">
+									<div class="input_wrap_tit"><strong class="tit">배송지</strong></div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" disabled placeholder="우편번호">
+											</div>
+											<button type="button"><span>주소 검색</span></button>
+										</div>
+									</div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" disabled placeholder="배송지를 입력해주세요.">
+											</div>
+										</div>
+									</div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" placeholder="상세주소를 입력해주세요.">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // address_input_wrap -->
+
+								<div class="address_input_wrap">
+									<div class="input_wrap_tit"><strong class="tit">연락처</strong></div>
+									<div class="row_guide">
+										<div class="set_input">
+											<div class="input">
+												<input type="text" class="input_item" placeholder="연락처를 입력해주세요.">
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // address_input_wrap -->
+
+							</div>
+							<!-- // order_content -->
+
+						</div>
+						<!-- // order_box -->
+
+						<!-- // 배송지 목록-->
+
+					</div>
+					<!-- // order_info_wrap -->
+					<!-- // 주문/결제 -->
+
+				</div>
+				<!-- // page_mid -->
+			</div>
+			<!-- // divide_wrap -->
+
+		</div>
+		<!-- // page_default -->
+	</div>
+	<!-- // container_wrap -->
+
+	<div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn fill"><span>등록하기</span></button>
+			</div>
+		</div>
+	</div>
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/slick.js"></script>
+<script src="../../js/temp.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<!-- <script src="../../js/cdnjs.cloudflare.com_ajax_libs_Swiper_4.0.7_js_swiper.min.js"></script> -->
+
+
+
+<script>
+/* 굿즈 상세보기 토글버튼 */
+// let btn_detail = document.querySelector(".goods_detail_info .btn_detail");
+// btn_detail.addEventListener("click", function(){
+// 	btn_detail.closest(".goods_detail_info").classList.toggle("active");
+// })
+/* // 굿즈 상세보기 토글버튼 */
+
+
+
+/* 약관 토글 */
+let btn_toggle = document.querySelector(".order_agree_form .order_agree_total button.btn_toggle");
+btn_toggle.addEventListener("click", function(){
+	this.classList.toggle("active");
+	document.querySelector(".order_agree_list").classList.toggle("active")
+})
+
+
+
+
+
+document.querySelector(".btn_popup.full").addEventListener("click", () => {
+	document.querySelector(".layer.full").style.display = "block"
+})
+
+document.querySelector(".layer.full .h_btn_prev").addEventListener("click", () => {
+	event.target.closest(".layer").style.display = "none";
+})
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+
+	<link rel="stylesheet" href="../../css/slick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+	<div class="wrap">
+
+		<!-- <div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>탈퇴하기</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div> -->
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="page_center">
+				
+				<div class="error_page">
+					<p><strong>불편을 드려 죄송합니다.<br />
+						잠시후 다시 시도해 주세요.</strong></p>
+					<div class="img"><img src="../../images/etc/img_error.png" alt="에러 이미지"></div>
+					<div class="btnGroup">
+						<div>
+							<button type="button" class="btn fill"><span>확인</span></button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- // page_center -->
+
+		</div>
+		<!-- // container_wrap -->
+
+		<!-- <div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div> -->
+	</div><!-- // wrap -->
+
+
+	<div class="layer dim" style="display: block;"></div>
+
+	<div class="layer slideUpBnr active">
+		<div class="inner">
+			<div class="layer_bnr_list">
+				<div class="item">
+					<img src="../../images/temp/sam_layer_bnr.png" alt="이미지">
+					<div class="bnr_inner">
+						<div class="txt_wrap">
+							<span>HANA ART BANK  X  PYO COLLECTION</span>
+							<div class="tit">
+								<strong>BEHIND THE SCENE</strong>
+								<span>특별전</span>
+							</div>
+							<div class="date">23.11.07 - 23.12.10</div>
+						</div>
+						<div class="btnGroup">
+							<div>
+								<button type="button" class="btn fill"><span>NFT 티켓 받으러 가기</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // item -->
+
+				<div class="item">
+					<img src="../../images/temp/sam_layer_bnr.png" alt="이미지">
+					<div class="bnr_inner">
+						<div class="txt_wrap">
+							<span>HANA ART BANK  X  PYO COLLECTION</span>
+							<div class="tit">
+								<strong>BEHIND THE SCENE</strong>
+								<span>특별전</span>
+							</div>
+							<div class="date">23.11.07 - 23.12.10</div>
+						</div>
+						<div class="btnGroup">
+							<div>
+								<button type="button" class="btn fill"><span>NFT 티켓 받으러 가기</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // item -->
+			</div>
+			<!-- // layer_bnr_list -->
+
+			<div class="layer_bnr_btm">
+				<button type="button" class="not_today"><span>오늘 그만보기</span></button>
+				<button type="button" class=""><span>닫기</span></button>
+			</div>
+		</div>
+
+	</div>
+	<!-- // .layer.slideUp -->
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="../../js/slick.js"></script>
+<script src="../../js/temp.js"></script>
+
+
+
+<script>
+/* 레이어팝업 버튼닫기 샘플 */
+// let layersBtn = document.querySelectorAll(".layer button");
+// layersBtn.forEach(function(item){
+// 	item.addEventListener("click", function(){
+// 		item.closest(".layer").style.display = "none"
+// 	})
+// })
+/* 레이어팝업 버튼닫기 샘플 */
+
+
+
+/* 레이어팝업 하단 배너 slick 관련 */
+let layerBnrSlideItem = document.querySelectorAll(".layer_bnr_list .item");
+if(layerBnrSlideItem.length > 1){
+	
+	$('.layer_bnr_list').on('init', function(event, slick) {
+		$(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
+			$('.current').text(slick.currentSlide + 1);
+			$('.total').text(slick.slideCount);
+	})
+	.slick({
+		autoplay: false,
+		autoplaySpeed: 3000,
+		infinite: true,
+		arrows: false
+	})
+	.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		$('.current').text(nextSlide + 1);
+	});
+
+}
+/* // 레이어팝업 하단 배너 slick 관련 */
+
+
+
+</script>
+
+
+</body>
+</html>

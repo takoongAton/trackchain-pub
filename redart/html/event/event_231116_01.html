@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+
+<style>
+/* @font-face{
+    font-family:'hana';
+    src:url('../../fonts/Hana2-Light.woff2') format('woff2');
+	font-weight:100;
+}
+@font-face{
+    font-family:'hana';
+    src:url('../../fonts/Hana2-CM.woff2') format('woff2');
+	font-weight:300;
+} */
+@font-face{
+    font-family:'hana';
+    src:url('../../fonts/Hana2-Regular.woff2') format('woff2');
+	font-weight:400;
+}
+/* @font-face{
+    font-family:'hana';
+    src:url('../../fonts/Hana2-Medium.woff2') format('woff2');
+	font-weight:500;
+} */
+@font-face{
+    font-family:'hana';
+    src:url('../../fonts/Hana2-Bold.woff2') format('woff2');
+	font-weight:700;
+}
+.redart_event_231116 {padding:0 0 86px; font-family:'hana'; font-weight:400;}
+.redart_event_231116 .top {padding:50px;}
+.redart_event_231116 .box.box1,
+.redart_event_231116 .box.box2 {text-align:center;}
+
+.redart_event_231116 .box.box1 {position:relative; padding:0 16px; padding-bottom:48px;}
+.redart_event_231116 .box.box1::before,
+.redart_event_231116 .box.box1::after {content:""; position:absolute; bottom:0;}
+
+.redart_event_231116 .box.box1::before {left:0; border-bottom:48px solid #F2F0EC; border-left:0 solid transparent; border-right:50vw solid transparent;}
+.redart_event_231116 .box.box1::after {right:0; border-bottom:48px solid #F2F0EC; border-left:50vw solid transparent; border-right:0 solid transparent;}
+@media screen and (min-width:720px) {
+	.redart_event_231116 .box.box1::before {border-right-width:360px;}
+	.redart_event_231116 .box.box1::after {border-left-width:360px;}
+}
+.redart_event_231116 .box.box1 p.txt {padding:30px 0 0; font-size:14px; line-height:1.35714em;}
+.redart_event_231116 .box.box1 p.txt:last-of-type {position:relative; margin-top:30px; padding-top:30px;}
+.redart_event_231116 .box.box1 p.txt:last-of-type::before {content:""; display:block; position:absolute; top:0; left:50%; width:24px; height:4px; background-color:#000; transform:translate(-50%,-100%);}
+.redart_event_231116 .box.box1 p.txt:last-of-type strong {display:block; font-size:18px; line-height:24px;;}
+
+.redart_event_231116 .box.box2 {padding:0 16px; background-color:#F2F0EC;}
+.redart_event_231116 .box.box2 .tit {padding:28px 56px 0;}
+
+
+.redart_event_231116 .box.box2 p.txt {padding:30px 0 0; font-size:14px; line-height:1.35714em;}
+.redart_event_231116 .box.box2 p.txt:first-of-type {position:relative; margin-top:30px; padding-top:30px;}
+.redart_event_231116 .box.box2 p.txt:first-of-type::before {content:""; display:block; position:absolute; top:0; left:50%; width:24px; height:4px; background-color:#000; transform:translate(-50%,-100%);}
+.redart_event_231116 .box.box2 p.txt:last-of-type strong {font-size:18px; line-height:24px;;}
+.redart_event_231116 .box.box2 img {margin-top:27px;}
+
+.redart_event_231116 .box.box3 {padding:0 16px 40px; background-color:#F2F0EC;}
+.redart_event_231116 .box.box3 div.tit {padding:26px 0 28px; text-align:center;}
+.redart_event_231116 .box.box3 div.tit strong {font-size:18px; line-height:24px;}
+.redart_event_231116 .box.box3 div.dl_tit {background-color:#000; border-radius:2px; color:#fff; line-height:30px; text-align:center;}
+.redart_event_231116 .box.box3 dl {display:flex; justify-content:space-between; align-items:center; width:100%; padding:15px 13px; border-bottom:1px solid #000; font-size:14px; line-height:19px; letter-spacing:-0.05em;}
+.redart_event_231116 .box.box3 dl dt {font-weight:bold; padding:0 12px;}
+.redart_event_231116 .box.box3 dl dd {flex:1; padding:0 0 0 12px;}
+.redart_event_231116 .box.box3 a {display:flex; justify-content:center; align-items:center; height:50px; margin-top:20px; border:1px solid #000; border-radius:12px; text-align:center;}
+.redart_event_231116 .box.box3 a span {display:inline-block; position:relative; padding-right:18px; line-height:1;}
+.redart_event_231116 .box.box3 a span::after {content:""; display:block; position:absolute; top:50%; right:0; width:8px; height:8px; border-width:1px 1px 0 0; border-color:#000; border-style:solid; transform:rotate(45deg); transform-origin: 100% 0;}
+
+.redart_event_231116 .box.box4 {padding:30px 16px 24px;}
+.redart_event_231116 .box.box4 strong {display:block; font-size:14px; line-height:19px;}
+.redart_event_231116 .box.box4 ul {}
+.redart_event_231116 .box.box4 ul li {margin-top:11px;}
+.redart_event_231116 .box.box4 ul li + li {margin-top:12px;}
+.redart_event_231116 .box.box4 ul li p {position:relative; padding-left:12px; font-size:12px; line-height:16px;;}
+.redart_event_231116 .box.box4 ul li p::before {content:"-"; display:block; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
+
+.redart_event_231116 .ev_btm {position:fixed; bottom:0; left:0; right:0; max-width:720px; margin:0 auto; padding:16px; background-color:#fff; font-family: 'Spoqa Han Sans Neo';}
+.ani {position:relative; top:40px; opacity:0; transition:all 0.5s ease;}
+.ani.active {top:0px; opacity:1;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+	<div class="header_wrap">
+		<header>
+			<div class="util-btn">
+				<button type="button"><span><img src="../../images/common/ico_back.png" alt="뒤로가기"></span></button>
+			</div>
+			<div class="inner">
+				<div class="header">
+					<h1>이벤트 NFT</h1>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap">
+		<div class="page_default">
+
+			<div class="redart_event_231116">
+				<div class="top"><img src="../../images/event/231116/img_title.png" alt="BEHIND THE SCRENE"></div>
+				<div class="box box1">
+					<div class="img"><img src="../../images/event/231116/img_poster.png" alt=""></div>
+					<div class="txt_wrap">
+						<p class="txt">한국의 ‘베르트 웨일’ 표갤러리 <strong>표미선 대표가</strong><br />
+							평생에 걸쳐 모은 주옥같은 소장품전!<br /><br />
+	
+							바야흐로 미술이 사랑받는 시대.<br />
+							우리는 시대를 대표하는 거장의 작품에 열광합니다.<br />
+							그들의 작품을 통해 위로받고 때때로 누군가는 인생이<br />
+							바뀌는 경험을 하기도 합니다.
+						</p>
+						<p class="txt">거장에게도 처음은 있었습니다.<br /><br />
+							
+							그림 하나 걸 곳 없어 전전긍긍하던<br />
+							<strong>무명 화가의 가치를 발견하는 안목</strong>
+							그들이 세상으로부터 인정받기까지
+						</p>
+					</div>
+					<!-- // txt_wrap -->
+				</div>
+				<!-- // box1 -->
+
+				<div class="box box2">
+					<div class="tit ani">
+						<img src="../../images/event/231116/img_title_sub.png" alt="">
+						<!-- 그들의 뒤엔 늘
+						<strong>뛰어난 갤러리스트</strong>가 있었습니다. -->
+					</div>
+
+					<p class="txt ani">결과만큼 과정이 중요한 시대,</p>
+
+					<p class="txt ani">
+						거장이 세상으로부터 인정받기까지<br />
+						<strong>대한민국 대표 여성 갤러리스트가 발견한 <br />마스터피스</strong>를 소개합니다.
+					</p>
+
+					<div class="img"><img src="../../images/event/231116/IMG_7832.png" alt=""></div>				</div>
+				<!-- // box2 -->
+
+				<div class="box box3">
+					<div class="tit ani">
+						<strong>김창열, 이우환 작가의 작품 외</strong><br />
+						약 50여 점의 마스터피스를 관람하실 수 있습니다.
+					</div>
+
+					<div class="dl_tit ani">전시정보</div>
+					<dl class="ani">
+						<dt><strong>전시 기간</strong></dt>
+						<dd>
+							2023. 11. 16(목) - 2023. 12. 22(금)<br />
+							10시 - 18시(매주 월요일 휴일)
+						</dd>
+					</dl>
+					<dl class="ani">
+						<dt><strong>전시 장소</strong></dt>
+						<dd>
+							Club1(클럽원) PB센터 지하 1층<br />
+							서울 삼성동 169-8
+						</dd>
+					</dl>
+
+					<a href="#g" class="ani"><span>온라인 전시 보러가기</span></a>
+				</div>
+				<!-- // box3 -->
+
+				<div class="box box4 ani">
+					<strong>유의사항</strong>
+					<ul>
+						<li>
+							<p>본 이벤트를 통하여 발급되는 디자털아트NFT는 클레이튼 메인넷을 기반으로 발행되며, 각기 고유합니다.</p>
+						</li>
+						<li>
+							<p>본 이벤트는 어라운즈(www.around.co.kr)의 사정에 따라 내용이 변경되거나 조기 종료될 수 있습니다.</p>
+						</li>
+						<li>
+							<p>본 이벤트를 통하여 발행되는 디지털아트NFT를 수령하기 위해서는 레드아트에 회원가입 및 NFT 서비스 이용 동의를 완료하여야 합니다.</p>
+						</li>
+						<li>
+							<p>레드아트 계정 1개당 1개의 디지털아트NFT가 지급됩니다.</p>
+						</li>
+						<li>
+							<p>이벤트 관련 자세한 사항은 어라운즈 고객센터
+								(02-2101-0642)로 문의하여 주시기 바랍니다.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ev_btm">
+					<div class="btn_group">
+						<!-- <div>
+							<button type="button" class="btn fill"><strong>이벤트 NFT 받기</strong></button>
+						</div> -->
+						<div>
+							<button type="button" class="btn line"><strong>이벤트 NFT 보러가기</strong></button>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+			<!-- // redart_event_231116 -->
+
+		</div>
+	</div>
+	<!-- // container_wrap -->
+
+
+</div><!-- // wrap -->
+
+
+
+
+<div class="layer dim" style="display:block;"></div>
+<div class="layer slideUp active" style="display:block">
+	<div class="inner">
+		<div class="login_content">
+			<p class="txt">
+				간편하게 로그인하고<br />
+				다양한 서비스를 즐겨보세요.
+			</p>
+			<ul>
+				<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_naver_48.png" alt="네이버로 시작"></span></button></li>
+				<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_apple_48.png" alt="Apple로 시작"></span></button></li>
+				<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_google_48.png" alt="구글로 시작"></span></button></li>
+			</ul>
+			<p class="last_login">최근 로그인한 계정은 <strong>네이버</strong>입니다.</p>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+	let pos;
+
+	window.addEventListener('load', function(){
+		pos = window.scrollY;;
+		inViewport()
+	});
+
+	window.addEventListener('scroll', function(){
+		pos = window.scrollY;
+		console.log(pos)
+		inViewport()
+	});
+
+	
+	/* 화면높이값 */
+	const viewportHeight = window.innerHeight;
+	const body = document.querySelector("body") /* height:100%; 일 경우에만 사용가능 */
+	console.log(document.querySelector("div.wrap"))
+
+
+	const items = document.querySelectorAll(".ani");
+	
+	function inViewport(){
+		if(items.length) {
+			items.forEach(function(item, index, array){
+				/* 
+				if(item.classList.contains('active')) {
+					return false;
+				}
+				if(item.offsetTop < pos + body.clientHeight - (item.clientHeight / 2)) {
+					console.log(item.innerHTML +  ": 화면안에 들어옴.")
+					item.classList.add("active")
+				}
+				*/
+				/*
+				if(!item.classList.contains('active')) {
+					if(item.offsetTop < pos + body.clientHeight - (item.clientHeight / 2)) {
+						console.log(item.innerHTML +  ": 화면안에 들어옴.")
+						item.classList.add("active")
+					
+					}
+				}
+				*/
+				
+				/* 스크롤 위치 현재 값 보다 아래에 있는 것만 화면으로 올라왔을때 실행 */
+				if(!item.classList.contains('active') && item.offsetTop < pos + viewportHeight - (/* item.clientHeight / 3 */ 10)) {
+					item.classList.add("active")
+				}
+
+				/* 아이템이 화면 안에 있을때만, 화면 벗어나면 복구 */
+				// if(item.offsetTop < pos + viewportHeight - (item.clientHeight / 5) && pos < item.offsetTop + (item.clientHeight * 1.2)) {
+				// 	item.classList.add("active");
+				// } else {
+				// 	item.classList.remove("active");
+				// }
+			})
+		}
+		else {
+			return false;
+			console.log("읎다~!")
+		}
+	}
+
+
+	function test123(){
+		let start = 2;
+		console.log(start)
+		for(i=0;i<=9;i++) {
+			console.log(start = Math.pow(start,2));
+		}
+	}
+	test123()
+
+// 1. 대상 선정
+// 대상 node 선택
+const target = document.querySelector('.wrap');
+
+// 2. 옵저버 인스턴스 생성
+// 감시자 인스턴스 만들기
+const observer = new MutationObserver(function(mutations) {
+	mutations.forEach(function(mutation) {
+		console.log(mutation.type);
+		if(mutation.type == 'attributes') {
+			console.log("속성이 바뀌었다.")
+		} else if (mutation.type == 'childList'){
+			console.log("항목이 삭제되거나 추가되었다.");
+			inViewport();
+		}
+	});
+});
+
+// 3. 옵션 설정
+// 감시자의 설정:
+const config = {
+	attributes:false, 
+	childList:true, 
+	characterData:true, 
+	subtree:true
+};
+
+// 4. 실행
+// 감시자 옵션 포함, 대상 노드에 전달
+observer.observe(target, config);
+
+// 나중에, 감시를 중지 가능
+// observer.disconnect();
+
+
+
+function getAngle(x1,y1,x2,y2) {
+  let a;
+  if(y1 == y2) {
+      if(x2<x1) {
+          a = -90;
+      } else {
+          a = 90;
+      }
+  } else if(x1==x2 && y2>y1) {
+      a = 180;
+  } else {
+      const rad = Math.atan((x2-x1)/(y1-y2));
+      a = rad * 180 / Math.PI;
+      
+      if(y2>y1 && x2>x1) {
+          a = 180 + a;
+      } else if(y2>y1 && x2<x1) {
+          a = -180 + a;
+      }
+  }
+  return a;
+}
+
+</script>
+</body>
+</html>

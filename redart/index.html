@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>트랙체인 - redart2.0</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+
+<link rel="shortcut icon" type="image/x-icon" href="./images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+<link rel="apple-touch-icon-precomposed" href="./images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#009DDF; text-decoration:underline;}
+a:hover {color:#009DDF; text-decoration:none;}
+a.active {color:red;}
+table {width:100%; border-collapse:collapse; border:1px solid #333;}
+tr.line1 {border-top:2px solid #333;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #333; background-color:var(--main-color); font-weight:normal;}
+td {padding:4px 4px 4px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.em {color:#ca0404;}
+.ing {color:#009DDF;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#333;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>trackchain - redart 2.0</h1>
+
+
+<table class="menulist">
+	<colgroup>
+		<!-- <col width="10%">
+		<col width="15%">
+		<col width="20%">
+		<col width="20%">
+		<col width="20%">
+		<col width=""> -->
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 2</th>
+			<th scope="col">Depth 3</th>
+			<th scope="col">Depth 4</th>
+			<th scope="col">Depth 5</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td></td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+		<!-- <tr class="line1">
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td><a target="_blank" href="./html/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<tr>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td><a target="_blank" href="./html/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+
+		<tr class="line1">
+			<td></td>
+			<td>공통</td>
+			<td>레이아웃</td>
+			<td>GNB 효과</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/00_layout/layout_00_gnb.html">layout_00_gnb.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>기본</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/00_layout/layout_01.html">layout_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>2단 기본</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/00_layout/layout_02.html">layout_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>2단 + 오류(중앙)</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/00_layout/layout_03.html">layout_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>2단 + 컨텐츠(하단)</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/00_layout/layout_04.html">layout_04.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td>팝업</td>
+			<td>일반 팝업</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup.html">popup.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>문의하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_01.html">popup_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>기존 설정 팝업 (v1.5)</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_02.html">popup_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>하단 팝업</td>
+			<td>멤버십</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_01.html">popup_slideup_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>티켓 - 입장하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_02.html">popup_slideup_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>티켓 - 재입장하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_03.html">popup_slideup_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작품필터</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_04.html">popup_slideup_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>본인인증 필요</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_05.html">popup_slideup_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>sns 로그인</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_06.html">popup_slideup_06.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>배너</td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/popup_slideup_bnr.html">popup_slideup_bnr.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>오류</td>
+			<td>단독 페이지</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/etc/error.html">error.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>로딩</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/etc/loading.html">loading.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Top 버튼</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/etc/top.html">top.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="line1">
+			<td>Splash_01</td>
+			<td>서비스 진입</td>
+			<td>스플래시</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/01_splash_new.html">01_splash_new.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Sign up_01</td>
+			<td></td>
+			<td>로그인</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_01.html">02_sign_up_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Sign up_02</td>
+			<td>휴대폰 인증, 약관동의</td>
+			<td>휴대폰인증</td>
+			<td>인증1</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_01.html">02_sign_up_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>인증2</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_02.html">02_sign_up_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>인증3</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_03.html">02_sign_up_02_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>인증4</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_04.html">02_sign_up_02_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Sign up_03</td>
+			<td></td>
+			<td></td>
+			<td>오류1</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_05.html">02_sign_up_02_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>오류2</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_02_06.html">02_sign_up_02_06.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>Sign up_04</td>
+			<td></td>
+			<td>약관동의</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_04_01.html">02_sign_up_04_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_04_02.html">02_sign_up_04_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Sign up_05</td>
+			<td></td>
+			<td></td>
+			<td>약관</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/01_start/02_sign_up_04_03.html">02_sign_up_04_03.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		
+		<tr class="line1">
+			<td>Home_01</td>
+			<td>홈</td>
+			<td>전시정보</td>
+			<td>기본</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_01_01.html">home_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>네비 마이페이지 알림</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_01_02.html">home_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Home_last exhibition_01</td>
+			<td></td>
+			<td></td>
+			<td>4개 이상</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_01_03.html">home_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>10개 초과 더보기</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_01_04.html">home_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>목록</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_01_05.html">home_01_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Home_02</td>
+			<td></td>
+			<td>NFT 지갑</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_02_01.html">home_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비로그인</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_02_02.html">home_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>본인인증</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_02_03.html">home_02_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>NFT 없음</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_02_04.html">home_02_04.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>Home_NFTdetail_01</td>
+			<td></td>
+			<td></td>
+			<td>NFT 상세</td>
+			<td>대기번호</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_01_01.html">home_nft_detail_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>구매기념</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_01_02.html">home_nft_detail_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>신탁증명</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_01_03.html">home_nft_detail_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>멤버십</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_01_04.html">home_nft_detail_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>오픈예정</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_01_05.html">home_nft_detail_01_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Home_NFTdetail_03</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>이벤트</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/home_nft_detail_03.html">home_nft_detail_03.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>Exhibition_01</td>
+			<td></td>
+			<td>현재전시</td>
+			<td>기본목록</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_01_01.html">exhibition_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>그리드 목록</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_01_02.html">exhibition_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작품필터</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_01_03.html">exhibition_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>도슨트 전체보기</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_01_04.html">exhibition_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Exhibition_docent_01</td>
+			<td></td>
+			<td></td>
+			<td>도슨트 플레이어</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_docent_01.html">exhibition_docent_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Exhibition_detail_01</td>
+			<td></td>
+			<td></td>
+			<td>작품 상세</td>
+			<td>오픈예정</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_01.html">exhibition_detail_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>도슨트있음</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_02.html">exhibition_detail_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>도슨트없음/신청전</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_03.html">exhibition_detail_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>신청후</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_04.html">exhibition_detail_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작품문의</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_05.html">exhibition_detail_01_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작품 문의하기</td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_05_01.html">exhibition_detail_01_05_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>찜하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_01_06.html">exhibition_detail_01_06.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>공유하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_02.html">exhibition_detail_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>Exhibition_detail_03</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비로그인</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_detail_03.html">exhibition_detail_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>apply_01</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>예약 신청</td>
+			<td></td>
+			<td><del><a target="_blank" href="./html/02_home/apply_01_01.html">apply_01_01.html</a></del></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><del><a target="_blank" href="./html/02_home/apply_01_02.html">apply_01_02.html</a></del></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>apply_02</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>대기신청</td>
+			<td></td>
+			<td><del><a target="_blank" href="./html/02_home/apply_02.html">apply_02.html</a></del></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Exhibition_03</td>
+			<td></td>
+			<td></td>
+			<td>전시</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_02.html">exhibition_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작가</td>
+			<td>1명인 경우</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_03.html">exhibition_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>2명 이상</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_03_list.html">exhibition_03_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>작가상세</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_03_view.html">exhibition_03_view.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>갤러리</td>
+			<td>멤버십 가입전</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_01.html">exhibition_04_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>멤버십 가입후</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_02.html">exhibition_04_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>갤러리 리스트(2개 이상)</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_list.html">exhibition_04_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>갤러리 상세</td>
+			<td>갤러리 이름 한줄</td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_view.html">exhibition_04_view.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>갤러리 이름 두줄</td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_view_01.html">exhibition_04_view_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>멤버십 보러가기</td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_view_02.html">exhibition_04_view_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>멤버십 가입하기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/02_home/exhibition_04_membership.html">exhibition_04_membership.html</a></td>
+			<td>페이지 -> 슬라이드 팝업</td>
+		</tr>
+		
+		<tr class="line1">
+			<td>Exhibition_ticket_01</td>
+			<td>티켓</td>
+			<td>입장 티켓 받기</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Exhibition_ticket_01.html">Exhibition_ticket_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>티켓 리스트</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_01_list.html">Tab_Ticket_01_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>입장 하기</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_01.html">Tab_Ticket_01.html</a></td>
+			<td>페이지 -> 슬라이드 팝업</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>재입장</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_01_1.html">Tab_Ticket_01_1.html</a></td>
+			<td>페이지 -> 슬라이드 팝업</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>로그인</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_02_1.html">Tab_Ticket_02_1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>보유티켓 없음</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_02_2.html">Tab_Ticket_02_2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>본인인증</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/07_ticket/Tab_Ticket_02_3.html">Tab_Ticket_02_3.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>티켓발행 완료 팝업</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/popup/Exhibition_ticket_01_popup.html">Exhibition_ticket_01_popup.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr class="line1">
+			<td>alarm_01</td>
+			<td>알림</td>
+			<td>도착 알림 없음</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/alarm/alarm_01_01.html">alarm_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>로그인 후 알림 확인</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/alarm/alarm_01_02.html">alarm_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>alarm_02</td>
+			<td></td>
+			<td>알림 목록</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/alarm/alarm_02_01.html">alarm_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>알림 설정</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/alarm/alarm_02_02.html">alarm_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr class="line1">
+			<td>mypage_bookmark_01</td>
+			<td>마이페이지</td>
+			<td>찜하기</td>
+			<td>목록</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_bookmark_01.html">mypage_bookmark_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>mypage_bookmark_02</td>
+			<td></td>
+			<td></td>
+			<td>찜 내역 없음</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_bookmark_02_01.html">mypage_bookmark_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>로그인후 확인 가능.</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_bookmark_02_02.html">mypage_bookmark_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="line1">
+			<td>mypage_01</td>
+			<td>마이페이지</td>
+			<td>메인</td>
+			<td>비로그인</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_01_01.html">mypage_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>로그인</td>
+			<td>멤버십 없음</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_01_02.html">mypage_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>프로필 사진 없음</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_01_03.html">mypage_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>프로필 사진 있음 + 알림표시</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_01_04.html">mypage_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>mypage_profile_01</td>
+			<td></td>
+			<td>프로필</td>
+			<td>기본 이미지</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_profile_01_01.html">mypage_profile_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>프로필 사진 있음</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_profile_01_02.html">mypage_profile_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>프로필 이미지 선택</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_profile_01_02_01.html">mypage_profile_01_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>중복된 닉네임</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_profile_01_03.html">mypage_profile_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>mypage_info_01</td>
+			<td></td>
+			<td>내정보</td>
+			<td>미인증</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_info_01_01.html">mypage_info_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>인증</td>
+			<td>네이버, 구글, 애플</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_info_01_02.html">mypage_info_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>mypage_info_03</td>
+			<td></td>
+			<td></td>
+			<td>회원탈퇴</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_info_03.html">mypage_info_03.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>Exhibition_membership_01</td>
+			<td></td>
+			<td>멤버십</td>
+			<td>목록</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/exhibition_membership_01_01.html">exhibition_membership_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>탈퇴유의사항</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/exhibition_membership_01_02.html">exhibition_membership_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>해지유의사항</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/exhibition_membership_01_03.html">exhibition_membership_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>본인인증</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/exhibition_membership_01_04.html">exhibition_membership_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>Mypage_condition_01</td>
+			<td></td>
+			<td><del>대기 현황</del> 구매 현황</td>
+			<td><del>대기 번호</del> 구매 번호</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_01_01.html">mypage_condition_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>문의 내역</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_01_02.html">mypage_condition_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>문의 내역 없음.</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_01_02_01.html">mypage_condition_01_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><del>대기 내역 없음</del>구매 내역 없음</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_01_03.html">mypage_condition_01_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>로그인 후 확인 가능</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_01_04.html">mypage_condition_01_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>Mypage_condition_02</td>
+			<td></td>
+			<td></td>
+			<td>구매 현황</td>
+			<td><del>대기신청</del></td>
+			<td></td>
+			<td><del><a target="_blank" href="./html/mypage/mypage_condition_02_01.html">mypage_condition_02_01.html</a></del></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>계약 대기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_02.html">mypage_condition_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>계약 확정</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_03.html">mypage_condition_02_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>구매 완료</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_04.html">mypage_condition_02_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>기념 NFT 발행 완료</td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_04_01.html">mypage_condition_02_04_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>신탁 완료</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_05.html">mypage_condition_02_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>예약 취소</td>
+			<td></td>
+			<td><a target="_blank" href="./html/mypage/mypage_condition_02_06.html">mypage_condition_02_06.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="line1">
+			<td></td>
+			<td>레드아트</td>
+			<td>소개</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/11_redart/11_redart_01.html">11_redart_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>앱다운받기</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/11_redart/11_redart_02.html">11_redart_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>브릿지 페이지</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/11_redart/11_redart_03.html">11_redart_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>표갤러리</td>
+			<td>앱설치</td>
+			<td>버튼식</td>
+			<td><a target="_blank" href="./html/11_redart/11_redart_04.html">11_redart_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>QR식</td>
+			<td><a target="_blank" href="./html/11_redart/11_redart_05.html">11_redart_05.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="line1">
+			<td></td>
+			<td>이메일</td>
+			<td>회원가입</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/email/email_01.html">email_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>모바일</td>
+			<td><a target="_blank" href="./html/email/email_01_mobile.html">email_01_mobile.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>회원탈퇴</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/email/email_02.html">email_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>모바일</td>
+			<td><a target="_blank" href="./html/email/email_02_mobile.html">email_02_mobile.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>인정보 이용내역 안내</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/email/email_03.html">email_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>모바일</td>
+			<td><a target="_blank" href="./html/email/email_03_mobile.html">email_03_mobile.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>약관 개정 및 정책 변경 안내</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/email/email_04.html">email_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>모바일</td>
+			<td><a target="_blank" href="./html/email/email_04_mobile.html">email_04_mobile.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="line1">
+			<td></td>
+			<td>관리자 컨텐츠용</td>
+			<td>전시</td>
+			<td>A</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_02_01.html">exhibition_02_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>B</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_02_02.html">exhibition_02_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td>작가</td>
+			<td>A</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_03_01.html">exhibition_03_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>B</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_03_02.html">exhibition_03_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td>갤러리</td>
+			<td>A</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_04_01_01.html">exhibition_04_01_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>B</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/content/exhibition_04_01_02.html">exhibition_04_01_02.html</a></td>
+			<td>-</td>
+		</tr>
+
+	</tbody>
+</table>
+</body>
+<!-- //html body -->
+</html>

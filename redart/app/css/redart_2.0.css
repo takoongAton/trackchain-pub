@@ -1866,8 +1866,10 @@ z-index:1;
 
 /* 상품 상세 슬라이드 */
 .detail_slide {position:relative;}
-.detail_slide .item {line-height:0;}
+.detail_slide .item {display:flex; justify-content:center; align-items:center; position:relative; line-height:0; min-height:328px; height:91.11111vw; max-height:688px;}
 .detail_slide .item div {font-size:0;}
+.detail_slide .item video {border-radius:10px; overflow:hidden;}
+
 .detail_slide img {display:block; line-height:1;}
 
 .goods_dot {display:flex; justify-content:center; gap:4px; position:absolute; bottom:16px; left:0; width:100%; font-size:0; z-index:10;}
@@ -1878,7 +1880,7 @@ z-index:1;
 /* 굿즈 상세 상품 타이틀 영역 */
 .goods_detail_tit_wrap {padding:24px 0;}
 .goods_detail_tit_wrap > div {display:flex; justify-content:space-between; align-items:flex-end;}
-.goods_detail_tit_wrap > div strong {flex:1; font-size:20px; line-height:1.25em; font-weight:bold;}
+.goods_detail_tit_wrap > div strong {flex:1; font-size:20px; line-height:1.25em; font-weight:bold; word-break:break-all;}
 .goods_detail_tit_wrap > div button.btn_share {display:block; float:right; width:24px; min-width:24px; height:24px; margin-left:12px; background:url('../images/common/ico_share.png') no-repeat center / contain; overflow:hidden; color:transparent}
 .goods_detail_tit_wrap > div button.btn_share span {white-space:nowrap;}
 .goods_detail_tit_wrap p.price {margin-top:8px; color:#000; font-size:16px; line-height:1.5em; font-weight:400;}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+
+<style>
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-Light.woff2') format('woff2');
+	font-weight:100;
+}
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-CM.woff2') format('woff2');
+	font-weight:300;
+}
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-Regular.woff2') format('woff2');
+	font-weight:400;
+}
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-Medium.woff2') format('woff2');
+	font-weight:500;
+}
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-Bold.woff2') format('woff2');
+	font-weight:700;
+}
+@font-face{
+	font-family:'hana';
+	src:url('../../fonts/Hana2-Heavy.woff2') format('woff2');
+	font-weight:900;
+}
+.redart_event_240223 {padding:0 0 5.375em; font-family:'hana'; font-weight:400;}
+.redart_event_240223 {font-size:4.44444vw;}
+@media screen and (min-width:720px) {
+	.redart_event_240223 {padding-bottom:86px; font-size:32px;}
+}
+
+.redart_event_240223 .top {padding:50px;}
+.redart_event_240223 .box.box3 {padding-bottom:2.25em; background-color:#E5DEE2;}
+.redart_event_240223 .box.box3 div.tit {}
+.redart_event_240223 .box.box3 div.tit strong {font-size:18px; line-height:24px;}
+.redart_event_240223 .box.box3 div.dl_tit {background-color:#000; border-radius:2px; color:#fff; line-height:30px; text-align:center;}
+.redart_event_240223 .box.box3 div {padding:0 1em;}
+.redart_event_240223 .box.box3 dl {display:flex; justify-content:space-between; align-items:center; width:100%; padding:15px 13px; background-color:#fff; border-bottom:1px solid #000; font-size:14px; line-height:19px; letter-spacing:-0.05em;}
+.redart_event_240223 .box.box3 dl dt {font-weight:bold; padding:0 12px;}
+.redart_event_240223 .box.box3 dl dd {flex:1; padding:0 0 0 12px;}
+.redart_event_240223 .box.box3 a {display:flex; justify-content:center; align-items:center; height:3.375em; border:1px solid #000; border-radius:100px; text-align:center;}
+.redart_event_240223 .box.box3 a span {display:inline-block; color:#000; font-size:1em; font-weight:bold;}
+
+.redart_event_240223 .box.box4 {padding:0 1em 0;}
+.redart_event_240223 .box.box4 div.tit {display:flex; justify-content:space-between; align-items:center; position:relative; height:3.4375em; text-align:center;}
+.redart_event_240223 .box.box4 strong {display:block; font-size:0.875em;}
+.redart_event_240223 .box.box4 div.tit button {position:absolute; top:50%; right:0; width:1.25em; height:1.25em; background-color:#fff; transform:translateY(-50%) rotate(0); overflow:hidden;}
+.redart_event_240223 .box.box4 div.tit button.active {transform:translateY(-50%) rotate(180deg);}
+.redart_event_240223 .box.box4 ul {}
+.redart_event_240223 .box.box4 ul li {}
+.redart_event_240223 .box.box4 ul li + li {margin-top:0.6875em;}
+.redart_event_240223 .box.box4 ul li p {position:relative; padding-left:0.5em; font-size:0.75em; line-height:1.16666em;}
+.redart_event_240223 .box.box4 ul li p::before {content:"-"; display:block; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
+
+.redart_event_240223 .ev_btm {position:fixed; bottom:0; left:0; right:0; max-width:720px; margin:0 auto; padding:1em; background-color:#fff; font-family: 'Spoqa Han Sans Neo';}
+.redart_event_240223 .ev_btm button.btn {height:3.375em;}
+
+.ani {position:relative; top:40px; opacity:0; transition:all 0.5s ease;}
+.ani.active {top:0px; opacity:1;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="util-btn">
+				<button type="button"><span><img src="../../images/common/ico_back.png" alt="뒤로가기"></span></button>
+			</div>
+			<div class="inner">
+				<div class="header">
+					<h1>NFT 이벤트 응모</h1>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap">
+		<div class="page_default">
+
+			<div class="redart_event_240223">
+				<div class="box box1"><img src="../../images/event/240223/ev_240223_img01.png" alt="ㅇㅇㅇㅇ"></div>
+				<div class="box box2"><img src="../../images/event/240223/ev_240223_img02.png" alt="ㅇㅇㅇㅇ"></div>
+				<div class="box box3">
+					<img src="../../images/event/240223/ev_240223_img03.png" alt="ㅇㅇㅇㅇ">
+					<div>
+						<a href="#g"><span>온라인 전시 보러가기</span></a>
+					</div>
+				</div>
+
+				<div class="box box4">
+					<div class="tit"><strong>유의사항</strong></div>
+					<ul>
+						<li>
+							<p>본 이벤트는 트랙체인(www.trackchaincorp.com)에서 진행하는 이벤트로서 하나은행은 NFT 발행 및 NFT 지급 등 본 이벤트에 관련하여 일체의 법적 책임을 지지 않습니다.</p>
+						</li>
+						<li>
+							<p>본 이벤트를 통하여 지급하는 기념 NFT는 클레이튼 메인넷을 기반으로 발행됩니다.</p>
+						</li>
+						<li>
+							<p>트랙체인의 사정에 따라 이벤트의 내용이 변경되거나 조기 종료될 수 있습니다.</p>
+						</li>
+						<li>
+							<p>본 이벤트를 통하여 발급되는 이벤트 NFT 는 각기 고유합니다.</p>
+						</li>
+						<li>
+							<p>본 이벤트를 통하여 발행되는 이벤트 NFT를 수령하기 위해서는 레드아트에 회원가입 및 로그인을 해야 합니다.</p>
+						</li>
+						<li>
+							<p>본 NFT 이벤트에 [응모하기] 버튼을 클릭함으로써 해당 NFT 서비스 이용 안내에 동의하는 것으로 간주합니다.</p>
+						</li>
+						<li>
+							<p>레드아트 계정 1개당 1개의 NFT만 받으실 수 있습니다.</p>
+						</li>
+						<li>
+							<p>이벤트 관련 자세한 사항은 트랙체인 고객센터(070-7731-9191)로 문의하여 주시기 바랍니다.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="box box4">
+					<div class="tit"><strong>NFT 서비스 이용안내</strong>
+						<button type="button" class="btn_toggle"><span><img src="../../images/event/240223/ico_list_down.png" alt="더보기" /></span></button>
+					</div>
+					<ul class="toggleContent" style="display:none;">
+						<li>
+							<p>[하나아트뱅크 x 박미나 특별展 ] 전시 연계 NFT의 발행주체는 주식회사 ‘트랙체인’입니다. 따라서 레드아트 서비스 내 노출되는 본 NFT 관련 서비스의 범위, 혜택 및 이벤트 등의 주체도 ‘트랙체인’입니다.</p>
+						</li>
+						<li>
+							<p>본 NFT는 블록체인 네트워크 “클레이튼 (Klaytn)”의 프로토콜 KIP-17을 기반으로 발행되며, 발행된 NFT에 대한 상세 정보는 “NFT 지갑” 메뉴를 통해 확인 가능합니다.</p>
+						</li>
+						<li>
+							<p>본 NFT는 [하나아트뱅크 x 박미나 특별展 ] 전시 마케팅을 위해 발행된 것으로 고유(자산)가치를 가지지 않으며, 외부 전송 또는 재거래가 불가합니다.</p>
+						</li>
+						<li>
+							<p>본 NFT는 발행일로부터 1년 간 유효하며, 유효 기간 만료 시 별도의 안내 없이 자동으로 소각 될 수 있습니다.</p>
+						</li>
+						<li>
+							<p>본 NFT 홀더는 하나아트뱅크 및 레드아트에서 관련 마케팅 캠페인 진행 진행 시 차별화된 혜택을 받으실 수 있습니다.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ev_btm">
+					<div class="btn_group">
+						<div>
+							<button type="button" class="btn fill"><strong>NFT 이벤트 응모하기</strong></button>
+						</div>
+						<!-- <div>
+							<button type="button" class="btn line"><strong>이벤트 NFT 보러가기</strong></button>
+						</div> -->
+					</div>
+				</div>
+
+				
+
+			</div>
+			<!-- // redart_event_240223 -->
+
+		</div>
+	</div>
+	<!-- // container_wrap -->
+
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../../js/temp.js"></script> -->
+
+<script>
+
+let btnToggle = document.querySelector(".box4 button.btn_toggle");
+btnToggle.addEventListener("click", function(){
+	btnToggle.classList.toggle("active");
+	if(btnToggle.classList.contains("active")) {
+		document.querySelector(".toggleContent").style.display = "block";
+	} else {
+		document.querySelector(".toggleContent").style.display = "none";
+	}
+})
+
+
+
+// const element = document.getElementById("box");
+// element.scrollIntoView();
+// element.scrollIntoView(false);
+// element.scrollIntoView({ block: "end" });
+// element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+</script>
+</body>
+</html>

@@ -1727,7 +1727,7 @@ div.layer.toast span {display:inline-flex; justify-content:center; align-items:c
 
 
 /* 작품 문의하기 팝업 컨텐츠 */
-.layer .layer_customer {}
+.layer .layer_customer {}.slick-initialized .slick-slide
 .layer .layer_customer li {padding:0 16px;}
 .layer .layer_customer li label {display:block; position:relative; cursor:pointer; padding:10px 0;}
 .layer .layer_customer li label input[type="radio"] {position:absolute; top:0; left:0; opacity:0;}
@@ -1753,6 +1753,7 @@ div.layer.toast span {display:inline-flex; justify-content:center; align-items:c
 .layer.slideUpBnr {display:flex; align-items:flex-end; position:fixed; right:0; bottom:0; left:0; width:100%; max-width:720px; /* max-height:97.36842vh; */ max-height:auto; margin:0 auto; transition:all 0.2s ease; transform:translateY(102%); z-index:100;}
 .layer.slideUpBnr div.inner {display:flex; flex-direction:column; justify-content:space-between; width:100%; background-color:transparent; border-radius:16px 16px 0 0; z-index:10; overflow-y:auto;}
 .layer.slideUpBnr.active {transform:translateY(0);}
+.layer.slideUpBnr div.inner .slick-slide {line-height:0}
 /* // 배너성 레이어팝업 */
 
 .layer_bnr_list {max-height:73.4vw;}

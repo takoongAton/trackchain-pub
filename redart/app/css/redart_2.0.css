@@ -28,7 +28,7 @@ hr {display:block; border:0; border-top:1px solid #e2e2e5;}
 
 
 /* 기본 레이아웃 */
-html, body {font-family:'Spoqa Han Sans Neo';}
+html, body {font-family:'Spoqa Han Sans Neo', -apple-system;}
 .wrap {position:relative; width:100%; max-width:720px; margin:0 auto; overflow:hidden;}
 .wrap .header_wrap {position:fixed; top:0; right:0; left:0; max-width:720px; margin:0 auto; transform:translateY(0); transition:all 0.2s ease;
 	-webkit-backdrop-filter: saturate(180%) blur(20px);

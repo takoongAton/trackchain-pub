@@ -1796,7 +1796,7 @@ z-index:1;
 .layer.slideUpBnr button.btn span {position:relative; top:1px;}
 
 /* 배너용 레이어팝업 하단 오늘 그만보기 */
-.layer_bnr_btm {display:flex; justify-content:space-between; background-color:#fff;}
+.layer_bnr_btm {display:flex; justify-content:space-between; background-color:#fff; border-bottom:1px solid #ddd;}
 .layer_bnr_btm button {width:auto; height:48px; padding:0 16px;}
 .layer_bnr_btm button span {color:#000;}
 .layer_bnr_btm button.not_today span {color:#9D9D9D;}

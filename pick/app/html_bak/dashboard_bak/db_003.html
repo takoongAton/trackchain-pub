@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../../css/reset.css">
+	
+	<!-- Noto Sans KR 폰트 -->
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	
+	<link rel="stylesheet" href="../../css/pick.css">
+</head>
+<body>
+
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+					</div>
+					<h1>채널 상세</h1>
+					<div class="tools-btn">
+						<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button> -->
+						<button type="button" class="h_btn_scan"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+<style>
+/* 총 보유자산 */
+.priceBox {}
+.priceBox .boxTop {display:flex; flex-direction: column; justify-content: space-between; position:relative; width:100%; height:156px; padding:24px 20px; background-color:#fff; border-radius:20px; box-shadow:0 0 10px rgba(0,0,0,0.2); z-index:2;}
+.priceBox .boxTop p.tit {}
+.priceBox .boxTop p.price {display:flex; justify-content:flex-end; align-items:center; width:100%;}
+.priceBox .boxTop p.price strong {font-size:40px; font-family:'Montserrat';}
+.priceBox .boxTop p.price span {font-size:24px; font-family:'Noto Sans KR';}
+
+.priceBox .boxBottom {position:relative; margin-top:-20px; padding:40px 20px 20px; background-color:#58534F; z-index:1; border-radius:0 0 20px 20px; color:#fff;}
+.priceBox .boxBottom .table dl {display:flex; justify-content:space-between; align-items:center; width:100%; height:24px;}
+.priceBox .boxBottom .table dl + dl {margin-top:8px;}
+.priceBox .boxBottom .table dl dt {font-size:14px;}
+.priceBox .boxBottom .table dl p strong {display:inline-block; padding-left:28px; font-size:20px; line-height:20px; font-family:'Montserrat'; font-weight:600; background:url('') no-repeat left top / 24px 24px;}
+.priceBox .boxBottom .table dl p span {display:inline-block; font-size:16px; line-height:20px; font-family:'Noto Sans KR'; font-weight:400;}
+.priceBox .boxBottom .table dl p strong.up {background-image:url('../../images/ico/ico_increase.png');}
+.priceBox .boxBottom .table dl p strong.down {background-image:url('../../images/ico/ico_decrease.png');}
+
+
+.priceBox .boxBottom .boxBottom .home {display:flex; justify-content:space-evenly; align-items:center; width:100%;}
+.priceBox .boxBottom .boxBottom .home p {position:relative; width:100%; text-align:center;}
+.priceBox .boxBottom .boxBottom .home p strong {display:inline-block; font-size:14px; line-height:20px; font-family:'Montserrat'; font-weight:400;}
+.priceBox .boxBottom .boxBottom .home p span {display:inline-block; font-size:14px; line-height:20px; font-family:'Noto Sans KR'; font-weight:500;}
+.priceBox .boxBottom .boxBottom .home p + p::before {content:""; display:block; position:absolute; top:0; left:0; width:1px; height:100%; background-color: #222;}
+
+
+/* 채널 상세 상단 */
+.channer_detail_header {padding:28px 24px 23px; text-align:center;}
+.channer_detail_header span.ico {display:inline-block; width:60px; height:60px;}
+.channer_detail_header p.tit {margin-top:8px; color:#222; font-size:16px; line-height:22px; font-family:'Montserrat'; font-weight:700;}
+.channer_detail_header p.txt {margin-top:4px; color:#999; font-size:12px; line-height:16px; font-weight:400;}
+
+/* 기본 회색 박스 */
+.grayBox {padding:40px 24px; background-color:#f7f7f7;}
+
+</style>
+	<div class="db_channlerDetailEx">
+		<div class="channer_detail_header">
+			<span class="ico"><img src="../../images/ico/ico_channel_upbit.png" alt="업비트"></span>
+			<p class="tit">Upbit</p>
+			<p class="txt">거래소 : 국내</p>
+			<div>
+				<p><span>현재가:</span><strong>100,000,000</strong><span>원</span></p>
+			</div>
+		</div><!-- // channer_detail_header -->
+
+		<div class="grayBox">
+			<div class="priceBox">
+				<div class="boxTop">
+					<p class="tit">총 보유 자산</p>
+					<p class="price">
+						<strong>270,000</strong>
+						<span>원</span>
+					</p>
+				</div><!-- // boxTop -->
+				<div class="boxBottom">
+					<!-- <div class="home">
+						<p>
+							<strong>채널</strong>
+							<span>3</span>
+						</p>
+						<p>
+							<strong>자산</strong>
+							<span>7</span>
+						</p>
+						<p>
+							<strong>NFT</strong>
+							<span>5</span>
+						</p>
+					</div> -->
+					<div class="table">
+						<dl>
+							<dt>총 매수</dt>
+							<dd>
+								<p><strong>100,000</strong><span>원</span></p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>평가손익</dt>
+							<dd>
+								<p><strong>100,000</strong><span>원</span></p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>수익률</dt>
+							<dd>
+								<p><strong class="up">9.99</strong><span>%</span></p>
+								<!-- <p><strong class="down">9.99</strong><span>원</span></p> -->
+							</dd>
+						</dl>
+					</div>
+				</div><!-- // boxBottom -->
+			</div><!-- // priceBox -->
+
+
+<style>
+/* dashboard_home - MY NFT coins */
+.my_coins_list {margin-top:48px; padding:0;}
+.my_coins_list .item {padding:20px 16px; border-radius:20px; background-color:#fff;}
+.my_coins_list .item + .item {margin-top:12px;}
+.my_coins_list .item .coinsItem {display:flex; justify-content:space-between; align-items:center; width:327px; width:100%; height:48px;}
+.my_coins_list .item .coinsItem div.icon {width:48px; height:48px;}
+.my_coins_list .item .coinsItem div.icon span {display:block; width:48px; height:48px; background-color:#f7f7f7; border-radius:24px; overflow:hidden;}
+.my_coins_list .item .coinsItem div.txt {flex:1; margin-left:12px;}
+.my_coins_list .item .coinsItem div.txt p.money {display:flex; align-items:center; color:#222;}
+.my_coins_list .item .coinsItem div.txt p.money strong {display:inline-block; font-size:20px; line-height:22px; font-family:'Montserrat'; font-weight:600;}
+.my_coins_list .item .coinsItem div.txt p.money span {display:inline-block; font-size:20px; line-height:22px; font-weight:500;}
+.my_coins_list .item .coinsItem div.txt p.rate {color:#666; font-size:12px; line-height:22px;}
+.my_coins_list .item .coinsItem div.tools img {width:20px; height:20px;}
+
+.nodata_coins {width:100%; padding:80px 0; text-align:center;}
+.nodata_coins span.ico {display:inline-block; width:80px; height:80px;}
+.nodata_coins p {color:#666; font-size:14px; line-height:21px;;}
+</style>
+			<div class="my_coins_list">
+				<div class="item">
+					<div class="coinsItem">
+						<div class="icon">
+							<span><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+						</div>
+						<div class="txt">
+							<p class="money">
+								<strong>228,000</strong>
+								<span>원</span>
+							</p>
+							<p class="rate">0.068 BTC (50%)</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="coinsItem">
+						<div class="icon">
+							<span><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+						</div>
+						<div class="txt">
+							<p class="money">
+								<strong>155,000</strong>
+								<span>원</span>
+							</p>
+							<p class="rate">0.3 ETH (22%)</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- // my_coins_list -->
+
+			<button type="button" class="btn txt"><span>더보기</span></button>
+
+			<div class="nodata_coins">
+				<span class="ico"><img src="../../images/ico_nodata_coins.png" alt="코인이미지"></span>
+				<p>보유중인 자산이 없습니다.</p>
+			</div><!-- // nodata_coins -->
+
+		</div><!-- // grayBox -->
+	</div><!-- // db_channlerDetailEx -->
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+
+
+</script>
+
+</body>
+</html>

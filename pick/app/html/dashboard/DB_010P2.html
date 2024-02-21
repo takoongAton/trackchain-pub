@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+
+/* 팝업 네트워크 선택 */
+/* .network_sel_wrap {display:flex; justify-content:space-around; flex-wrap:wrap; row-gap:16px; width:100%;} */
+.network_sel_wrap {display:grid; grid-template-columns:auto auto auto; justify-content:space-around; flex-wrap:wrap; row-gap:16px; width:100%;}
+.network_sel_wrap .item {width:80px;}
+
+
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="header_wrap">
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>지갑 세부사항</h1>
+						<div class="tools-btn">
+							<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button> -->
+							<button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div><!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+				
+			<div class="wallet_detail_header">
+				<span class="ico"><img src="../../images/ico/ico_channel_wallet.png" alt="업비트"></span>
+				<p class="tit">
+					<strong>Wallet A</strong>
+					<button class="btn_eidt"><span><img src="../../images/ico/ico_edit2.png" alt="수정"></span></button>
+				</p>
+				<p class="txt">0x12329fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl0x12329fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl29fkl</p>
+			</div><!-- // wallet_detail_header -->
+
+			<div class="wallet_network_wrap">
+				<div class="wallet_network">
+					<div class="tit">
+						<strong>Network</strong>
+						<button type="button"><span class="ico"><img src="../../images/setting.png" alt="설정"></span></button>
+					</div>
+					<div class="network_list">
+						<span class="ico"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+						<span class="ico"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+						<span class="ico"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+					</div>
+				</div>
+					</div>
+		</div><!-- // container_wrap -->
+
+	</div><!-- // wrap -->
+
+
+
+
+
+	<div class="layer dim"></div>
+	
+	<div class="layer modal">
+		
+		<div class="layer_inner">
+			<div class="layer_header">
+				<div class="layer_tit"><strong>Network</strong></div>
+				<div class="txt_content">
+					<p class="txt">추가할 채널을 선택해주세요.</p>
+				</div>
+			</div>
+			<div class="layer_section">
+				<div class="form_content">
+					<div class="network_sel_wrap">
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+									<input type="checkbox" id="set_checkbox1">
+									<label for="set_checkbox1"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Ethereum</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Polygon.png" alt="폴리곤"></span>
+									<input type="checkbox" id="set_checkbox2">
+									<label for="set_checkbox2"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Polygon</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_BNBChain.png" alt="비엔비체인"></span>
+									<input type="checkbox" id="set_checkbox3">
+									<label for="set_checkbox3"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">BNB Chain</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Klaytn.png" alt="클레이튼"></span>
+									<input type="checkbox" id="set_checkbox4">
+									<label for="set_checkbox4"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Klaytn</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+									<input type="checkbox" id="set_checkbox5">
+									<label for="set_checkbox5"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Solana</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+									<input type="checkbox" id="set_checkbox6">
+									<label for="set_checkbox6"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Bitcoin</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+									<input type="checkbox" id="set_checkbox11">
+									<label for="set_checkbox11"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Ethereum</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Polygon.png" alt="폴리곤"></span>
+									<input type="checkbox" id="set_checkbox21">
+									<label for="set_checkbox21"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Polygon</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_BNBChain.png" alt="비엔비체인"></span>
+									<input type="checkbox" id="set_checkbox31">
+									<label for="set_checkbox31"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">BNB Chain</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Klaytn.png" alt="클레이튼"></span>
+									<input type="checkbox" id="set_checkbox41">
+									<label for="set_checkbox41"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Klaytn</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+									<input type="checkbox" id="set_checkbox51">
+									<label for="set_checkbox51"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Solana</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+									<input type="checkbox" id="set_checkbox61">
+									<label for="set_checkbox61"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Bitcoin</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+									<input type="checkbox" id="set_checkbox12">
+									<label for="set_checkbox12"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Ethereum</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Polygon.png" alt="폴리곤"></span>
+									<input type="checkbox" id="set_checkbox22">
+									<label for="set_checkbox22"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Polygon</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_BNBChain.png" alt="비엔비체인"></span>
+									<input type="checkbox" id="set_checkbox33">
+									<label for="set_checkbox33"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">BNB Chain</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_Klaytn.png" alt="클레이튼"></span>
+									<input type="checkbox" id="set_checkbox44">
+									<label for="set_checkbox44"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Klaytn</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+									<input type="checkbox" id="set_checkbox55">
+									<label for="set_checkbox55"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Solana</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ipt_checkbox_icon_item">
+								<div class="ipt_checkbox_icon coin">
+									<span class="img"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+									<input type="checkbox" id="set_checkbox66">
+									<label for="set_checkbox66"></label>
+									<span class="checkmark"></span>
+								</div>
+								<p class="txt">Bitcoin</p>
+							</div>
+						</div>
+					</div><!-- // network_sel_wrap -->
+				</div><!-- // form_content -->
+			</div>
+
+			<div class="layer_footer">
+				<div class="btnGroup">
+					<div class="btn"><button class="btn fill popup"><span>저장</span></button></div>
+				</div>
+			</div>
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+
+
+
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+
+
+<script>
+let modal_wrap = document.querySelector(".layer.modal");
+let modal_headerH = modal_wrap.querySelector(".layer_header").clientHeight;
+let modal_sectionH = modal_wrap.querySelector(".layer_section").clientHeight;
+let modal_footerH = modal_wrap.querySelector(".layer_footer").clientHeight;
+if(modal_wrap.clientHeight < modal_headerH + modal_sectionH + modal_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	modal_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	modal_wrap.classList.remove("scrollH")
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>

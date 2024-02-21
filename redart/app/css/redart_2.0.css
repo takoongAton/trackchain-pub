@@ -1727,7 +1727,7 @@ div.layer.toast span {display:inline-flex; justify-content:center; align-items:c
 
 
 /* 작품 문의하기 팝업 컨텐츠 */
-.layer .layer_customer {}.slick-initialized .slick-slide
+.layer .layer_customer {}
 .layer .layer_customer li {padding:0 16px;}
 .layer .layer_customer li label {display:block; position:relative; cursor:pointer; padding:10px 0;}
 .layer .layer_customer li label input[type="radio"] {position:absolute; top:0; left:0; opacity:0;}
@@ -2110,8 +2110,6 @@ z-index:1;
 .order_agree_form ul.order_agree_list li button {display:flex; justify-content:center; align-items:center; width:24px; height:24px;}
 .order_agree_form ul.order_agree_list li button span {display:inline-block; width:20px; height:20px;}
 .order_agree_form ul.order_agree_list li button img {width:20px; height:20px;}
-/* .order_agree_form .order_agree_list {display:none;}
-.order_agree_form .order_agree_list.active {display:block;} */
 .order_agree_form label {position:relative; padding-left:36px; font-size:16px; line-height:24px; cursor:pointer;}
 .order_agree_form label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
 .order_agree_form label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:50%; left:0; width:24px; height:24px; background-image: url('../images/common/btn_scheck_off.png'); background-repeat: no-repeat; background-position: center; background-size: contain; vertical-align:top; transform:translateY(-50%);}

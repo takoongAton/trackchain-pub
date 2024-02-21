@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+	<div class="pick_home">
+
+		<div class="home_header">
+			<div>
+				<strong>Welcome!</strong>
+				<p>반가워요 김트랙님</p>
+			</div>
+			<div>
+				<div class="profile">
+					<img src="../../images/temp/icon_profile_sam.png" alt="프로필이미지">
+				</div>
+			</div>
+		</div>
+		<!-- // home_header -->
+
+		<div class="home_price_wrap">
+			<div class="priceBox">
+				<div class="boxTop">
+					<p class="tit">총 보유 자산</p>
+					<p class="price">
+						<strong>270,000</strong>
+						<span>원</span>
+					</p>
+					<button type="button" class="btn_refresh"><span><img src="../../images/ico/ico_reset.png" alt="새로고침"></span></button>
+				</div><!-- // boxTop -->
+				<div class="boxBottom">
+					<div class="home">
+						<p>
+							<strong>채널</strong>
+							<span>3</span>
+						</p>
+						<p>
+							<strong>자산</strong>
+							<span>7</span>
+						</p>
+						<p>
+							<strong>NFT</strong>
+							<span>5</span>
+						</p>
+					</div>
+				</div><!-- // boxBottom -->
+			</div><!-- // priceBox -->
+
+			<div class="priceBox">
+				<div class="boxTop">
+					<p class="tit">총 보유 자산</p>
+					<p class="nodata" style="display:flex; justify-content:center; align-items:center; flex:1; color:#666; font-size:15px; line-height:22px; text-align:center;">
+						연결된 채널에<br />보유 자산이 없어요. 😮
+					</p>
+					<button type="button" class="btn_refresh"><span><img src="../../images/ico/ico_reset.png" alt="새로고침"></span></button>
+				</div><!-- // boxTop -->
+				<div class="boxBottom">
+					<div class="home">
+						<p>
+							<strong>채널</strong>
+							<span>3</span>
+						</p>
+						<p>
+							<strong>자산</strong>
+							<span>7</span>
+						</p>
+						<p>
+							<strong>NFT</strong>
+							<span>5</span>
+						</p>
+					</div>
+				</div><!-- // boxBottom -->
+			</div><!-- // priceBox -->
+
+			<div class="home_add_wallet">
+				<p class="txt">거래소나 지갑을 추가하면<br />
+					흩어져 있는 가상 자산을 한 눈에 모아볼 수 있어요.</p>
+				<span><img src="../../images/home/icon_home_add_wallet.png" alt="연동하기"></span>
+				<p class="txt2">지금 자산을 연동해볼까요?</p>
+			</div><!-- // home_add_wallet -->
+		</div><!-- // home_price_wrap -->
+
+		<div class="home_today_wrap">
+
+			<div class="today_tit">
+				<strong>💎Today</strong>
+				<button type="button"><span><img src="../../images/home/ico_filter.png" alt="필터보기"></span></button>
+			</div>
+
+			<div class="home_card_list">
+				<div class="item issue"><img src="../../images/home/home_today_img1.png" alt="카드1"></div>
+				<div class="item edu"><img src="../../images/home/home_today_img2.png" alt="카드1"></div>
+				<div class="item invest"><img src="../../images/home/home_today_img3.png" alt="카드1"></div>
+			</div>
+		</div>
+		<!-- // home_today_wrap -->
+
+		<button class="btn more"><span>더보기</span></button>
+
+	</div><!-- // pick_home -->
+
+
+	
+	<div class="layer dim" style="display:none;"></div>
+
+	<div class="layer footer" style="display:none;">
+			
+		<div class="layer_inner">
+			<div class="layer_header">
+				<div class="layer_tit"><strong>콘텐츠 필터</strong></div>
+			</div>
+			<!-- // layer_header -->
+	
+			<div class="layer_section">
+	
+				<div class="home_filter_wrap">
+					<dl>
+						<dt>날짜</dt>
+						<dd>
+							<span><input type="date" value="2023-01-01" min="2023-01-01" max="2023-12-31"></span>
+							<span><img src="../../images/ico/ico_right_arrow.png" alt=""></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>카테고리</dt>
+						<dd>
+							<p>1개 선택</p>
+							<span><img src="../../images/ico/ico_right_arrow.png" alt=""></span>
+						</dd>
+					</dl>
+				</div><!-- // home_filter_wrap -->
+	
+			</div>
+			<!-- // layer_section -->
+	
+			<!-- <div class="layer_footer">
+				<div class="btnGroup">
+					<div><button class="btn fill popup"><span>확인</span></button></div>
+				</div>
+			</div>		 -->
+			<!-- // layer_footer -->	
+		</div><!-- // layer_inner -->
+	
+		<div class="btnClose">
+			<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer footer -->
+
+	
+	<div class="layer footer" style="display:none">
+		
+		<div class="layer_inner">
+			<div class="layer_header">
+				<div class="layer_tit"><strong>카테고리</strong></div>
+				<div class="txt_content">
+					<p class="txt">지갑이 추가 되었습니다.</p>
+				</div><!-- // layer_con -->
+			</div>
+			<!-- // layer_header -->
+	
+			<div class="layer_section">
+	
+				<div class="home_category_sel_wrap">
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_general_News.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox1">
+								<label for="cate_checkbox1"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">일반 뉴스</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_edu.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox2">
+								<label for="cate_checkbox2"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토 교육</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_news(daily).png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox3">
+								<label for="cate_checkbox3"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토 뉴스<br />(데일리)</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_News(weekly).png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox4">
+								<label for="cate_checkbox4"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토 뉴스<br />(위클리)</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_event.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox5">
+								<label for="cate_checkbox5"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토 이벤트</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_trend.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox6">
+								<label for="cate_checkbox6"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토 트랜드</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_crypto investment strategy.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox11">
+								<label for="cate_checkbox11"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">크립토<br />투자 전략</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_report_introduction.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox21">
+								<label for="cate_checkbox21"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">리포트 소개</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="ipt_checkbox_icon_item">
+							<div class="ipt_checkbox_icon category">
+								<span class="img"><img src="../../images/home/ico_crypto_interest.png" alt="아이콘"></span>
+								<input type="checkbox" id="cate_checkbox31">
+								<label for="cate_checkbox31"></label>
+								<span class="checkmark"></span>
+							</div>
+							<p class="txt">흥미</p>
+						</div>
+					</div>
+				</div><!-- // home_category_sel_wrap -->
+			</div>
+			<!-- // layer_section -->
+	
+			<div class="layer_footer">
+				<!-- <p>layer_footer</p> -->
+				<div class="btnGroup">
+					<div><button class="btn fill popup"><span>확인</span></button></div>
+				</div>
+			</div>		
+			<!-- // layer_footer -->	
+		</div><!-- // layer_inner -->
+	
+		<div class="btnClose">
+			<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+
+
+<script>
+let footer_wrap = document.querySelector(".layer.footer.active");
+let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	footer_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	footer_wrap.classList.remove("scrollH")
+}
+</script>
+
+
+</body>
+</html>

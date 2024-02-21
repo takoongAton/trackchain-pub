@@ -1,0 +1,95 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=pie-borderRadius&code=PYBwLglsB2AEC8sDeAoWszGAG0iAXMmuhgE4QDmFApqYQOQRjUC29xAvgDTHbU3QAJoVQlYAI2BhMLBgFYApPR5i-AMzAMAxtWjNS7dN2IBnWhGonCAbWLpRY2NACGLagwCCWnSZOwAYqTAbCqOYACeIO6w9CAWynYkpM6CEACuVrDW9ABsAAxKXDEA7AX0ALqhYs4AbsAQggAyzuLU2ADyNbTYzgSwas7YZlUkTKwAyhF8IolikqSCtABKKemZAIx5eSNzwAu0AMI4ewwAxGoXCY4k84ukAOoNYAAWhABMs7DG1z2t2DPXdAmZ7AADuhAGQ2oOxIIGAJiYUGg2l0-kMjm-jlYIGezgRmQcPxabQBgKBIPBZDS0M-YjUMDA4wgAC9ogAWba0kj0vT3aiUZ6aGKSbCCdHXDifTGqYnYRoQaDRQmOYFgiGDMxSmGCZxgZw2LlIWA1QbUwibNkADiKLjcDHG1GcpC0z1gAFFoBQFdR6F8YfZjabosUAMxyG2uaL0AAiEFI1C0YF90scRpN2DNsBDIe2TkjDAAag1qMBYB5BCZk_7kIGM9Fs7nbVGi4s3qXy5W_Yba5mw438zEW4t2xXk59yolJegJxwANxAA&lang=js
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="width:375px; height:300px; margin:0 auto;"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    bottom: '5%',
+    left: 'center'
+  },
+  series: [
+    {
+      name: 'Access From',
+      type: 'pie',
+      radius: ['60%', '70%'],
+      avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 100,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: 20,
+          fontWeight: 'bold'
+        }
+      },
+      labelLine: {
+        show: false
+      },
+      data: [
+        { value: 1048, name: 'Search Engine' },
+        { value: 735, name: 'Direct' },
+        { value: 330, name: 'Video Ads' },
+        { value: 330, name: 'Vide2o Ads' },
+        { value: 350, name: 'Viddeo Ads' }
+      ]
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.home_today_wrap .keyword_wrap {padding:30px 24px; background-color:#fff; border-radius:20px;}
+.home_today_wrap .keyword_wrap div.tit {color:#222; font-size:20px; line-height:26px;}
+.home_today_wrap .keyword_wrap strong {display:inline-block; padding-right:24px; background:url('../../images/home/material-symbols_arrow-right-alt.png') no-repeat right center / 24px 24px;; color:#FF643C; font-size:20px; line-height:26px; font-weight:bold;}
+.home_today_wrap .keyword_wrap .keyword {display:flex; flex-wrap:wrap; margin-top:24px; gap:8px;}
+.home_today_wrap .keyword_wrap .keyword span {display:inline-block; margin-right:8px; padding:10px 14px; border-radius:4px; background-color:rgba(255,100,60,0.1); color:#666; font-size:15px; letter-spacing:-0.05em;}
+/* // home - today - keyword */
+
+/* home - today - 카드형 */
+.home_card_wrap {}
+.home_card_wrap .item {border-radius:20px; background-color:red; color:#fff;}
+.home_card_wrap .item .txt_wrap {padding:48px 24px 0;}
+.home_card_wrap .item .txt_wrap span.cate {color:rgba(255,255,255,0.8); font-size:14px; line-height:20px; font-weight:bold;}
+.home_card_wrap .item .txt_wrap p.tit {margin-top:16px; font-size:28px; line-height:34px;}
+.home_card_wrap .item .txt_wrap p.txt {margin-top:8px; font-size:16px; line-height:24px;}
+.home_card_wrap .item picture {text-align:center;}
+.home_card_wrap .item div.linktxt1 {padding:12px 24px; background-color:rgba(0,0,0,0.1); text-align:right;}
+.home_card_wrap .item div.linktxt1 strong {display:inline-block; padding-right:26px; background:url('../../images/home/material-symbols_arrow-right-alt_white.png') no-repeat right center / 24px 24px; font-size:16px; line-height:25px; font-weight:500;}
+.home_card_wrap .item div.linktxt2 {padding:0 28.5px 40px;}
+.home_card_wrap .item div.linktxt2 p {display:flex; height:60px; padding:5px; background-color:#fff; border-radius:30px; color:#666; font-size:16px; }
+.home_card_wrap .item div.linktxt2 p span {display:inline-flex; justify-content:center; align-items:center; width:67px; background-color:#F47C6B; border-radius:60px;}
+.home_card_wrap .item div.linktxt2 p span img {display:block; width:24px; height:25px;}
+.home_card_wrap .item div.linktxt2 p strong {display:flex; justify-content:center; align-items:center; flex:1; padding-right:10px; color:#666; font-size:16px; font-weight:500;}
+.home_card_wrap .item.issue {background-color:#927B67;}
+.home_card_wrap .item.issue picture {padding:7px 0 36px;}
+.home_card_wrap .item.issue picture img {width:186px;}
+.home_card_wrap .item.portfolio {background-color:#F47C6B;}
+.home_card_wrap .item.portfolio picture {padding:28px 0 36px;}
+.home_card_wrap .item.portfolio picture img {width:135px;}
+/* // home - today - 카드형 */

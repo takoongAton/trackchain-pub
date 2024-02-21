@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>omnion</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Omnion" />
+	<meta property="og:description" content="개인형 디지털 지갑" />
+	<meta property="og:image" content="../images/omnion_meta.png" />
+
+	<link rel="stylesheet" href="../css/Global.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="../images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+	
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>개인정보처리방침</h1>
+					<!-- <div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div> -->
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+					
+					<div class="inBox">
+						<pre>
+							<strong>제 1조 수집하는 개인정보의 항목 및 수집 방법</strong>
+							
+							1. 재화등의 공급자 및 판매자의 상호, 대표자의 성명ㆍ주소 및 전화번호 등
+							2.    재화등의 명칭ㆍ종류 및 내용
+							2의2. 재화등의 정보에 관한 사항. 이 경우 제품에 표시된 기재로 계약내용에 관한 서면에의 기재를 갈음할 수 있다.
+							3.    재화등의 가격 (가격이 결정되어 있지 아니한 경우에는 가격을 결정하는 구체적인 방법)과 그 지급방법 및 지급시기
+							4.    재화등의 공급방법 및 공급시기
+							5.    청약의 철회 및 계약의 해제(이하 “청약철회등”이라 한다)의 기한ㆍ행사방법 및 효과에 관한 사항(청약철회등의 권리를 행사하는 데에 필요한 서식을 포함한다)
+							6.    재화등의 교환ㆍ반품ㆍ보증과 그 대금 환불 및 환불의 지연에 따른 배상금 지급의 조건ㆍ절차
+							7.    전자매체로 공급할 수 있는 재화등의 전송ㆍ설치 등을 할 때 필요한 기술적 사항
+							8.    소비자피해보상의 처리, 재화등에 대한 불만 처리 및 소비자와 사업자 사이의 분쟁 처리에 관한 사항
+							9.    거래에 관한 약관(그 약관의 내용을 확인할 수 있는 방법을 포함한다)
+							10. 소비자가 구매의 안전을 위하여 원하는 경우에는 재화등을 공급받을 때까지 대통령령으로 정하는 제3자에게 그 재화등의 결제대금을 예치하는 것(이하 “결제대금예치”라 한다)의 이용을 선택할 수 있다는 사항 또는 통신판매업자의 제24조제1항에 따른 소비자피해보상보험계약등의 체결을 선택할 수 있다는 사항(제15조제1항에 따른 선지급식 통신판매의 경우에만 해당하며, 제24조제3항에 각 호의 어느 하나에 해당하는 거래를 하는 경우는 제외한다)
+						</pre>
+					</div>
+
+				</div><!-- // section_top -->
+				
+			</div>
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+	
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+/* 테스트 스크립트 */
+function openFull(target){
+	let targetLayer = '#' + target;
+	$(targetLayer).show();
+	$("html").addClass("scrollHidden");
+}
+$(".layer.full button.btn_close").on("click", function(){
+	$(this).closest(".layer.full").hide();
+	$("html").removeClass("scrollHidden");
+})
+</script>
+
+
+</body>
+</html>

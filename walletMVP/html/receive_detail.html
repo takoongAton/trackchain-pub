@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>omnion</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Omnion" />
+	<meta property="og:description" content="개인형 디지털 지갑" />
+	<meta property="og:image" content="../images/omnion_meta.png" />
+
+	<link rel="stylesheet" href="../css/Global.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="../images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+	
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>페이지타이틀</h1>
+					<!-- <div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div> -->
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap linearBg"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+					
+					<div class="inBox">
+						<div class="selectCoin">
+							<div class="triger">
+								<div class="item"><p>코인 / 토큰 / NFT</p></div>
+							</div>
+							<div class="list" style="display:none;">
+								<div class="item"><span class="icon"><img src="../images/icon_ether.png" alt="이더리움 아이콘"></span><p class="name">이더리움</p></div>
+								<div class="item"><span class="icon"><img src="../images/icon_ether.png" alt="이더리움 아이콘"></span><p class="name">이더리움</p></div>
+								<div class="item"><span class="icon"><img src="../images/icon_klaytn.png" alt="클레이튼 아이콘"></span><p class="name">클레이튼</p></div>
+							</div>
+						</div><!-- // selectCoin"> -->
+<style>
+.receiveWrap .code p {transition:all 0.2s ease-in-out;}
+.receiveWrap .code.active p {background-color:#ff9100; color:#fff;}
+</style>
+						<div class="receiveWrap">
+							<div class="qrcode"><img src="../images/img_qrcode.png" alt="QR코드 이미지"></div>
+							<div class="code">
+								<p>0xA8e62D08dF4d645916048b79360C3f2D564A3dEf</p>
+							</div>
+							<button type="button" class="btnCopy"><span><img src="../images/btn_clipboard.png" alt="복사하기"></span></button>
+						</div><!-- // receiveWrap -->
+					</div>
+
+				</div><!-- // section_top -->
+
+				<div class="section_bottom">
+					<div class="btn_group">
+						<div><button type="button" class="next"><span>완료</span></button></div>
+					</div>
+				</div><!-- // section_bottom -->
+
+			</div>
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+
+/* 코인,토큰,NFT 선택하기 */
+$(".triger").on("click", function(){
+	$(".selectCoin div.list").slideToggle(200);
+})
+let selectCoin = document.querySelector(".selectCoin");
+if(selectCoin != null){
+	let selectCoinTriger = selectCoin.querySelector(".triger");
+	selectCoinTriger.addEventListener("click", function(){
+		console.log("asdfasdfasf")
+		let conList = selectCoin.querySelectorAll(".list .item");
+		conList.forEach(function(item,index){
+			item.addEventListener("click", function(){
+				const node = item;
+				const clone = node.cloneNode(true);
+				selectCoinTriger.innerHTML = "";
+				selectCoinTriger.appendChild(clone);
+				selectCoin.querySelector(".list").style.display = 'none'
+			})
+		})
+	})
+}
+/* // 코인,토큰,NFT 선택하기 */
+
+const code = document.querySelector(".receiveWrap .code");
+if(code != null) {
+	code.addEventListener("click", function(){
+		console.log("click");
+		code.classList.add("active");
+		setTimeout(function(){
+			code.classList.remove("active");
+		},200)
+	})
+}
+
+</script>
+
+
+</body>
+</html>

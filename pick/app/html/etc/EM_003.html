@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+	<div class="email_wrap">
+		<div class="pick_logo"><img src="../../images/etc/logo_pick.png" alt="PICK"></div>
+
+		<div class="img"><img src="../../images/etc/img_email03.png" alt="이미지"></div>
+
+		<p class="tit">
+			이 가입인증 링크는<br />
+			<span>만료</span>되었습니다.
+		</p>
+
+		<p class="txt">새로운 가입인증 메일을 확인해주세요.</p>
+		
+		<p class="copyright">
+			<span>문의: pick@trackchaincorp.com</span>
+			<span>© 2022 TrackChain Inc. All Rights Reserved.</span>
+		</p>
+	</div>
+	<!-- // email_wrap -->
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+<script>
+// let footer_wrap = document.querySelector(".layer.footer.active");
+// let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+// let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+// let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+// if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+// 	console.log ("스크롤 생겨야함.")
+// 	footer_wrap.classList.add("scrollH")
+// } else {
+// 	console.log ("스크롤 안생겨야함.")
+// 	footer_wrap.classList.remove("scrollH")
+// }
+
+
+/* select focus in,out */
+let selectItems = document.querySelectorAll(".set_select select");
+if(selectItems.length > 0) {
+	selectItems.forEach(function(item,index){
+		item.addEventListener("focusin", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.add("active")
+		})
+		item.addEventListener("focusout", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.remove("active")
+		})
+	})
+}
+</script>
+
+
+</body>
+</html>

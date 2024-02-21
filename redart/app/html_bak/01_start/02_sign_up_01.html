@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+.ddd {position:relative; width:100%; padding:0 16px 36px; z-index:1;}
+.ddd p {color:#fff; text-align:center;}
+.ddd p.txt {margin-top:24px; font-size:16px; line-height:21px;}
+.ddd p.last_login {margin-top:24px; font-size:14px; line-height:18px;;}
+.ddd p.last_login strong {font-weight:bold;}
+.ddd ul {margin-top:35px;}
+.ddd ul li {}
+.ddd ul li + li {margin-top:16px;}
+.ddd ul li button {position:relative; height:54px; background-color:#fff; border-radius:27px;}
+.ddd ul li button span {}
+.ddd ul li button span.ico {position:absolute; top:50%; left:16px; width:24px; height:24px; color:#fff; border-radius:100%; transform:translateY(-50%);}
+.ddd ul li button span.txt {font-size:16px; line-height:21px;}
+.ddd button.btn_more {height:18px; margin-top:36px;}
+.ddd button.btn_more span {color:#fff;}
+
+
+.layer.slideUp {}
+.login_content {text-align:center;;}
+.login_content ul {display:flex; justify-content:center; gap:28px; margin-top:28px;}
+.login_content ul li {}
+.login_content ul li button {width:48px; height:48px;}
+
+.login_content p.txt {font-size:16px; line-height:21px;}
+.login_content p.last_login {margin-top:36px; font-size:14px; line-height:18px;;}
+.login_content p.last_login strong {font-weight:bold;}
+
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+
+		<div class="container_wrap">
+
+			<div class="login_wrap_new">
+				
+				<!-- <button class="btn_cancel"><span>닫기</span></button> -->
+
+				<div class="login">
+					<div class="img"><img src="../../images/01_start/login_new_bg.png" alt="배경이미지"></div>
+
+					<div class="login_over_view">
+						<div class="trackchain_bi"><img src="../../images/common/login_bi_wt.svg" alt="redart"></div>
+
+						<div class="ddd">
+							<p class="txt">
+								간편하게 로그인하고<br />
+								다양한 서비스를 즐겨보세요.
+							</p>
+							<ul>
+								<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_naver_48.png" alt=""></span><span class="txt">네이버로 시작</span></button></li>
+								<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_apple_48.png" alt=""></span><span class="txt">Apple로 시작</span></button></li>
+								<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_google_48.png" alt=""></span><span class="txt">구글로 시작</span></button></li>
+							</ul>
+							<p class="last_login">최근 로그인한 계정은 <strong>네이버</strong>입니다.</p>
+							<button class="btn_more"><span>둘러보기</span></button>
+						</div>
+					</div>
+				</div>
+
+
+				
+			</div>
+			<!-- // login_wrap_new -->
+
+		</div>
+		<!-- // container_wrap -->
+
+	</div><!-- // wrap -->
+
+
+	<div class="layer slideUp active" style="display:block">
+		<div class="dim"></div>
+		<div class="inner">
+			<div class="login_content">
+				<p class="txt">
+					간편하게 로그인하고<br />
+					다양한 서비스를 즐겨보세요.
+				</p>
+				<ul>
+					<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_naver_48.png" alt="네이버로 시작"></span></button></li>
+					<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_apple_48.png" alt="Apple로 시작"></span></button></li>
+					<li><button type="button"><span class="ico"><img src="../../images/01_start/ico_google_48.png" alt="구글로 시작"></span></button></li>
+				</ul>
+				<p class="last_login">최근 로그인한 계정은 <strong>네이버</strong>입니다.</p>
+			</div>
+		</div>
+		
+	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+</body>
+</html>

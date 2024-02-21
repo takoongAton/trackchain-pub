@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+.tabbar {z-index:2;}
+.nft_list .nft_item div.info p.txt {display:inline-block; position:relative; word-break:break-all;}
+.nft_list .nft_item div.info p.txt::before {content:""; display:block; position:absolute; top:50%; left:-10px; width:calc(100% + 20px); height:100%; background-color:rgba(0,0,0,0.2); z-index:0; transform:translateY(-50%); border-radius:4px;}
+.nft_list .nft_item div.info p.txt span {position:relative; z-index:1;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span><img src="../../images/common/ico_back.png" alt="이전"></span></button>
+					</div>
+					<h1>NFT</h1>
+					<div class="tools-btn">
+						<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						<button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button> -->
+						<!-- <button type="button" class="h_btn_menu"><span><img src="../images/common/ico_menu.png" alt="메뉴"></span></button> -->
+						<button type="button" class="h_btn_menu"><span><img src="../../images/common/ico_wallet.png" alt="지갑"></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap">
+		<div class="page_default">
+			
+			<div class="tabbar">
+				<ul class="tab fill">
+					<li class="on"><span>전체</span></li>
+					<li><span>예약</span></li>
+					<li><span>기념</span></li>
+					<li><span>수탁</span></li>
+					<li><span>이벤트</span></li>
+				</ul>
+			</div>
+			<!-- // tabbar -->
+
+			<div class="sort_wrap">
+				<p><span>총</span> <strong class="count">41</strong><span>개</span></p>
+				<div class="sort">발행일순</div>
+			</div>
+
+
+			<div class="nft_list">
+				<div class="nft_item">
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328.png" alt="bg"></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>gallery A</span></p>
+						<div class="author"><strong>조성희</strong></div>
+						<div class="state"><span>예약</span></div>
+					</div>
+				</div>
+
+				<div class="nft_item">
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328.png" alt="bg"></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>gallery A gallery A gallery A gallery A gallery A gallery A</span></p>
+						<div class="author"><strong>조성희</strong></div>
+						<div class="state"><span>예약</span></div>
+					</div>
+				</div>
+
+				<div class="nft_item">
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328_2.png" alt=""></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328_2.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>gallery B</span></p>
+						<div class="author"><strong>조성희</strong></div>
+						<div class="state"><span>예약</span></div>
+					</div>
+				</div>
+
+				<div class="nft_item">
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328_2.png" alt=""></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328_2.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>gallery A gallery A gallery A gallery A gallery A gallery</span></p>
+						<div class="author"><strong>조성희</strong></div>
+						<div class="state"><span>예약</span></div>
+					</div>
+				</div>
+
+				<div class="nft_item type2"><!-- type2가 붙고 info 안의 내용이 수정되었습니다.-->
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328_4.png" alt="bg"></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328_4.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>하나은행 수장고에 안전하게 보관되고 있습니다</span></p>
+						<div>
+							<strong class="author">조성희</strong>
+							<span class="state">수탁</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="nft_item">
+					<div class="img_bg"><img src="../../images/03_nft/sam_328x328_3.png" alt=""></div>
+					<div class="img"><img src="../../images/03_nft/sam_328x328_3.png" alt=""></div>
+					<div class="info">
+						<p class="txt"><span>Share your HappinessShare your HappinessShare your HappinessShare your HappinessShare your Happiness</span></p>
+						<div class="author"><strong>조성희</strong></div>
+						<div class="state"><span>예약</span></div>
+					</div>
+				</div>
+
+				<div class="loader_wrap">
+					<span class="loader"></span>
+				</div>
+
+			</div>
+			<!-- // nft_list -->
+
+		</div>
+		<!-- <div class="page_center"></div> -->
+	</div>
+	<!-- // container_wrap -->
+
+
+	<!-- <div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn line" disabled=""><span>취소</span></button>
+			</div>
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div>
+	</div> -->
+	<!-- // footer_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+// 1. 대상 선정
+// 대상 node 선택
+const target = document.querySelector('.nft_list');
+
+// 2. 옵저버 인스턴스 생성
+// 감시자 인스턴스 만들기
+const observer = new MutationObserver(function(mutations) {
+	mutations.forEach(function(mutation) {
+		console.log(mutation.type);
+		if(mutation.type == 'attributes') {
+			console.log("속성이 바뀌었다.")
+		} else if (mutation.type == 'childList'){
+			console.log("항목이 삭제되거나 추가되었다.");
+			fixedContainer();
+		}
+	});
+});
+
+// 3. 옵션 설정
+// 감시자의 설정:
+const config = {attributes:false, childList:true, characterData:false, subtree:false};
+// 4. 실행
+// 감시자 옵션 포함, 대상 노드에 전달
+observer.observe(target, config);
+</script>
+</body>
+</html>

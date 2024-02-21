@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>omnion</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Omnion" />
+	<meta property="og:description" content="개인형 디지털 지갑" />
+	<meta property="og:image" content="../images/omnion_meta.png" />
+
+	<link rel="stylesheet" href="../css/Global.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="../images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+	
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>세부 내역</h1>
+					<!-- <div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div> -->
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+
+					<div class="completeTop linearBg">
+						<div class="tit">
+							<span class="medium">보내기를 완료하였습니다.</span>
+						</div>
+						<div class="img"><img src="../images/img_export.png" alt="출금완료 이미지"></div>
+					</div><!-- // completeTop -->
+
+
+					<div class="walletDetailTable">
+						<!-- <div class="tit">세부내역</div> -->
+						<div class="info">
+							<dl class="item">
+								<dt>From</dt>
+								<dd>0xadsfnpqo30923jfo3f</dd>
+								<dd class="btn"><button type="button" class="btnCopy"><span><img src="../images/btn_clipboard.png" alt="복사하기"></span></button></dd>
+							</dl>
+							<dl class="item">
+								<dt>To</dt>
+								<dd>0xfdjskljfej2309jfojljkld</dd>
+								<dd class="btn"><button type="button" class="btnCopy"><span><img src="../images/btn_clipboard.png" alt="복사하기"></span></button></dd>
+							</dl>
+							<dl class="item">
+								<dt>수량</dt>
+								<dd>00.00000000 ETH</dd>
+							</dl>
+							<dl class="item">
+								<dt>수수료</dt>
+								<dd>0.00000000 ETH</dd>
+							</dl>
+							<dl class="item">
+								<dt>총합</dt>
+								<dd>00.00000000 ETH</dd>
+							</dl>
+							<dl class="item">
+								<dt>일시</dt>
+								<dd>YYYY.MM.DD  00:00 PM</dd>
+							</dl>
+							<dl class="item">
+								<dt>Txid</dt>
+								<dd>fdkljfioejf03jfojdlfkjdlkd</dd>
+								<dd class="btn"><button type="button" class="btnCopy"><span><img src="../images/btn_clipboard.png" alt="복사하기"></span></button></dd>
+							</dl>
+						</div>
+					</div>
+
+				</div><!-- // section_top -->
+
+				<div class="section_bottom">
+
+					<div class="btn_group">
+						<div><button type="button" class="next"><span>확인</span></button></div>
+					</div>
+				</div><!-- // section_bottom -->
+
+			</div>
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+/* 테스트 스크립트 */
+function openFull(target){
+	let targetLayer = '#' + target;
+	$(targetLayer).show();
+	$("html").addClass("scrollHidden");
+}
+$(".layer.full button.btn_close").on("click", function(){
+	$(this).closest(".layer.full").hide();
+	$("html").removeClass("scrollHidden");
+})
+</script>
+
+
+</body>
+</html>

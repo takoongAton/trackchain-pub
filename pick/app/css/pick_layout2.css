@@ -1,0 +1,520 @@
+:root {
+	--color-primary: #FF643C;
+	--color-secondary: #07B37A;
+	--color-warring: #FF6464;
+
+	--line-dark: #CCCCCC;
+	--line-gray: #e5e5e5;
+	--line-light: #f7f7f7;
+
+	--bg-gray: #e5e5e5;
+	--bg-light: #f7f7f7;
+
+	--color-dim:rgba(0,0,0,0.6);
+
+	--text-color:black;
+	--error-color:#FF0000;
+	--main-disibled-color:rgba(0,0,0,0.6);
+	--main-bg-color: #ecf0f1;
+	--em-color: #ff5571;
+	--required-color: #ff6060;
+	--border-color: #aeaeae;
+	--line-color: #aeaeae;
+	--btn-color: #000;
+	--btn-dim-color: #d4d4d4;
+}
+
+
+
+/* 기본 레이아웃 */
+html.flexCol {height:100%;}
+html.flexCol body {height:100%;}
+html.flexCol .wrap {display:flex; flex-direction:column; justify-content:space-between; width:100%; height:100%;}
+html.flexCol .wrap .container_wrap {flex:1; display:flex;}
+html.flexCol .wrap section {flex:1; width:100%; height:100%;}
+
+html, body {width:100%; height:100%;}
+.wrap {display:flex; flex-direction:column; width:100%; max-width:720px; height:100%; margin:0 auto;}
+.wrap .header_wrap {}
+.wrap .container_wrap {flex:1; /* padding-bottom:36px; */ overflow-y:auto;}
+.wrap .footer_wrap {padding:0 24px 40px;}
+.wrap .footer_wrap .btnGroup {display:flex; justify-content:space-between; align-items:center; gap:8px;}
+.wrap .footer_wrap .btnGroup div {width:100%;}
+
+
+.content_wrap {min-height:100%; /* padding:0 1em; */}
+.content_wrap.divide {display:flex; flex-direction:column; align-items:center; justify-content:space-between; width:100%; height:100%;}
+.content_wrap.divide > div {width:100%;}
+.content_wrap.divide div.divide_top {display:flex; flex:1; flex-direction:column; width:100%;}
+.content_wrap.divide div.divide_center {display:flex; flex:1; align-items:center; justify-content:center; width:100%; text-align:center; color:#000; font-size:0.875em; line-height:1.42857em;}
+.content_wrap.divide div.divide_center p.txt.center {padding:0 2em; word-break:keep-all;}
+.content_wrap.divide div.divide_bottom {width:100%; padding-bottom:1.25em;}
+
+.content_wrap .section_top {display:flex; flex-direction:column; flex:1; width:100%; /* padding:1.875em 1.125em; */}
+.content_wrap .section_middle {display:flex; flex-direction:column; justify-content:center; align-items:center; flex:1; height:100%;}
+.content_wrap .section_bottom.expand {background-color:#fff; /* border-radius:1.875em 1.875em 0 0; */ box-shadow:0 0 10px rgba(0,0,0,0.1)}
+
+.content_wrap.divide .section_top {}
+.content_wrap.divide .section_bottom {/* display:flex; flex-direction:column; justify-content:space-between; */ position:relative; width:100%; padding:0 1.25em 1.3125em;}
+.content_wrap.divide .section_bottom.fixed {position:fixed; bottom:0; right:0; left:0; width:100%; max-width:720px; margin:0 auto;}
+.content_wrap.divide .section_footer {width:100%;}
+
+.content_wrap .section_center {display:flex; flex-direction:column; justify-content:center; width:100%; /* height:100vh; padding:0 1.125em; */}
+/* // 기본 레이아웃 */
+
+.section_bottom {padding:0 24px 40px;}
+.section_bottom .btnGroup {display:flex; justify-content:space-between; align-items:center; gap:8px;}
+.section_bottom .btnGroup div {width:100%;}
+.section_bottom.sticky {position:sticky; bottom:0; left:0;}
+
+/* 하단 네비 샘플 */
+.app_footer_wrap {display:flex; justify-content:center; align-items:flex-end; position:relative; width:100%;}
+.nav_btn_group {display:flex; justify-content:space-evenly; align-items:flex-end; position:fixed; bottom:0; left:0; right:0; width:100%; max-width:720px; height:116px; margin:0 auto; padding-bottom:32px; background:url('../images/temp/nav_bg.png') no-repeat center bottom / auto 116px; text-align:center;}
+.nav_btn_group button {}
+.nav_btn_group button span {display:inline-block; width:32px; height:32px;}
+.nav_btn_group button span img {width:inherit; height:inherit;}
+.nav_btn_group button.btn3 {position:relative; top:-18px; width:50px; height:50px; background-color:var(--color-primary); border-radius:25px; color:#fff;}
+.nav_btn_group button.btn3 span {width:30px; height:30px;}
+/* // 하단 네비 샘플 */
+
+
+
+/* 가로 스크롤 형식 공통 */
+.scroll-wrapper {overflow-y:hidden; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.scroll-wrapper::-webkit-scrollbar {display:none !important;}
+.scroll-wrapper .scroll {display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;}
+.scroll-wrapper .scroll .item {white-space:nowrap;} /* 구분 칸 */
+/* .scroll-wrapper .scroll .item div {} 해당 컨텐츠부터 수정 가능 */
+/* 가로 스크롤 형식 공통 */
+
+
+
+
+button.btn.active {transition:all 0.2s ease; animation: btnActiveAni 0.2s ease;}
+
+@keyframes btnActiveAni {
+	0% {transform:scale(1);}
+	50% {transform:scale(0.96);}
+	100% {transform:scale(1);}
+}
+
+/* 버튼 공통(color,height) */
+button.btn {height:60px; border:1px solid transparent; border-radius:8px;}
+button.btn.small {height:46px;}
+button.btn.popup {height:48px}
+button.btn.fill {background-color:var(--color-primary); color:#fff;}
+button.btn.fill:disabled {background-color:#ccc;}
+
+button.btn.line {background-color:#fff; color:var(--color-primary); border-color:var(--color-primary);}
+button.btn.line:disabled {border-color:#ccc; color:#666;}
+
+button.btn span {display:block; font-size:16px; line-height:24px; font-weight:bold;}
+button.btn.small span {font-size:15px; line-height:22px;}
+button.btn.more {}
+button.btn.more span {display:inline-block; position:relative; padding:0 24px; color:#999; font-size:16px; line-height:24px; font-weight:500;}
+button.btn.more span::after {content:""; display:block; position:absolute; top:50%; right:0; width:24px; height:24px; background:url('../images/ico/ico_more.png') no-repeat right top / 24px 24px; transform:translateY(-50%); opacity:0.4;}
+
+/* button.btn.more span::before,
+button.btn.more span::after {content:""; display:block; position:absolute; top:50%; right:8px; width:1px; height:10px; background-color:#ff6600;}
+button.btn.more span::before {transform: translateY(-50%) rotate(90deg);}
+button.btn.more span::after {transform: translateY(-50%) rotate(0deg);} */
+
+
+/* header */
+div.header_wrap {position:sticky; top:0; left:0; width:100%; height:58px; padding:16px 24px; background-color:#fff; overflow:hidden; z-index:10;}
+div.header_wrap header {position:sticky; top:0; right:0; left:0; width:100%; max-width:720px; margin:0 auto; background-color:rgba(255,255,255,0.1); z-index:10; transition:all 0.2s ease;}
+div.header_wrap header.home {position:fixed;}
+div.header_wrap header div.header {box-sizing:content-box;}
+div.header_wrap header div.header h1 {display:flex; justify-content:center; align-items:center; height:26px; color:#000; font-size:18px; font-weight:500; letter-spacing:-0.05em; word-break:keep-all;}
+
+div.header_wrap header .util-btn, header .tools-btn {position:absolute; top:0;}
+div.header_wrap header .util-btn {top:1px; left:0;}
+div.header_wrap header .tools-btn {top:1px; right:0;}
+div.header_wrap header button {display:inline-block; width:24px; height:24px; background-repeat:no-repeat; background-position:center; background-size:1.5em;}
+div.header_wrap header button span {position:relative; z-index:-1; white-space:nowrap;}
+
+
+
+
+
+
+/* 코인 기본 최소 컨텐츠 */
+.itemSmall {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%; height:48px; overflow:hidden;}
+.itemSmall div.icon {width:48px; height:48px;}
+.itemSmall div.icon span {display:block; width:48px; height:48px; background-color:#f7f7f7; border-radius:24px; overflow:hidden;}
+.itemSmall div.icon span img {width:48px; height:48px;}
+.itemSmall div.txt {flex:1; margin-left:12px; padding-right:16px; overflow:hidden;}
+.itemSmall div.txt p.money {display:flex; align-items:center; color:#222;}
+.itemSmall div.txt p.money strong {display:inline-block; font-size:20px; line-height:22px; font-family:'Montserrat'; font-weight:600;}
+.itemSmall div.txt p.text {max-width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.itemSmall div.txt p.text strong {display:inline-block; width:100%; font-size:20px; line-height:22px; font-family:'Montserrat'; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.itemSmall div.txt p.money span {display:inline-block; font-size:20px; line-height:22px; font-weight:500;}
+.itemSmall div.txt p.rate {color:#666; font-size:12px; line-height:22px;}
+.itemSmall div.txt p.text + p.rate {color:#999;}
+.itemSmall div.tools span.img {display:inline-block; width:24px; height:24px;}
+.itemSmall div.tools img {display:block; width:24px; height:24px;}
+
+
+
+/* nft_viewer */
+.nft_viewer .nft_small_list {margin-top:5px; padding:0 24px;}
+.nft_viewer .nft_small_list .item {position:relative;}
+.nft_viewer .nft_small_list .item div {position:relative; width:112px; height:112px; box-sizing:border-box; border-radius:20px; overflow:hidden;}
+.nft_viewer .nft_small_list .item + .item {margin-left:12px;}
+.nft_viewer .nft_small_list .item.active {animation: test123 0.2s 1 ease}
+.nft_viewer .nft_small_list .item.active div::before {content:""; display:block; position:absolute; top:0; left:0; width:112px; height:112px; border:5px solid #FF643C; border-radius:20px;}
+@keyframes test123 {
+	0% {transform:scale(1);}
+	50% {transform:scale(0.95);}
+	100% {transform:scale(1);}
+}
+
+.nft_viewer .nft_big_wrap {width:327px; margin:0 auto; margin-top:30px; padding-top:30px; border-top:1px solid #e5e5e5;}
+.nft_viewer .nft_big_wrap .nft_big_item {position:relative;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_channel {display:flex; justify-content:center; align-items:center; position:absolute; top:24px; left:24px; height:24px; border-radius:12px; border:1px solid #fff; z-index:1;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_channel span {display:block; padding:0 15px; color:#fff; font-size:13px; font-family:'Montserrat';}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_img {border-radius:20px; overflow:hidden;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_img img {display:block; transition:all 0.2s ease; animation: identifier 5s ease infinite;}
+
+.nft_viewer .nft_big_wrap .nft_big_item p.nft_tit {position:absolute; bottom:24px; left:24px; padding-right:96px; color:#fff; font-size:32px; line-height:39px;}
+.nft_viewer .nft_big_wrap .nft_big_item span.nft_ico {display:block; position:absolute; right:24px; bottom:24px; width:48px; height:48px;}
+
+@keyframes identifier {
+	0% {transform:scale(1) translateX(0) translateY(0);}
+	25% {transform:scale(1.03) translateX(3px) translateY(-3px);}
+	50% {transform:scale(1.03) translateX(3px) translateY(3px);}
+	75% {transform:scale(1.03) translateX(-3px) translateY(3px);}
+	100% {transform:scale(1) translateX(0) translateY(0);}
+}
+
+
+.nft_viewer .nft_big_wrap div.btn_detail {margin-top:24px;}
+
+.nft_viewer .nft_big_wrap .nft_community {margin-top:48px;}
+.nft_viewer .nft_big_wrap .nft_community div.tit {font-size:16px; line-height:20px; font-family:'Montserrat'; font-weight:500;}
+.nft_viewer .nft_big_wrap .nft_community .community_list {margin-top:16px;}
+.nft_viewer .nft_big_wrap .nft_community .community_list span {display:inline-block; width:48px; height:48px; margin-right:8px;}
+.nft_viewer .nft_big_wrap .nft_community .community_list span img {width:48px; height:48px;}
+/* // nft_viewer */
+
+
+
+
+
+/* 총 보유자산 */
+.priceBox {}
+.priceBox .boxTop {display:flex; flex-direction: column; justify-content: space-between; position:relative; width:100%; height:156px; padding:24px 20px; background-color:#fff; border-radius:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1); z-index:2;}
+.priceBox .boxTop p.tit {}
+.priceBox .boxTop p.price {display:flex; justify-content:flex-end; align-items:center; width:100%;}
+.priceBox .boxTop p.price strong {font-size:40px; font-family:'Montserrat';}
+.priceBox .boxTop p.price span {font-size:24px; font-family:'Noto Sans KR';}
+.priceBox .boxTop button.btn_refresh {position:absolute; top:16px; right:10px; width:40px; height:40px;}
+.priceBox .boxTop button.btn_refresh span {display:inline-block; width:20px; height:20px;}
+
+.priceBox .boxBottom {position:relative; margin-top:-20px; padding:40px 20px 20px; background-color:#58534F; z-index:1; border-radius:0 0 20px 20px; color:#fff;}
+.priceBox .boxBottom .table dl {display:flex; justify-content:space-between; align-items:center; width:100%; height:24px;}
+.priceBox .boxBottom .table dl + dl {margin-top:8px;}
+.priceBox .boxBottom .table dl dt {font-size:14px;}
+.priceBox .boxBottom .table dl p strong {display:inline-block; padding-left:28px; font-size:20px; line-height:20px; font-family:'Montserrat'; font-weight:600; background:url('') no-repeat left top / 24px 24px;}
+.priceBox .boxBottom .table dl p span {display:inline-block; font-size:16px; line-height:20px; font-family:'Noto Sans KR'; font-weight:400;}
+.priceBox .boxBottom .table dl p strong.up {background-image:url('../images/ico/ico_increase.png');}
+.priceBox .boxBottom .table dl p strong.down {background-image:url('../images/ico/ico_decrease.png');}
+
+
+.priceBox .boxBottom .boxBottom .home {display:flex; justify-content:space-evenly; align-items:center; width:100%;}
+.priceBox .boxBottom .boxBottom .home p {position:relative; width:100%; text-align:center;}
+.priceBox .boxBottom .boxBottom .home p strong {display:inline-block; font-size:14px; line-height:20px; font-family:'Montserrat'; font-weight:400;}
+.priceBox .boxBottom .boxBottom .home p span {display:inline-block; font-size:14px; line-height:20px; font-family:'Noto Sans KR'; font-weight:500;}
+.priceBox .boxBottom .boxBottom .home p + p::before {content:""; display:block; position:absolute; top:0; left:0; width:1px; height:100%; background-color: #222;}
+/* // 총 보유자산 */
+
+
+
+
+/* 채널 상세 */
+/* 채널 상세 상단 */
+.channer_detail_header {padding:28px 24px 23px; text-align:center;}
+.channer_detail_header span.ico {display:inline-block; width:60px; height:60px;}
+.channer_detail_header p.tit {margin-top:8px; color:#222; font-size:16px; line-height:22px;}
+.channer_detail_header p.tit strong {display:inline-block; font-family:'Montserrat'; font-weight:700;}
+.channer_detail_header p.tit span {display:inline-block; position:relative; margin-left:8px; padding-left:8px; color:#999; font-size:14px; font-weight:500;}
+.channer_detail_header p.tit span::before {content:""; display:block; position:absolute; top:50%; left:0; width:1px; height:12px; background-color:#e5e5e5; transform:translateY(-50%);}
+.channer_detail_header p.txt {margin-top:4px; color:#999; font-size:12px; line-height:16px; font-weight:400;}
+
+
+.channer_detail_header .currentPrice {display:flex; justify-content:center; align-items:center; height:46px; margin-top:28px; border:1px solid #ccc; border-radius:8px;}
+.channer_detail_header .currentPrice p {display:flex; justify-content:center; align-items:center; font-size:15px;}
+.channer_detail_header .currentPrice p span,
+.channer_detail_header .currentPrice p strong {display:inline-block; color:#666;}
+.channer_detail_header .currentPrice p strong {padding:0 2px; font-family:'Montserrat'; font-weight:500;}
+
+/* 채널 상세 하단 */
+.channer_detail_footer {padding:40px 24px; background-color:#f7f7f7;}
+
+/* 채널 상세 코인 목록 */
+.channer_detail_list {margin-top:36px;}
+.channer_detail_list .item {}
+.channer_detail_list .item + .item {margin-top:12px;}
+.channer_detail_list .item div.item_default {position:relative;  padding:20px 16px; background-color:#fff; border-radius:20px; z-index:1;}
+.channer_detail_list .item div.item_extend {margin-top:-18px; padding-top:18px; background-color:#e5e5e5; border-radius:0 0 20px 20px;}
+.channer_detail_list .item .extent_item {padding:17px 16px;}
+.channer_detail_list .item .extent_item + .extent_item {border-top:1px solid #f7f7f7;}
+
+/* 채널 상세 기본형 small 아이콘 */
+.item_default div.icons {font-size:0; text-align:right;}
+.item_default div.icons span {box-sizing:content-box; display:inline-block; width:24px; height:24px; margin-left:-6px; font-size:0; border-radius:12px; border:2px solid #fff;}
+.item_default div.icons span img {display:block; width:24px; height:24px;}
+.item_default div.icons span:nth-child(odd) {background-color:#f7f7f7;}
+.item_default div.icons span:nth-child(even) {background-color:#f7f7f7;}
+
+/* 채널 상세 확장형 small 아이콘 */
+.item_extend div.icons {font-size:0; text-align:right;}
+.item_extend div.icons span {box-sizing:content-box; display:inline-block; width:24px; height:24px; margin-left:-6px; font-size:0; border-radius:12px; border:2px solid #fff;}
+.item_extend div.icons span img {display:block; width:24px; height:24px;}
+.item_extend div.icons span:nth-child(odd) {background-color:#f7f7f7;}
+.item_extend div.icons span:nth-child(even) {background-color:#f7f7f7;}
+
+/* 데이터 없음 */
+.nodata_coins {width:100%; padding:60px 0; text-align:center;}
+.nodata_coins span.ico {display:inline-block; width:80px; height:80px;}
+.nodata_coins span.ico img {display:block; width:80px; height:80px;}
+.nodata_coins p {color:#666; font-size:14px; line-height:21px;}
+/* // 채널 상세 */
+
+
+
+
+
+/* channer txt tab */
+.channer_txt_tab {}
+.channer_txt_tab .tab_group {margin-top:28px; padding:0 24px;}
+.channer_txt_tab .tab_group button {position:relative; width:auto; height:34px;}
+.channer_txt_tab .tab_group button + button {margin-left:12px;}
+.channer_txt_tab .tab_group button span {color:#ccc; font-size:18px; font-weight:400;}
+.channer_txt_tab .tab_group button.active span {color:var(--color-primary); font-weight:500;}
+.channer_txt_tab .tab_group button.active span::before {content:""; position:absolute; bottom:0; left:0; width:100%; border-bottom:2px solid var(--color-primary)}
+/* // channer txt tab */
+
+/* 채널관리 - 거래소 목록 */
+.channer_set_list {margin-top:28px; padding:0 24px;}
+.channer_set_list .item_default {}
+.channer_set_list .item:first-of-type {padding-bottom:28px;}
+.channer_set_list .item + .item {padding:28px 0; border-top:1px solid #e5e5e5;}
+/* // 채널관리 - 거래소 목록 */
+
+/* 채널 추가 버튼 */
+.btn_add_wrap {text-align:center;}
+.btn_add_wrap .btn.add {display:inline-block; width:60px; height:60px; background-color:#ff643c; border-radius:100%; color:#fff;}
+.btn_add_wrap .btn.add span {display:inline-block; background:url('../images/ico/ico_plus.png') no-repeat center / 36px 36px; color:transparent;}
+/* // 채널 추가 버튼 */
+
+
+
+
+/* 지갑 세부사항 */
+.wallet_detail_header {padding:28px 24px 23px; text-align:center;}
+.wallet_detail_header span.ico {display:inline-block; width:60px; height:60px;}
+.wallet_detail_header p.tit {display:flex; justify-content:center; align-items:baseline; margin-top:8px; color:#222; font-size:16px; line-height:22px;}
+.wallet_detail_header p.tit strong {display:inline-block; font-family:'Montserrat'; font-weight:700;}
+.wallet_detail_header p.tit button {width:24px; height:24px; overflow:hidden; color:transparent; opacity:0.5;}
+.wallet_detail_header p.txt {margin-top:4px; color:#999; font-size:12px; line-height:16px; font-weight:400; overflow-x:auto;}
+/* // 지갑 세부사항 */
+
+
+
+/* 지갑 세부사항 Network */
+.wallet_network_wrap {padding:0 24px;}
+.wallet_network {padding-top:48px; border-top:1px solid #e5e5e5;}
+.wallet_network div.tit {display:flex; align-items:center; font-size:16px; line-height:20px; font-family:'Montserrat'; font-weight:500;}
+.wallet_network div.tit button {display:inline-block; width:24px; height:24px;;}
+.wallet_network div.tit button img {width:24px; height:24px;}
+.wallet_network .network_list {margin-top:16px;}
+.wallet_network .network_list span {display:inline-block; width:48px; height:48px; margin-right:8px;}
+.wallet_network .network_list span img {width:48px; height:48px;}
+/* // 지갑 세부사항 Network */
+
+
+
+
+
+
+
+
+
+/* 레이어팝업 dim */
+div.layer.dim {position:fixed; top:0; right:0; bottom:0; left:0; width:100%; background-color:rgba(0,0,0,0.6); transition:all 0.2s ease; opacity:1; z-index:20;}
+div.layer.dim.active {opacity:1;}
+
+/* 중앙 팝업 */
+.layer.alert {position:fixed; top:50%; left:50%; width:327px; max-height:72vh; padding:48px 36px 36px 36px; background-color:#fff; border-radius:20px; transform:translate(-50%,-50%); box-shadow:0 0 3px rgba(0,0,0,0.16); z-index:20;}
+.layer.alert div.btnClose {position:absolute; top:24px; right:24px; width:24px; height:24px;}
+.layer.alert .layer_inner {text-align:center;}
+.layer.alert .layer_inner .layer_tit strong {display:block; font-size:1.125em; line-height:1.5em; text-align:center;}
+.layer.alert .layer_inner .txt_content {letter-spacing:-0.5px;}
+.layer.alert .layer_inner .layer_tit + .txt_content {margin-top:12px;}
+.layer.alert .layer_inner .btnGroup {display:flex; justify-content:space-between; width:100%; margin-top:28px; gap:8px;}
+.layer.alert .layer_inner .btnGroup > div {width:100%;}
+
+
+/* 중앙 팝업 - modal */
+.layer.modal {position:fixed; top:50%; left:50%; width:327px; max-height:70vh; background-color:#fff; border-radius:20px; transform:translate(-50%,-50%); box-shadow:0 0 3px rgba(0,0,0,0.16); overflow:hidden; z-index:10000;}
+.layer.modal.scrollH {height:100%;}
+.layer.modal div.btnClose {position:absolute; top:24px; right:24px; width:24px; height:24px;}
+.layer.modal .layer_inner {display:flex; -ms-flex-direction:column; flex-direction:column; justify-content:space-between; width:100%; height:100%; padding-top:48px; text-align:center;}
+.layer.modal .layer_inner .layer_header {padding:0 36px;}
+.layer.modal .layer_inner .layer_section {flex:1; padding:0 36px; overflow-y:auto;}
+.layer.modal .layer_inner .layer_footer {padding:0 36px 36px;}
+.layer.modal .layer_inner .layer_header + .layer_section {margin-top:28px;}
+
+.layer.modal .layer_inner .layer_tit strong {display:block; font-size:1.125em; line-height:1.5em; text-align:center;}
+.layer.modal .layer_inner .txt_content {margin-top:12px; letter-spacing:-0.5px;}
+
+.layer.modal .layer_inner .layer_content {flex:1; position:relative; height:auto; overflow-y:scroll; margin-top:20px;}
+.layer.modal .layer_inner .btnGroup {display:flex; justify-content:space-between; width:100%; margin-top:28px; gap:8px;;}
+.layer.modal .layer_inner .btnGroup > div {width:100%;}
+
+
+
+/* 하단 레이어팝업 */
+.layer.footer {position:fixed; bottom:0%; left:0; width:100%; padding:48px 36px 48px 36px; background-color:#fff; border-radius:20px 20px 0 0; transform:translateY(110%); transition:all 0.2s ease; z-index:20;}
+.layer.footer div.btnClose {position:absolute; top:24px; right:24px; width:24px; height:24px;}
+.layer.footer .layer_inner {text-align:center;}
+.layer.footer .layer_inner .layer_tit strong {display:block; font-size:1.125em; line-height:1.5em; text-align:center; font-weight:bold;}
+.layer.footer .layer_inner .txt_content {letter-spacing:-0.5px;}
+.layer.footer .layer_inner .layer_tit + .txt_content {margin-top:12px;}
+.layer.footer .layer_inner .btnGroup {display:flex; justify-content:space-between; width:100%; margin-top:28px; gap:8px;}
+.layer.footer .layer_inner .btnGroup > div {width:100%;}
+.layer.footer.active {transform:translateY(0%);}
+
+
+
+
+
+/* layer footer connect Type */
+.layer .connectType {margin-top:28px;}
+.layer .connectType .connect {display:flex; justify-content:space-between; gap:10px;;}
+.layer .connectType .connect button {width:100% !important; width:133px; height:114px; background-color:#f7f7f7; border-radius:8px;}
+.layer .connectType .connect span.ico,
+.layer .connectType .connect span.ico img {display:inline-block; width:36px; height:36px;}
+.layer .connectType .connect span.txt {display:block; margin-top:12px; color:#222; font-size:18px; line-height:26px; font-weight:500;}
+/* // layer footer connect Type */
+
+
+
+
+
+
+
+/* 입력폼 모음 */
+/* 기본 input */
+.set_input_wrap {text-align:left;;}
+.set_input_wrap .set_input{position:relative; font-size:0; border:1px solid #f4f4f4; border-radius:8px; overflow:hidden;}
+.set_input_wrap .set_input input{width:100%; padding:0 43px 0 10px; border:0 none; border-radius:8px; color:#222; font-size:16px; line-height:58px; transform:skew(-0.03deg);}
+.set_input_wrap .set_input input:focus{outline:none;}
+.set_input_wrap .set_input input[disabled] {background-color:#fff;}
+.set_input_wrap .set_input input::placeholder {color:rgba(204,204,204)}
+.set_input_wrap .set_input.disabled {border-color:#eaeaea;}
+.set_input_wrap .set_input.active{border-color:var(--color-secondary);}
+.set_input_wrap .set_input.type_error{border:1px solid var(--color-warring);}
+.set_input_wrap .set_input .btn_input_del{position:absolute; top:50%; right:11px; width:24px; height:24px; background:url('../images/ico_delete.png') no-repeat left top / 24px 24px; transform:translateY(-50%); text-indent:-9999px; overflow:hidden;}
+.set_input_wrap .set_input .btn_input_qr {position:absolute; top:50%; right:9px; width:46px; height:33px; background:url('../images/ico_qr.png') no-repeat left top / 46px 33px; transform:translateY(-50%); text-indent:-9999px; overflow:hidden;}
+.set_input_wrap .set_input + .text_gm{margin-top:8px; font-size:12px; line-height:18px;}
+.set_input_wrap .set_input + .text_gm_point{margin-top:8px; font-size:12px; line-height:18px;}
+.set_input_wrap .set_input.type_error + .text_gm_point {color:var(--color-warring);}
+/* // 기본 input */
+
+
+
+.ipt_checkbox {display:inline-block; width:24px; height:24px;}
+.ipt_checkbox input[type="checkbox"] {display:none;}
+.ipt_checkbox input[type="checkbox"] + label {display:inline-block; position:relative; width:24px; height:24px; border-radius:12px; overflow:hidden;
+	background-color:#e5e5e5;
+	background-image:url('../images/ico_checkbox_off.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:24px 24px;
+}
+.ipt_checkbox input[type="checkbox"]:checked + label {background-color:var(--color-primary); background-image:url('../images/ico_checkbox_on.png');}
+
+
+/* 코인 캐릭터 다중 선택 */
+.ipt_checkbox_icon_item {display:inline-block; width:auto;}
+.ipt_checkbox_icon_item p.txt {margin-top:8px; color:#222; font-size:12px; line-height:16px; font-family:'Montserrat'; font-weight:500; text-align:center;}
+
+/* 코인, 캐릭터 다중선택 */
+.ipt_checkbox_icon {display:inline-block; position:relative;}
+.ipt_checkbox_icon span.img {display:block;}
+.ipt_checkbox_icon input[type="checkbox"] {display:none;}
+.ipt_checkbox_icon input[type="checkbox"] + label {display:inline-block; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:100%; border:0 solid transparent; overflow:hidden; transition:all 0.1s ease;}
+.ipt_checkbox_icon input[type="checkbox"]:checked + label {border-width:2px; border-color:var(--color-primary);}
+.ipt_checkbox_icon input[type="checkbox"]:checked ~ span.checkmark {position:absolute; top:0; right:0; border-radius:100%; background:var(--color-primary) url('../images/ico_checkbox_on.png') no-repeat center / contain;  animation:selActiveAni 0.16s ease; box-shadow:0 1px 3px rgba(0,0,0,0.16);}
+/* 코인 선택 */
+.ipt_checkbox_icon.coin {width:60px; height:60px;}
+.ipt_checkbox_icon.coin span.checkmark {width:18px; height:18px;}
+/* 캐릭터 선택 */
+.ipt_checkbox_icon.profile {width:80px; height:80px;}
+.ipt_checkbox_icon.profile span.checkmark {width:24px; height:24px;}
+@keyframes selActiveAni {
+	0% {transform:translate(-5px,5px); opacity:0.5;}
+	100% {transform:translate(0,0); opacity:1;}
+}
+
+
+
+
+/* dashboard_home */
+.dashboard_home {min-height:100%; padding-top:20px; background-color:#f7f7f7;}
+.dashboard_home .dashboard_header {padding:0 24px 24px 24px;}
+.dashboard_home .dashboard_tit {display:flex; justify-content:space-between; align-items:flex-start; width:100%;}
+.dashboard_home .dashboard_tit strong.tit {font-size:24px; line-height:29px; font-family:'Montserrat'; font-weight:bold;}
+.dashboard_home .dashboard_tit .channelEdit button {display:flex; align-items:center; width:auto;}
+.dashboard_home .dashboard_tit .channelEdit span.txt {display:inline-block; font-size:14px; line-height:20px;}
+.dashboard_home .dashboard_tit .channelEdit span.ico {display:inline-block; width:16px; height:16px; font-size:0;}
+
+.dashboard_home .dashboard_tab {margin-top:28px;}
+.dashboard_home .dashboard_tab button {display:inline-flex; justify-content:center; align-items:center; width:auto; background-color:transparent; width:66px; height:40px; border:1px solid #222; border-radius:33px;}
+.dashboard_home .dashboard_tab button span {font-size:18px; font-weight:bold;}
+.dashboard_home .dashboard_tab button.active {background-color:#222;}
+.dashboard_home .dashboard_tab button.active span {color:#fff;}
+.dashboard_home .dashboard_tab button + button {margin-left:8px;}
+
+.dashboard_home .dashboard_graph {background-color:#fff;;}
+.dashboard_home .dashboard_graph img {width:100%;}
+.dashboard_home .dashboard_myNFT {padding:48px 0;}
+.dashboard_home .dashboard_myNFT > div.tit {padding:0 24px; font-size:24px; font-family:'Montserrat'; line-height:29px; font-weight:600;}
+
+.dashboard_home .dashboard_myNFT .dashboard_data {margin-top:16px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT {padding:0 24px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT .item {transition:0.2s ease;;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT .item.active {animation: test123 0.2s 1 ease}
+.dashboard_home .dashboard_myNFT .dashboard_data .nodata_NFT {padding:0 24px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .nodata_NFT p {display:flex; justify-content:center; align-items:center; width:100%; height:80px; border-radius:20px; background-color:#e5e5e5; font-size:14px; line-height:21px; overflow:hidden;}
+@keyframes test123 {
+	0% {transform:scale(1);}
+	50% {transform:scale(0.95);}
+	100% {transform:scale(1);}
+}
+
+.dashboard_home .my_NFT {}
+.dashboard_home .my_NFT .item div {width:112px; height:112px; box-sizing:border-box; border-radius:20px; overflow:hidden;} /* 사용자 수정 가능 */
+.dashboard_home .my_NFT .item + .item {margin-left:12px;}
+
+/* dashboard_home - MY NFT coins */
+.dashboard_home .my_coins_list {margin-top:48px; padding:0 24px;}
+.dashboard_home .my_coins_list .item {padding:20px 16px; border-radius:20px; background-color:#fff;}
+.dashboard_home .my_coins_list .item + .item {margin-top:12px;}
+.dashboard_home .my_coins_list .item .coinsItem {display:flex; justify-content:space-between; align-items:center; width:327px; width:100%; height:48px;}
+.dashboard_home .my_coins_list .item .coinsItem div.icon {width:48px; height:48px;}
+.dashboard_home .my_coins_list .item .coinsItem div.icon span {display:block; width:48px; height:48px; background-color:#f7f7f7; border-radius:24px; overflow:hidden;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt {flex:1; margin-left:12px;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money {display:flex; align-items:center; color:#222;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money strong {display:inline-block; font-size:20px; line-height:22px; font-family:'Montserrat'; font-weight:600;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money span {display:inline-block; font-size:20px; line-height:22px; font-weight:500;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.rate {color:#666; font-size:12px; line-height:22px;}
+.dashboard_home .my_coins_list .item .coinsItem div.tools img {width:20px; height:20px;}
+
+.dashboard_home .nodata_coins {width:100%; padding:80px 0; text-align:center;}
+.dashboard_home .nodata_coins span.ico {display:inline-block; width:80px; height:80px;}
+.dashboard_home .nodata_coins p {color:#666; font-size:14px; line-height:21px;;}
+/* // dashboard_home */

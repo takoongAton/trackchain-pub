@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<link rel="stylesheet" href="../../css/slick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+
+	<link rel="stylesheet" href="../../css/slick.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="wrap">
+
+		<!-- <div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>탈퇴하기</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div> -->
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="splash_visual">
+				<div class="item">
+					<div><img src="../../images/splash/Welcome01.gif" alt="이미지"></div>
+					<p>
+						복잡하고 어려운 가상자산 관리<br />
+						쉽게 할 순 없을까?
+					</p>
+				</div>
+				<div class="item">
+					<div><img src="../../images/splash/Welcome02.gif" alt="이미지"></div>
+					<p>
+						흩어져 있는 가상자산을 모아서<br />
+						한 눈에 확인하고,
+					</p>
+				</div>
+				<div class="item">
+					<div><img src="../../images/splash/Welcome03.gif" alt="이미지"></div>
+					<p>
+						가장 핫 한 뉴스부터 자산 관리 트렌드까지<br />
+						하나도 놓치지 않도록
+					</p>
+				</div>
+				<div class="item">
+					<div><img src="../../images/splash/Welcome04.gif" alt="이미지"></div>
+					<p>
+						복잡하고 어려운 가상자산 관리<br />
+						쉽게 할 순 없을까?
+					</p>
+				</div>
+			</div>
+			<!-- // splash_visual -->
+
+		</div>
+		<!-- // container_wrap -->
+
+		<div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill"><span>시작하기</span></button>
+			</div>
+		</div>
+	</div><!-- // wrap -->
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="../../js/slick.js"></script>
+<script src="../../js/temp.js"></script>
+
+<style>
+.splash_visual {height:100%}
+</style>
+
+<script>
+// let footer_wrap = document.querySelector(".layer.footer.active");
+// let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+// let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+// let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+// if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+// 	console.log ("스크롤 생겨야함.")
+// 	footer_wrap.classList.add("scrollH")
+// } else {
+// 	console.log ("스크롤 안생겨야함.")
+// 	footer_wrap.classList.remove("scrollH")
+// }
+
+
+/* select focus in,out */
+let selectItems = document.querySelectorAll(".set_select select");
+if(selectItems.length > 0) {
+	selectItems.forEach(function(item,index){
+		item.addEventListener("focusin", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.add("active")
+		})
+		item.addEventListener("focusout", function(e){
+			e.preventDefault();
+			item.parentElement.closest(".set_select").classList.remove("active")
+		})
+	})
+}
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+
+$('.splash_visual').slick({
+	dots: true,
+	dotsClass: "sp_visual_dot",
+	infinite: true,
+	arrows: false
+});
+
+})
+</script>
+
+
+
+</body>
+</html>

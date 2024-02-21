@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	
+	<link rel="stylesheet" href="../../css/layout.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+
+<style>
+
+.set_input_wrap {}
+.set_input_wrap .input_wrap_tit {display:flex; justify-content:space-between; align-items:center; width:100%; padding-bottom:8px;}
+.set_input_wrap .input_wrap_tit.ko {}
+.set_input_wrap .input_wrap_tit.en {font-family:'Montserrat';}
+.set_input_wrap .input_wrap_tit strong.tit {font-size:14px; line-height:20px; font-weight:400;}
+.set_input_wrap .input_wrap_tit div {color:#666;}
+.set_input_wrap .input_wrap_tit div span {font-size:14px;}
+.set_input_wrap .input_wrap_tit div span.limit {color:#ccc;}
+
+.profileImg_wrap {text-align:center;}
+.profileImg_wrap .img_wrap {display:inline-block; position:relative;}
+.profileImg_wrap .img_wrap span.img {display:inline-block; width:120px; height:120px;}
+.profileImg_wrap .img_wrap button {position:absolute; right:0; bottom:0; width:40px; height:40px; border-radius:100%; background-color:#fff;;}
+.profileImg_wrap .img_wrap button span {display:block;}
+
+
+
+
+/* 프로필 이메일 */
+.nickname_wrap {}
+.nickname_wrap .profile_email {margin-top:8px; color:#666666; font-size:16px; line-height:22px; font-family:'Montserrat'; text-align:center;}
+.nickname_wrap .nickName {display:inline-flex; justify-content:center; align-items:center; width:100%;}
+.nickname_wrap .nickName button {width:24px; height:24px; opacity:0.5;}
+.nickname_wrap .nickName img {}
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="header_wrap">
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>타이틀</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+							<button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div><!-- // header_wrap -->
+
+		<div class="container_wrap">
+			
+
+			
+<style>
+	.contact_header {}
+	.contact_header .contactItem {display:flex; align-items:center; width:100%;}
+	.contact_header .contactItem div.icon {width:60px; height:60px;}
+	.contact_header .contactItem div.txt {}
+	.contact_header .contactItem div.txt div.ip_address {display:flex; align-items:center;}
+	.contact_header .contactItem div.txt div.ip_address p {padding-right:8px; color:#999; font-size:16px; line-height:28px; font-family:'Montserrat';}
+	.contact_header .contactItem div.txt div.ip_address button {width:16px; height:16px; opacity:0.5;}
+	
+	.set_input_wrap {}
+	.set_input_wrap .input_wrap_tit {display:flex; justify-content:space-between; align-items:center; width:100%; padding-bottom:8px;}
+	.set_input_wrap .input_wrap_tit.ko {}
+	.set_input_wrap .input_wrap_tit.en {font-family:'Montserrat';}
+	.set_input_wrap .input_wrap_tit strong.tit {font-size:14px; line-height:20px; font-weight:400;}
+	.set_input_wrap .input_wrap_tit div {color:#666;}
+	.set_input_wrap .input_wrap_tit div span {font-size:14px;}
+	.set_input_wrap .input_wrap_tit div span.limit {color:#ccc;}
+	</style>
+			<div class="contact_header">
+				<div class="contactItem">
+					<div class="icon">
+						<span><img src="../../images/ico/ico_coin_bitcoin.png" alt=""></span>
+					</div>
+					<div class="txt">
+						<p>
+							<strong>Upbit</strong>
+						</p>
+						<div class="ip_address">
+							<p>IP 주소 : 172.111.11.000</p>
+							<button type="button"><span><img src="../../images/ico/ico_copy.png" alt="복사하기"></span></button>
+						</div>
+					</div>
+				</div><!-- // contactItem -->
+			</div><!-- // contact_header -->
+	
+	<style>
+	.contact_input_form {}
+	.contact_input_form .item {}
+	.contact_input_form .item + .item {margin-top:28px;}
+	.contact_input_form .item input {background-color:transparent;}
+	
+	.contact_input_form_guide {margin-top:40px;}
+	</style>
+			<div class="contact_input_form">
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">Access Key</strong>
+							<!-- <div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div> -->
+						</div>
+						<div class="row_guide">
+							<div class="set_input">
+								<input type="text" placeholder="Access Key" title="Access Key">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<!-- <p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p> -->
+						</div>
+					</div><!-- // set_input_wrap -->
+				</div>
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">Secret Key</strong>
+							<!-- <div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div> -->
+						</div>
+						<div class="row_guide">
+							<div class="set_input">
+								<input type="text" placeholder="place holder" title="place holder">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<!-- <p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p> -->
+						</div>
+					</div><!-- // set_input_wrap -->
+				</div>
+	
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">Access Key</strong>
+							<!-- <div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div> -->
+						</div>
+						<div class="row_guide">
+							<div class="set_input active">
+								<input type="text" placeholder="Access Key" title="Access Key">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<!-- <p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p> -->
+						</div>
+					</div><!-- // set_input_wrap -->
+				</div>
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">Secret Key</strong>
+							<!-- <div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div> -->
+						</div>
+						<div class="row_guide">
+							<div class="set_input active">
+								<input type="text" placeholder="place holder" title="place holder">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<!-- <p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p> -->
+						</div>
+					</div><!-- // set_input_wrap -->
+				</div>
+	
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">이름</strong>
+							<div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div>
+						</div>
+						<div class="row_guide">
+							<div class="set_input type_error">
+								<input type="text" placeholder="김트랙" title="김트랙">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p>
+						</div>
+					</div><!-- // set_input_wrap -->
+				</div>
+	
+				<div class="item">
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">이름</strong>
+							<div class="">
+								<span>0</span>
+								<span class="limit">/300</span>
+							</div>
+						</div>
+						<div class="row_guide">
+							<div class="set_input type_error">
+								<input type="text" placeholder="김트랙" title="김트랙">
+								<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+							</div>
+							<p class="text_gm_point">
+								유효하지 않은 값 입니다.<br />
+								키 값을 다시 한 번 확인해주세요.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- // contact_input_form -->
+	
+			<div class="contact_input_form_guide">
+				<button type="button" class="btn line small"><span>거래소 추가 가이드</span></button>
+			</div>
+
+
+
+		</div><!-- // container_wrap -->
+
+		<div class="footer_wrap">
+			<p>footer_wrap</p>
+			<div class="btnGroup">
+				<div><button type="button" class="btn line"><span>아니요</span></button></div>
+				<div><button type="button" class="btn fill"><span>예</span></button></div>
+			</div>
+		</div>
+		<!-- // footer_wrap -->
+
+		<!-- <div class="app_footer_wrap">
+			<div class="nav_btn_group">
+				<div><button type="button" class="btn1"><span><img src="../../images/ico_nav_1.png" alt="홈"></span></button></div>
+				<div><button type="button" class="btn2"><span><img src="../../images/ico_nav_2.png" alt="대시보드"></span></button></div>
+				<div><button type="button" class="btn3"><span><img src="../../images/ico_nav_3.png" alt="추가"></span></button></div>
+				<div><button type="button" class="btn4"><span><img src="../../images/ico_nav_4.png" alt="피드"></span></button></div>
+				<div><button type="button" class="btn5"><span><img src="../../images/ico_nav_5.png" alt="마이페이지"></span></button></div>
+			</div>
+		</div> -->
+	</div><!-- // wrap -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../../js/temp.js"></script> -->
+
+<script>
+const wrap_temp = document.querySelector(".wrap");
+const header_temp = wrap_temp.querySelector(".header_wrap")
+const container_temp = wrap_temp.querySelector(".container_wrap")
+const footer_temp = wrap_temp.querySelector(".footer_wrap")
+const app_footer_temp = wrap_temp.querySelector(".app_footer_wrap")
+
+if(container_temp && footer_temp && app_footer_temp) {
+	footer_temp.style.paddingBottom = app_footer_temp.clientHeight + "px";
+	container_temp.style.paddingBottom = footer_temp.clientHeight + "px"
+} else if(container_temp && footer_temp) {
+	container_temp.style.paddingBottom = footer_temp.clientHeight + "px"
+} else if(container_temp && app_footer_temp) {
+	container_temp.style.paddingBottom = app_footer_temp.clientHeight + "px";
+}
+
+let btns = document.querySelectorAll("button");
+btns.forEach(function(item){
+	item.addEventListener("click", function(){
+		if(item.textContent) {
+			console.log(item.textContent)
+		} else {
+			let xxx = item.querySelector("img").getAttribute("alt");
+			console.log(xxx)
+		}
+	})
+})
+
+</script>
+
+</body>
+</html>

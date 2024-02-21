@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../../css/reset.css">
+	
+	<!-- Noto Sans KR 폰트 -->
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	
+	<link rel="stylesheet" href="../../css/pick.css">
+</head>
+<body>
+
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+					</div>
+					<h1>채널 관리</h1>
+					<div class="tools-btn">
+						<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button> -->
+						<button type="button" class="h_btn_scan"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+<style>
+
+/* channer txt tab */
+.tab_txt {margin-top:28px; padding:0 24px;}
+.tab_txt button {position:relative; width:auto; height:34px;}
+.tab_txt button + button {margin-left:12px;}
+.tab_txt button span {color:#ccc; font-size:18px; font-weight:400;}
+.tab_txt button.active span {color:var(--color-primary); font-weight:500;}
+.tab_txt button.active span::before {content:""; position:absolute; bottom:0; left:0; width:100%; border-bottom:2px solid var(--color-primary)}
+</style>
+
+	<div class="db_channel_set">
+		<div class="tab_txt">
+			<button type="button" class="active"><span>거래소</span></button>
+			<button type="button"><span>지갑</span></button>
+		</div>
+	</div>
+<style>
+.db_channel_set_list {margin-top:28px; padding:0 24px;}
+.db_channel_set_list .item {padding-bottom:28px;}
+.db_channel_set_list .item:first-of-type {padding-bottom:28px;}
+.db_channel_set_list .item + .item {padding:28px 0; border-top:1px solid #e5e5e5;}
+
+.db_channel_set_list div.icons {font-size:0; text-align:right;}
+.db_channel_set_list div.icons span {box-sizing:content-box; display:inline-block; width:24px; height:24px; margin-left:-6px; font-size:0; border-radius:12px; border:2px solid #fff;}
+.db_channel_set_list div.icons span img {display:block; width:24px; height:24px;}
+.db_channel_set_list div.icons span:nth-child(odd) {background-color:#f7f7f7;}
+.db_channel_set_list div.icons span:nth-child(even) {background-color:#f7f7f7;}
+</style>
+	<div class="db_channel_set_list">
+		<div class="item">
+			<div class="itemSmall">
+				<div class="icon">
+					<span><img src="../../images/ico/ico_channel_upbit.png" alt="업비트"></span>
+				</div>
+				<div class="txt">
+					<p class="money">
+						<strong>155,000</strong>
+						<span>원</span>
+					</p>
+					<p class="rate">0.3 ETH (22%)</p>
+				</div>
+				<div class="tools">
+					<div class="ipt_checkbox">
+						<input type="checkbox" id="set_checkbox1">
+						<label for="set_checkbox1"></label>
+					</div>
+				</div>
+			</div><!-- // itemSmall -->
+		</div><!-- // item -->
+		<div class="item">
+			<div class="itemSmall">
+				<div class="icon">
+					<span><img src="../../images/ico/ico_channel_binance.png" alt="바이넨스"></span>
+				</div>
+				<div class="txt">
+					<p class="money">
+						<strong>155,000</strong>
+						<span>원</span>
+					</p>
+					<p class="rate">0.3 ETH (22%)</p>
+				</div>
+				<div class="tools">
+					<div class="ipt_checkbox">
+						<input type="checkbox" id="set_checkbox2">
+						<label for="set_checkbox2"></label>
+					</div>
+				</div>
+			</div><!-- // itemSmall -->
+		</div><!-- // item -->
+		<div class="item">
+			<div class="itemSmall">
+				<div class="icon">
+					<span><img src="../../images/ico/ico_channel_coinbase.png" alt="코인베이스"></span>
+				</div>
+				<div class="txt">
+					<p class="text">
+						<strong>155,000</strong>
+					</p>
+					<p class="rate">0.3 ETH (22%)</p>
+				</div>
+				<div class="tools">
+					<span><img src="../../images/ico/ico_right_arrow.png" alt=""></span>
+				</div>
+			</div><!-- // itemSmall -->
+			<div class="icons">
+				<span><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+				<span><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+				<span><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+			</div>
+		</div><!-- // item -->
+		<div class="item">
+			<div class="itemSmall">
+				<div class="icon">
+					<span><img src="../../images/ico/ico_channel_coinbase.png" alt="코인베이스"></span>
+				</div>
+				<div class="txt">
+					<p class="money">
+						<strong>155,000</strong>
+						<span>원</span>
+					</p>
+					<p class="rate">0.3 ETH (22%)</p>
+				</div>
+				<div class="tools">
+					<div class="ipt_checkbox">
+						<input type="checkbox" id="set_checkbox3">
+						<label for="set_checkbox3"></label>
+					</div>
+				</div>
+			</div><!-- // itemSmall -->
+			<div class="icons">
+				<span><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+				<span><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+				<span><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+			</div>
+		</div><!-- // item -->
+	</div><!-- // db_channel_set_list -->
+
+<style>
+.btn.add {display:inline-block; width:60px; height:60px; background-color:#ff643c; border-radius:100%; color:#fff;}
+.btn.add span {display:inline-block; background:url('../../images/ico/ico_plus.png') no-repeat center / 36px 36px; color:transparent;}
+</style>
+	<div class="" style="text-align:center;">
+		<button class="btn add"><span>추가</span></button>
+	</div>
+
+<style>
+.btnGroup {display:flex; justify-content:space-between; align-items:center; width:100%; gap:8px;}
+.btnGroup div {width:100%;}
+</style>
+	<div class="btnGroup">
+		<div><button class="btn line popup"><span>취소</span></button></div>
+		<div><button class="btn fill popup"><span>삭제</span></button></div>
+	</div>
+
+
+<style>
+.form_content {margin-top:28px;}
+.form_content .connect {display:flex; justify-content:space-between; gap:10px;;}
+.form_content .connect button {width:133px; height:114px; background-color:#f7f7f7; border-radius:8px;}
+.form_content .connect span.ico,
+.form_content .connect span.ico img {display:inline-block; width:36px; height:36px;}
+.form_content .connect span.txt {display:block; margin-top:12px; color:#222; font-size:18px; line-height:26px; font-weight:500;}
+</style>
+	<!-- layer -->	
+	<div class="layer dim"></div>
+
+	<div class="layer footer active">
+		<div class="layer_inner">
+			<div class="layer_tit"><strong>자산 연동</strong></div>
+			<div class="txt_content">
+				<p class="txt">추가할 채널을 선택해주세요.</p>
+			</div><!-- // txt_content -->
+
+			<div class="form_content">
+				<div class="connect">
+					<button type="button">
+						<span class="ico"><img src="../../images/coin-exchange.png" alt="거래소아이콘"></span>
+						<span class="txt">거래소</span>
+					</button>
+					<button type="button">
+						<span class="ico"><img src="../../images/wallet.png" alt="지갑아이콘"></span>
+						<span class="txt">개인지갑</span>
+					</button>
+				</div>
+			</div><!-- // form_content -->
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+	
+<!-- // layer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+</body>
+</html>

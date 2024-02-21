@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+	
+	<div class="redart_appstore">
+
+		<div class="section1">
+			<div class="logo"><img src="../../images/11_redart/logo_redart_w.svg" alt="redart."></div>
+			<div class="tit"><strong>작품과 컬렉터를 연결하는<br />
+				아트 & 테크 플랫폼</strong></div>
+			<p class="txt">
+				redart는 감상하고, 예약하고, 소유하는<br />
+				예술의 모든 과정을 함께 합니다.<br />
+				NFT를 통해 예술과 혁신의 접점을 만들어 내고<br />
+				미술 작품의 색다른 소유 경험을 제공합니다.
+			</p>
+			<div class="btn">
+				<button type="button"><span><img src="../../images/11_redart/store_apple.png" alt="버튼"></span></button>
+				<button type="button"><span><img src="../../images/11_redart/store_google.png" alt="버튼"></span></button>
+			</div>
+			<div class="more">
+				<button class="more"><span><img src="../../images/11_redart/btn_more.png" alt="더보기"></span></button>
+			</div>
+		</div>
+
+		<div class="section2">
+			<p class="txt">
+				전시 QR코드 스캔은<br />
+				redart 앱 내 카메라<span><img src="../../images/11_redart/qrcode_camera.png" alt=""></span>를<br />
+				이용해주세요.
+			</p>
+			<div class="img"><img src="../../images/11_redart/camara_screenshot.png" alt=""></div>
+		</div>
+
+	</div>
+
+	
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../../js/temp.js"></script> -->
+
+<script>
+document.querySelector(".redart_appstore .more button").addEventListener("click", function(){
+	let yy = document.querySelector(".section1").clientHeight;
+	window.scrollBy({
+		top: yy,
+		left: 0,
+		behavior: "smooth",
+	});
+})
+
+document.querySelector("html").style.height = "100%";
+document.querySelector("body").style.height = "100%";
+</script>
+</body>
+</html>

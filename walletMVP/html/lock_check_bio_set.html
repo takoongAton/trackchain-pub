@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>omnion</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Omnion" />
+	<meta property="og:description" content="개인형 디지털 지갑" />
+	<meta property="og:image" content="../images/omnion_meta.png" />
+
+	<link rel="stylesheet" href="../css/Global.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="../images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+	
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>비밀번호 설정</h1>
+					<!-- <div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div> -->
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+					<div class="lockChkWrap">
+						<p class="tit">안전한 지갑관리를 위해<br />6자리 비밀번호를 설정해주세요.<!-- <span>(1/5)</span> --> </p>
+						<div class="lockNum">
+							<span class="active"></span>
+							<span class="active"></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<button type="button" class="btnDelAll"><span>전체삭제</span></button>
+						<!-- <p class="errorTxt">설정하신 비밀번호와 일치하지 않습니다.</p>
+						<p class="errorTxt">5회 실패 시 삭제후 재설치 해야합니다.</p> -->
+					</div>
+				</div><!-- // section_top -->
+
+				<div class="section_bottom" style="position:relative;">
+					<div class="keypad_wrap">
+						<div class="keypad">
+							<div><button type="button" class="number">1</button></div>
+							<div><!-- <button type="button"></button> --></div>
+							<div><button type="button" class="number">2</button></div>
+							<div><button type="button" class="number">3</button></div>
+							<div><button type="button" class="number">4</button></div>
+							<div><button type="button" class="number">5</button></div>
+							<div><button type="button" class="number">6</button></div>
+							<div><button type="button" class="number">7</button></div>
+							<div><button type="button" class="number">8</button></div>
+							<div><button type="button" class="number">9</button></div>
+							<div><!-- <button type="button"></button> --></div>
+							<div><button type="button" class="number">0</button></div>
+							<div><button type="button" class="close"><span>취소</span></button></div>
+							<div class="submit"><button><span>입력완료</span></button></div>
+						</div>
+						
+					</div>
+				</div><!-- // section_bottom -->
+
+			</div><!-- // content_wrap -->
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+</div><!-- // wrap -->
+
+
+<div class="layer modal">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layerTit">생체인증 설정</div>
+
+		<div class="layer_content">
+			
+			<div class="bioSet">
+				<span class="icon"><img src="../images/ico_fingerprint.png" alt="지문인식"></span>
+				<p class="txt">생체인증을 설정하시면<br />간편한 서비스 이용이 가능합니다.</p>
+				<p class="tit">설정 하시겠습니까?</p>
+			</div>
+			
+		</div><!-- // layer_content -->
+
+		<div class="btn_group">
+			<div><button class="next"><span>설정하기</span></button></div>
+			<div><button class="prev"><span>나중에 할게요.</span></button></div>
+		</div>
+
+		<div><button type="button" class="btn_close"><span>닫기</span></button></div>
+
+	</div><!-- // layer_inner -->
+</div><!-- // layer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+/* 테스트 스크립트 */
+function openFull(target){
+	let targetLayer = '#' + target;
+	$(targetLayer).show();
+	$("html").addClass("scrollHidden");
+}
+$(".layer button.btn_close").on("click", function(){
+	$(this).closest(".layer").hide();
+	$("html").removeClass("scrollHidden");
+})
+</script>
+
+
+</body>
+</html>

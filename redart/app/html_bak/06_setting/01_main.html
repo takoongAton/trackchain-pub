@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<h1>설정</h1>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap">
+		<div class="page_default">
+			
+			<div class="setting_wrap">
+
+				<div class="userInfo">
+
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">이름</strong>
+						</div>
+						<!-- // input_wrap_tit -->
+						<div class="row_guide">
+							<div class="set_input disabled"><!-- focused, wearning, success, disabled-->
+								<input type="text" class="input_item" value="김철수" disabled>
+								<!-- <button type="button" class="btn_input_del"><img src="../../images/common/btn_input_del.png" alt="삭제"></button> -->
+							</div>
+							<p class="guide_txt"></p>
+						</div>
+						<!-- // row_guide -->
+					</div>
+					<!-- // set_input_wrap -->
+
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">전화번호</strong>
+						</div>
+						<!-- // input_wrap_tit -->
+						<div class="row_guide">
+							<div class="set_input disabled"><!-- focused, wearning, success, disabled-->
+								<input type="text" class="input_item" value="010-2222-2222" disabled>
+							</div>
+							<p class="guide_txt"></p>
+						</div>
+						<!-- // row_guide -->
+					</div>
+					<!-- // set_input_wrap -->
+
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">이메일(필수)</strong>
+						</div>
+						<!-- // input_wrap_tit -->
+						<div class="row_guide">
+							<div class="set_input disabled"><!-- focused, wearning, success, disabled-->
+								<input type="text" class="input_item" value="takoong@s.c" disabled>
+							</div>
+							<p class="guide_txt"></p>
+						</div>
+						<!-- // row_guide -->
+					</div>
+					<!-- // set_input_wrap -->
+
+					<div class="emai_edit">
+						<button type="button"><span class="icon"><img src="../../images/common/ico_edit.png" alt="수정"></span><span class="txt">이메일 수정</span></button>
+					</div>
+
+					<div class="btnGroup">
+						<div>
+							<button type="button" class="btn line"><span>로그아웃</span></button>
+						</div>
+					</div>
+
+				</div>
+				<!-- // userInfo -->
+
+				<div class="settingList">
+					<div class="item"><a href="#g"><span class="tit">작품 / 예약 / 구매 문의하기</span></a></div>
+					<div class="item"><a href="#g"><span class="tit">기타 문의하기</span></a></div>
+					<div class="item"><a href="#g"><span class="tit">개인정보 처리방침</span></a></div>
+					<div class="item"><a href="#g"><span class="tit">서비스 이용약관</span></a></div>
+					<div class="item"><a href="#g"><span class="tit">마케팅 정보 수신동의</span></a>
+						<div class="extend">
+							<p>레드아트에서 제공하는 광고성 이벤트 정보를 받습니다.</p>
+							<div class="ipt_switch">
+								<input type="checkbox" id="set_switch1" data-switch="primary">
+								<label for="set_switch1" data-on-label="" data-off-label=""></label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // settingList -->
+
+				<div class="appVer">
+					<dl>
+						<dt>앱버전 정보</dt>
+						<dd>
+							<span>최신버전입니다.</span>
+						</dd>
+					</dl>
+				</div>
+				<!-- // appVer -->
+
+			</div>
+			<!-- // setting_wrap -->
+
+		</div>
+		<!-- <div class="page_center"></div> -->
+	</div>
+	<!-- // container_wrap -->
+
+
+	<!-- <div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn line" disabled=""><span>작품 상세</span></button>
+			</div>
+			<div>
+				<button type="button" class="btn fill"><span>예약NFT 상세</span></button>
+			</div>
+		</div>
+	</div> -->
+	<!-- // footer_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+<div class="layer toast">
+	<span>마케팅 정보 수신 동의 활성화</span>
+</div>
+
+
+
+
+<div class="layer dim" style="display:none;"></div>
+<div class="loader_wrap page" style="display:none;">
+	<div class="loader"></div>
+</div>	
+
+
+
+
+
+<div class="layer full" style="display:none">
+	<div class="layer_header">
+		<div class="header">
+			<div class="util-btn">
+				<button type="button" class="h_btn_prev"><span><img src="../../images/common/ico_back.png" alt="이전"></span></button>
+			</div>
+			<h1>서비스 이용약관</h1>
+		</div>
+	</div>
+
+	<div class="layer_container">
+		<pre>
+			더미 텍스트<br />
+제1조 [목적]<br />
+본 이용약관은 주식회사 트랙체인 (이하 “회사”)이 제공하는 PICK(이하 “서비스”)을 이용함에 있어 사용자가 숙지하고 지켜야 할 권리·의무 및 책임사항을 명시하는 것을 목적으로 합니다.<br />
+제2조 [용어의 정의]<br />
+이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br />
+z1. 서비스 : 이용자가 이용할 수 있도록 회사가 제공하는 디지털 자산 포트폴리오 서비스 PICK 및 PICK과 관련된 제반 서비스를 말합니다.<br />
+2. 이용자 : 본 약관에 동의함으로써 회사와 이용 계약을 체결하고 회사가 제공하는 서비스를 이용하는 자를 말합니다.<br />
+3. 계정 : 서비스에서 본인을 식별하기 위해 생성된 것으로 본 약관에 동의하고 회사와 이용계약을 체결한 이용자에게 부여되는 서비스 계정을 말합니다.<br />
+4. 디지털 자산 : 코인, 토큰, NFT, STO 등을 포함하는 블록체인 상의 전자적 정보로 가치의 저장수단, 교환의 매개가 되는 서비스의 대상물을 말합니다.<br />
+5. 디지털 자산 지갑 : 디지털 자산의 보관 및 보내기/받기가 가능한 수단을 말합니다.<br />
+6. 지갑 주소 : 디지털 자산의 변화를 기록하기 위해 블록체인 상에 존재하는 고유한 식별 주소를 말합니다.<br />
+7. 프라이빗 키 : 특정 지갑 주소가 보유한 디지털 자산의 전송, 거래, 서명 등 모든 스마트 컨트랙트 동작 시 필 포함하는 블록체인 상의 전자적 정보로 가치의 저장수단, 교환의 매개가 되는 서비스의 대상물을 말합니다.<br />
+5. 디지털 자산 지갑 : 디지털 자산의 보관 및 보내기/받기가 가능한 수단을 말합니다.<br />
+6. 지갑 주소 : 디지털 자산의 변화를 기록하기 위해 블록체인 상에 존재하는 고유한 식별 주소를 말합니다.<br />
+7. 프라이빗 키 : 특정 지갑 주소가 보유한 디지털 자산의 전송, 거래, 서명 등 모든 스마트 컨트랙트 동작 시 필 포함하는 블록체인 상의 전자적 정보로 가치의 저장수단, 교환의 매개가 되는 서비스의 대상물을 말합니다.<br />
+5. 디지털 자산 지갑 : 디지털 자산의 보관 및 보내기/받기가 가능한 수단을 말합니다.<br />
+6. 지갑 주소 : 디지털 자산의 변화를 기록하기 위해 블록체인 상에 존재하는 고유한 식별 주소를 말합니다.<br />
+7. 프라이빗 키 : 특정 지갑 주소가 보유한 디지털 자산의 전송, 거래, 서명 등 모든 스마트 컨트랙트 동작 시 필
+		</pre>
+	</div>
+	<!-- // layer_container -->
+</div>
+<!-- // .layer.full -->
+
+
+
+
+
+<div class="layer alert" style="display:none;">
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="layer_tit"><strong>로그아웃하시겠어요?</strong></div>
+		</div>
+		
+		<div class="layer_footer">
+			<div class="btnGroup">
+				<div class="btn"><button class="btn line popup"><span>취소</span></button></div>
+				<div class="btn"><button class="btn fill popup"><span>로그아웃</span></button></div>
+			</div>
+		</div>
+	</div><!-- // layer_inner -->
+
+	<!-- <div class="btnClose">
+		<button type="button"><img src="../../images/common/ico_close.png" alt="닫기"></button>
+	</div> -->
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+
+function copyToClipboard() {
+	const accountNumber = document.getElementById("account-number").textContent;
+	navigator.clipboard.writeText(accountNumber);
+	alert("계좌번호가 복사되었습니다.");
+}
+
+if(document.querySelector(".account button")) {
+	document.querySelector(".account button").addEventListener("click", function(){
+		copyToClipboard();
+	})
+}
+
+</script>
+</body>
+</html>

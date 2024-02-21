@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../../css/reset.css">
+	
+	<!-- Noto Sans KR 폰트 -->
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	
+	<link rel="stylesheet" href="../../css/pick.css">
+<style>
+/* html,body {height:100%;} */
+.dashboard_home {min-height:100%; background-color:#f7f7f7;}
+.dashboard_home .dashboard_header {padding:0 24px 24px 24px;}
+.dashboard_home .dashboard_tit {display:flex; justify-content:space-between; align-items:flex-start; width:100%;}
+.dashboard_home .dashboard_tit strong.tit {font-size:24px; line-height:29px; font-family:'Montserrat'; font-weight:bold;}
+.dashboard_home .dashboard_tit .channelEdit button {display:flex; align-items:center; width:auto;}
+.dashboard_home .dashboard_tit .channelEdit span.txt {display:inline-block; font-size:14px; line-height:20px;}
+.dashboard_home .dashboard_tit .channelEdit span.ico {display:inline-block; width:16px; height:16px; font-size:0;}
+
+.dashboard_home .dashboard_tab {margin-top:28px;}
+.dashboard_home .dashboard_tab button {display:inline-flex; justify-content:center; align-items:center; width:auto; background-color:transparent; width:66px; height:40px; border:1px solid #222; border-radius:33px;}
+.dashboard_home .dashboard_tab button span {font-size:18px; font-weight:bold;}
+.dashboard_home .dashboard_tab button.active {background-color:#222;}
+.dashboard_home .dashboard_tab button.active span {color:#fff;}
+.dashboard_home .dashboard_tab button + button {margin-left:8px;}
+
+.dashboard_home .dashboard_graph {background-color:#fff;;}
+.dashboard_home .dashboard_graph img {width:100%;}
+.dashboard_home .dashboard_myNFT {padding:48px 0;}
+.dashboard_home .dashboard_myNFT > div.tit {padding:0 24px; font-size:24px; font-family:'Montserrat'; line-height:29px; font-weight:600;}
+
+.dashboard_home .dashboard_myNFT .dashboard_data {margin-top:16px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT {padding:0 24px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT .item {transition:0.2s ease;;}
+.dashboard_home .dashboard_myNFT .dashboard_data .my_NFT .item.active {animation: test123 0.2s 1 ease}
+.dashboard_home .dashboard_myNFT .dashboard_data .nodata_NFT {padding:0 24px;}
+.dashboard_home .dashboard_myNFT .dashboard_data .nodata_NFT p {display:flex; justify-content:center; align-items:center; width:333px; height:80px; border-radius:20px; background-color:#e5e5e5; font-size:14px; line-height:21px; overflow:hidden;}
+@keyframes test123 {
+	0% {transform:scale(1);}
+	50% {transform:scale(0.95);}
+	100% {transform:scale(1);}
+}
+
+	/* 가로 스크롤 형식 */
+	.scroll-wrapper {overflow-y:hidden; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+	.scroll-wrapper::-webkit-scrollbar {display:none !important;}
+	.scroll-wrapper .scroll {display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;}
+	.scroll-wrapper .scroll .item {white-space:nowrap;} /* 구분 칸 */
+	.scroll-wrapper .scroll .item div {width:112px; height:112px; box-sizing:border-box; border-radius:20px; overflow:hidden;} /* 사용자 수정 가능 */
+	.scroll-wrapper .scroll .item:nth-child(odd) div {background-color:#ff6600;}
+	.scroll-wrapper .scroll .item:nth-child(even) div {background-color:#0066ff;}
+	.scroll-wrapper .scroll .item + .item {margin-left:12px;}
+	
+	
+	/* dashboard_home - MY NFT coins */
+.dashboard_home .my_coins_list {margin-top:48px; padding:0 24px;}
+.dashboard_home .my_coins_list .item {padding:20px 16px; border-radius:20px; background-color:#fff;}
+.dashboard_home .my_coins_list .item + .item {margin-top:12px;}
+.dashboard_home .my_coins_list .item .coinsItem {display:flex; justify-content:space-between; align-items:center; width:327px; width:100%; height:48px;}
+.dashboard_home .my_coins_list .item .coinsItem div.icon {width:48px; height:48px;}
+.dashboard_home .my_coins_list .item .coinsItem div.icon span {display:block; width:48px; height:48px; background-color:#f7f7f7; border-radius:24px; overflow:hidden;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt {flex:1; margin-left:12px;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money {display:flex; align-items:center; color:#222;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money strong {display:inline-block; font-size:20px; line-height:22px; font-family:'Montserrat'; font-weight:600;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.money span {display:inline-block; font-size:20px; line-height:22px; font-weight:500;}
+.dashboard_home .my_coins_list .item .coinsItem div.txt p.rate {color:#666; font-size:12px; line-height:22px;}
+.dashboard_home .my_coins_list .item .coinsItem div.tools img {width:20px; height:20px;}
+	
+	
+	.dashboard_home .nodata_coins {width:100%; padding:80px 0; text-align:center;}
+	.dashboard_home .nodata_coins span.ico {display:inline-block; width:80px; height:80px;}
+	.dashboard_home .nodata_coins p {color:#666; font-size:14px; line-height:21px;;}
+	</style>
+</head>
+<body>
+
+	<div class="dashboard_home">
+
+		<div class="dashboard_header">
+			<div class="dashboard_tit">
+				<strong class="tit">Dashboard</strong>
+				<div class="channelEdit">
+					<button type="button" class="">
+						<span class="txt">채널관리</span>
+						<span class="ico"><img src="../../images/setting.png" alt=""></span>
+					</button>
+				</div>
+			</div><!-- // dashboard_tit -->
+			<div class="dashboard_tab">
+				<button type="button" class="active"><span>자산</span></button>
+				<button type="button"><span>채널</span></button>
+			</div><!-- // dashboard_tab -->
+		</div><!-- // dashboard_header -->
+
+		<div class="dashboard_graph">
+			<img src="../../images/temp/Frame 48095478.png" alt="그래프 임시">
+		</div><!-- // dashboard_graph -->
+
+		<div class="dashboard_myNFT">
+			<div class="tit">MY NFT</div>
+			<div class="dashboard_data">
+
+				<div class="my_NFT scroll-wrapper">
+					<div class="scroll">
+						<div class="item">
+							<div><img src="" alt=""></div>
+						</div>
+						<div class="item">
+							<div><img src="" alt=""></div>
+						</div>
+						<div class="item">
+							<div><img src="" alt=""></div>
+						</div>
+						<div class="item">
+							<div><img src="" alt=""></div>
+						</div>
+						<div class="item">
+							<div><img src="" alt=""></div>
+						</div>
+					</div>
+				</div><!-- // my_NFT -->
+
+				<div class="nodata_NFT">
+					<p>보유중인 nft가 없습니다.</p>
+				</div><!-- // nodata_NFT -->
+
+				<div class="my_coins_list">
+					<div class="item">
+						<div class="coinsItem">
+							<div class="icon">
+								<span></span>
+							</div>
+							<div class="txt">
+								<p class="money">
+									<strong>228,000</strong>
+									<span>원</span>
+								</p>
+								<p class="rate">0.068 BTC (50%)</p>
+							</div>
+							<div class="tools">
+								<img src="../../images/ico_go.png" alt="링크표시">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="coinsItem">
+							<div class="icon">
+								<span></span>
+							</div>
+							<div class="txt">
+								<p class="money">
+									<strong>155,000</strong>
+									<span>원</span>
+								</p>
+								<p class="rate">0.3 ETH (22%)</p>
+							</div>
+							<div class="tools">
+								<img src="../../images/ico_go.png" alt="링크표시">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="coinsItem">
+							<div class="icon">
+								<span></span>
+							</div>
+							<div class="txt">
+								<p class="money">
+									<strong>197,500</strong>
+									<span>원</span>
+								</p>
+								<p class="rate">12 SOL (18%)</p>
+							</div>
+							<div class="tools">
+								<img src="../../images/ico_go.png" alt="링크표시">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="coinsItem">
+							<div class="icon">
+								<span></span>
+							</div>
+							<div class="txt">
+								<p class="money">
+									<strong>426,000</strong>
+									<span>원</span>
+								</p>
+								<p class="rate">22.2 USDC (10%)</p>
+							</div>
+							<div class="tools">
+								<img src="../../images/ico_go.png" alt="링크표시">
+							</div>
+						</div>
+					</div>
+				</div><!-- // my_coins_list -->
+
+				<div class="nodata_coins">
+					<span class="ico"><img src="../../images/ico_nodata_coins.png" alt="코인이미지"></span>
+					<p>보유중인 자산이 없습니다.</p>
+				</div><!-- // nodata_coins -->
+
+			</div><!-- // dashboard_data -->
+			
+			
+		</div><!-- // dashboard_myNFT -->
+		
+	</div><!-- // dashboard_home -->
+
+
+
+<style>
+/* 앱하단 */
+.app_footer_wrap {position:fixed; bottom:0; left:0; width:100%; height:66px; display:none;}
+.app_footer_wrap .inner {position:fixed; bottom:0; left:50%; width:100%; max-width:720px; border-radius:12px 12px 0 0; transform:translateX(-50%); z-index:2}
+/* .app_footer_wrap .inner::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; height:54.42176%; background-color: #fff; z-index:0;}
+.app_footer_wrap .inner ul {display:flex; justify-content:space-evenly; align-items:flex-end; position:relative; width:100%; z-index:1;}
+.app_footer_wrap .inner ul button {width:43px; height:40px;}
+.app_footer_wrap .inner ul button.home {width:73.5px; height:73.5px;} */
+</style>
+
+	<div class="app_footer_wrap">
+		<div class="inner"><img src="../../images/temp/@Bottom Navigation Bar.png" alt=""></div>
+		<!-- <div class="inner">
+			<ul>
+				<li><button type="button" class="app_web3"><span><img src="../images/ico_web3.png" alt="홈"></span></button></li>
+				<li><button type="button" class="app_web3"><span><img src="../images/ico_web3.png" alt="대시보드"></span></button></li>
+				<li><button type="button" class="home"><span><img src="../images/f_btn_home.png" alt="자산추가"></span></button></li>
+				<li><button type="button" class="app_setting"><span><img src="../images/ico_secure.png" alt="피드"></span></button></li>
+				<li><button type="button" class="app_setting"><span><img src="../images/ico_secure.png" alt="마이"></span></button></li>
+			</ul>
+		</div> -->
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

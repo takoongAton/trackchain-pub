@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>wallet MVP</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="타이틀타이틀">
+	<meta property="og:description" content="설명설명설명">
+	<meta property="og:image" content="../../images/common/wallet_meta.png">
+	<meta property="og:url" content="https://www.www.www.www/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="타이틀타이틀">
+	<meta name="twitter:description" content="설명설명설명">
+	<meta name="twitter:image" content="../../images/common/logo_wallet.png">
+	<meta name="twitter:domain" content="https://www.www.www.www/">
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"> -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=block" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>페이지타이틀</h1>
+					<div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+					111 내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />
+					내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다.<br />내용이 들어갑니다. 222<br />
+				</div><!-- // section_top -->
+
+			</div>
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+
+</div><!-- // wrap -->
+
+
+<div class="layer full">
+	<div class="header">
+		<h1>타이틀</h1>
+		<div class="tools-btn">
+			<button class="btn_close"><span>닫기</span></button>
+		</div>
+	</div>
+	<div class="layer_content">
+		내용이 들어갑니다.
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+/* 테스트 스크립트 */
+function openFull(target){
+	let targetLayer = '#' + target;
+	$(targetLayer).show();
+	$("html").addClass("scrollHidden");
+}
+$(".layer.full button.btn_close").on("click", function(){
+	$(this).closest(".layer.full").hide();
+	$("html").removeClass("scrollHidden");
+})
+</script>
+
+
+</body>
+</html>

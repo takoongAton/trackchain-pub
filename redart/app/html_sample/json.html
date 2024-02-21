@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>lottie</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<!-- <link rel="stylesheet" href="../css/redart.css"> -->
+
+<style>
+* {margin:0; padding:0; list-style:none;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="test">
+		
+		<lottie-player src="144374-loading.json" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay></lottie-player>
+		<hr style="display:block; border-top:1px solid #ddd;">
+		<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_uWAYWpqg1e.json" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay></lottie-player>
+		<!-- <lottie-player src="file:///C:/work/trackchain/redart/app/html_sample/144374-loading.json" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay></lottie-player> -->
+		<!-- <lottie-player src="https://assets5.lottiefiles.com/datafiles/zc3XRzudyWE36ZBJr7PIkkqq0PFIrIBgp4ojqShI/newAnimation.json"  background="transparent" speed="1" loop autoplay></lottie-player> -->
+
+	</div>
+
+	<div id="imageContainer">
+		
+	</div>
+
+</div><!-- // wrap -->
+
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+<script>
+	var imageContainer = document.getElementById('imageContainer');
+
+// AJAX 요청을 통해 JSON 파일 가져오기
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'file:///C:/work/trackchain/redart/app/html_sample/144374-loading.json', true);
+xhr.onreadystatechange = function() {
+	if (xhr.readyState === 4 && xhr.status === 200) {
+		var response = JSON.parse(xhr.responseText);
+
+		// 이미지 요소 생성
+		var imageElement = document.createElement('img');
+		imageElement.src = response.imageData;
+
+		// 이미지를 컨테이너에 추가
+		imageContainer.appendChild(imageElement);
+	}
+};
+xhr.send();
+</script>
+
+
+
+</body>
+</html>

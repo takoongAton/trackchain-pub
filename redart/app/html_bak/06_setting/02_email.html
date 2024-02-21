@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/redart_2.0.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<h1>설정</h1>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap">
+		<div class="page_default">
+			
+			<div class="setting_wrap">
+
+				<div class="userInfo">
+
+					<div class="set_input_wrap">
+						<div class="input_wrap_tit">
+							<strong class="tit">이메일(필수)</strong>
+						</div>
+						<!-- // input_wrap_tit -->
+						<div class="row_guide">
+							<div class="set_input"><!-- focused, wearning, success, disabled-->
+								<input type="text" class="input_item" value="text">
+								<button type="button" class="btn_input_del"><img src="../../images/common/btn_input_del.png" alt="삭제"></button>
+							</div>
+							<!-- <p class="guide_txt"></p> -->
+						</div>
+						<!-- // row_guide -->
+					</div>
+					<!-- // set_input_wrap -->
+
+				</div>
+				<!-- // userInfo -->
+
+			</div>
+			<!-- // setting_wrap -->
+
+		</div>
+		<!-- <div class="page_center"></div> -->
+	</div>
+	<!-- // container_wrap -->
+
+
+	<div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- // footer_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+
+function copyToClipboard() {
+	const accountNumber = document.getElementById("account-number").textContent;
+	navigator.clipboard.writeText(accountNumber);
+	alert("계좌번호가 복사되었습니다.");
+}
+
+if(document.querySelector(".account button")) {
+	document.querySelector(".account button").addEventListener("click", function(){
+		copyToClipboard();
+	})
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>omnion</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Omnion" />
+	<meta property="og:description" content="개인형 디지털 지갑" />
+	<meta property="og:image" content="../images/omnion_meta.png" />
+
+	<link rel="stylesheet" href="../css/Global.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/tc_wallet.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="../images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+	
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span>이전</span></button>
+					</div>
+					<h1>Settings</h1>
+					<!-- <div class="tools-btn">
+						<button type="button" class="h_btn_close"><span>닫기</span></button>
+						<button type="button" class="h_btn_scan"><span>스캔</span></button>
+					</div> -->
+				</div>
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<div class="content_wrap"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+
+				<div class="section_top">
+
+					<div class="settingList">
+						<ul>
+							<li><a href="#g"><span class="tit">비밀번호 변경</span></a></li>
+							<li class="setting_item">
+								<p>생체 인증 설정</p>
+								<div class="ipt_switch">
+									<input type="checkbox" id="set_switch2" data-switch="primary">
+									<label for="set_switch2" data-on-label="ON" data-off-label="OFF"></label>
+								</div>
+							</li>
+							<li><a href="#g"><span class="tit">복구코드 백업하기</span></a></li>
+							<li><a href="#g"><span class="tit">서비스 이용 약관</span></a></li>
+							<li><a href="#g"><span class="tit">개인정보 처리방침</span></a></li>
+							<li class="appVer">
+								<p>앱 버전 :</p>
+								<p>
+									<span>V 1.0.1</span><br />
+									<span>최신 버전입니다.</span>
+								</p>
+							</li>
+						</ul>
+					</div><!-- // settingList -->
+
+				</div><!-- // section_top -->
+
+			</div>
+			
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+	<div class="app_footer_wrap">
+		<div class="inner">
+			<ul>
+				<li><button type="button" class="app_web3"><span><img src="../images/ico_web3.png" alt="WEB3"></span></button></li>
+				<li><button type="button" class="home"><span><img src="../images/f_btn_home.png" alt="홈"></span></button></li>
+				<li><button type="button" class="app_setting"><span><img src="../images/ico_secure.png" alt="설정"></span></button></li>
+			</ul>
+		</div>
+	</div>
+	
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+/* 테스트 스크립트 */
+function openFull(target){
+	let targetLayer = '#' + target;
+	$(targetLayer).show();
+	$("html").addClass("scrollHidden");
+}
+$(".layer.full button.btn_close").on("click", function(){
+	$(this).closest(".layer.full").hide();
+	$("html").removeClass("scrollHidden");
+})
+</script>
+
+
+</body>
+</html>

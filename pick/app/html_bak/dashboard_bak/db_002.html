@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../../css/reset.css">
+	
+	<!-- Noto Sans KR 폰트 -->
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	
+	<link rel="stylesheet" href="../../css/pick.css">
+<style>
+
+</style>
+</head>
+<body>
+
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+					</div>
+					<h1>타이틀</h1>
+					<div class="tools-btn">
+						<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						<button type="button" class="h_btn_scan"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+<style>
+.nft_viewer .nft_small_list {margin-top:5px; padding:0 24px;}
+.nft_viewer .nft_small_list .item {position:relative;}
+.nft_viewer .nft_small_list .item div {position:relative; width:112px; height:112px; box-sizing:border-box; border-radius:20px; overflow:hidden;}
+.nft_viewer .nft_small_list .item + .item {margin-left:12px;}
+.nft_viewer .nft_small_list .item.active {animation: test123 0.2s 1 ease}
+.nft_viewer .nft_small_list .item.active div::before {content:""; display:block; position:absolute; top:0; left:0; width:112px; height:112px; border:5px solid #FF643C; border-radius:20px;}
+@keyframes test123 {
+	0% {transform:scale(1);}
+	50% {transform:scale(0.95);}
+	100% {transform:scale(1);}
+}
+
+.nft_viewer .nft_big_wrap {width:327px; margin:0 auto; margin-top:30px; padding-top:30px; border-top:1px solid #e5e5e5;}
+.nft_viewer .nft_big_wrap .nft_big_item {position:relative;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_channel {display:flex; justify-content:center; align-items:center; position:absolute; top:24px; left:24px; height:24px; border-radius:12px; border:1px solid #fff; z-index:1;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_channel span {display:block; padding:0 15px; color:#fff; font-size:13px; font-family:'Montserrat';}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_img {border-radius:20px; overflow:hidden;}
+.nft_viewer .nft_big_wrap .nft_big_item div.nft_img img {display:block; transition:all 0.2s ease; animation: identifier 5s ease infinite;}
+
+.nft_viewer .nft_big_wrap .nft_big_item p.nft_tit {position:absolute; bottom:24px; left:24px; padding-right:96px; color:#fff; font-size:32px; line-height:39px;}
+.nft_viewer .nft_big_wrap .nft_big_item span.nft_ico {display:block; position:absolute; right:24px; bottom:24px; width:48px; height:48px;}
+
+@keyframes identifier {
+	0% {transform:scale(1) translateX(0) translateY(0);}
+	25% {transform:scale(1.03) translateX(3px) translateY(-3px);;}
+	50% {transform:scale(1.03) translateX(3px) translateY(3px);;}
+	75% {transform:scale(1.03) translateX(-3px) translateY(3px);;}
+	100% {transform:scale(1) translateX(0) translateY(0);;}
+}
+
+
+.nft_viewer .nft_big_wrap div.btn_detail {margin-top:24px;}
+
+.nft_viewer .nft_big_wrap .nft_community {margin-top:48px;}
+.nft_viewer .nft_big_wrap .nft_community div.tit {font-size:16px; line-height:20px; font-family:'Montserrat'; font-weight:500;}
+.nft_viewer .nft_big_wrap .nft_community .community_list {margin-top:16px;}
+.nft_viewer .nft_big_wrap .nft_community .community_list span {display:inline-block; width:48px; height:48px; margin-right:8px;}
+.nft_viewer .nft_big_wrap .nft_community .community_list span img {width:48px; height:48px;}
+
+
+
+@media screen and (max-width:720px) {
+
+}
+</style>
+	<div class="nft_viewer">
+		<div class="nft_small_list scroll-wrapper">
+			<div class="scroll">
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+				<div class="item">
+					<div><img src="../../images/temp/Mask group.png" alt="샘플"></div>
+				</div>
+			</div><!-- // scroll -->
+		</div><!-- // nft_small_list -->
+
+		<div class="nft_big_wrap">
+			<div class="nft_big_item">
+				<div class="nft_channel"><span>Upbit</span></div>
+				<div class="nft_img"><img src="../../images/temp/sam_nft_big.png" alt="NFT 샘플"></div>
+				<p class="nft_tit">Collection Title</p>
+				<span class="nft_ico"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+			</div><!-- // nft_big_item -->
+
+			<div class="btn_detail">
+				<button class="btn line small"><span>상세보기</span></button>
+			</div>
+
+			<div class="nft_community">
+				<div class="tit">Community</div>
+				<div class="community_list">
+					<span class="ico"><img src="../../images/ico/ico_community_discord.png" alt="디스코드"></span>
+					<span class="ico"><img src="../../images/ico/ico_community_telegram.png" alt="텔레그램"></span>
+					<span class="ico"><img src="../../images/ico/ico_community_twitter.png" alt="트위터"></span>
+				</div>
+			</div><!-- // nft_community -->
+
+		</div><!-- // nft_big -->
+
+		
+	</div><!-- // nft_viewer -->
+	
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+let nftItemList = document.querySelector(".nft_small_list");
+let nftItems = nftItemList.querySelectorAll(".item");
+if(nftItems.length > 0) {
+	nftItems.forEach(function(item,index){
+		item.addEventListener("click", function(){
+			removeClass(nftItems);
+			item.classList.add("active");
+		})
+	})
+}
+function removeClass(nftItems){
+	nftItems.forEach(function(item,index){
+		item.classList.remove("active")
+	})
+}
+
+
+
+</script>
+
+</body>
+</html>

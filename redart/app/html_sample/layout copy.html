@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> -->
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/redart.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+.slider {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-item {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-item.active {
+  background-color: #ccc;
+}
+
+.slider-item.next {
+  transform: translateX(100%);
+}
+
+.slider-item.previous {
+  transform: translateX(-100%);
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="h_btn_prev"><span><img src="../images/common/ico_back.png" alt="이전"></span></button>
+					</div>
+					<h1>타이틀</h1>
+					<div class="tools-btn">
+						<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+						<button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button> -->
+						<button type="button" class="h_btn_menu"><span><img src="../images/common/ico_menu.png" alt="메뉴"></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	
+
+	<div class="container_wrap">
+		<div class="page_default">
+			<div class="slider">
+				<div class="slider-track">
+				  <div class="slider-item">Slide 1</div>
+				  <div class="slider-item">Slide 2</div>
+				  <div class="slider-item">Slide 3</div>
+				</div>
+			  </div>
+
+			<!-- <div class="slider">
+				<div class="slider-item"><img src="../images/02_gallery/img_sam_328x328_1.png" alt=""></div>
+				<div class="slider-item"><img src="../images/02_gallery/img_sam_328x328_2.png" alt=""></div>
+				<div class="slider-item"><img src="../images/02_gallery/img_sam_328x328_3.png" alt=""></div>
+			</div> -->
+		</div>
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+		<!-- <div class="page_center"></div> -->
+	</div>
+	<!-- // container_wrap -->
+
+
+	<div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn line" disabled=""><span>취소</span></button>
+			</div>
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div>
+		
+	</div>
+	<!-- // footer_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../js/temp.js"></script> -->
+<script>
+const slider = document.querySelector('.slider');
+const track = document.querySelector('.slider-track');
+const items = document.querySelectorAll('.slider-item');
+
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+let currentIndex = 0;
+
+const touchStart = (index) => (e) => {
+  currentIndex = index;
+  startPos = getPositionX(e);
+  isDragging = true;
+  animationID = requestAnimationFrame(animation);
+  slider.classList.add('grabbing');
+};
+
+const touchMove = (e) => {
+  if (!isDragging) return;
+  const currentPosition = getPositionX(e);
+  currentTranslate = prevTranslate + currentPosition - startPos;
+
+  const itemWidth = items[0].offsetWidth;
+  items.forEach((item, index) => {
+    const itemTranslate = (index - currentIndex) * itemWidth;
+    item.style.transform = `translateX(${currentTranslate + itemTranslate}px)`;
+  });
+};
+
+const touchEnd = () => {
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+  const moveBy = currentTranslate - prevTranslate;
+
+  if (moveBy < -100 && currentIndex < items.length - 1) {
+    currentIndex++;
+  }
+
+  if (moveBy > 100 && currentIndex > 0) {
+    currentIndex--;
+  }
+
+  setPositionByIndex();
+  slider.classList.remove('grabbing');
+};
+
+const getPositionX = (e) => e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+
+const animation = () => {
+  setSliderPosition();
+  if (isDragging) requestAnimationFrame(animation);
+};
+
+const setSliderPosition = () => {
+  track.style.transform = `translateX(${currentTranslate}px)`;
+};
+
+const setPositionByIndex = () => {
+  currentTranslate = currentIndex * -slider.offsetWidth;
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+};
+
+items.forEach((item, index) => {
+  item.addEventListener('touchstart', touchStart(index));
+  item.addEventListener('touchmove', touchMove);
+  item.addEventListener('touchend', touchEnd);
+  item.addEventListener('mousedown', touchStart(index));
+  item.addEventListener('mousemove', touchMove);
+  item.addEventListener('mouseup', touchEnd);
+  item.addEventListener('mouseleave', touchEnd);
+});
+
+setPositionByIndex();
+</script>
+</body>
+</html>

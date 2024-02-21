@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+<style>
+.pick_home {max-width:720px; min-height:100%; margin:0 auto; padding:20px 24px; background-color: #f8f8f8;}
+.home_header {display:flex; justify-content:space-between; align-items:center; width:100%; height:76px;}
+.home_header > div:first-of-type {flex:1;}
+.home_header > div:last-of-type {width:60px;}
+.home_header .profile {width:60px; height:60px; border-radius:100%;}
+
+.profileImg_wrap {text-align:center;}
+.profileImg_wrap .img_wrap {display:inline-block; position:relative;}
+.profileImg_wrap .img_wrap span.img {display:inline-block; width:120px; height:120px;}
+.profileImg_wrap .img_wrap button {position:absolute; right:0; bottom:0; width:40px; height:40px; border-radius:100%; background-color:#fff;;}
+.profileImg_wrap .img_wrap button span {display:block;}
+
+
+
+
+/* 프로필 이메일 */
+.nickname_wrap {}
+.nickname_wrap .profile_email {margin-top:8px; color:#666666; font-size:16px; line-height:22px; font-family:'Montserrat'; text-align:center;}
+.nickname_wrap .nickName {display:inline-flex; justify-content:center; align-items:center; width:100%;}
+.nickname_wrap .nickName button {width:24px; height:24px; opacity:0.5;}
+.nickname_wrap .nickName img {}
+</style>
+</head>
+<body>
+
+	<div class="pick_home">
+
+		<div class="pickProfile_wrap">
+
+			<div class="btnSetting"><button type="button"><span>설정</span></button></div>
+
+			<div class="profileImg_wrap">
+				<div class="img_wrap">
+					<span class="img"><img src="../../images/temp/icon_profile_sam.png" alt="이미지"></span>
+					<button type="button"><span>수정버튼</span></button>
+				</div>
+			</div><!-- // profileImg_wrap -->
+
+			<div class="set_input_wrap">
+				<div class="row_guide">
+					<div class="set_input">
+						<input type="text" placeholder="김트랙" title="김트랙">
+						<button type="button" class="btn_input_nickname" style="display: block;">edit</button>
+					</div>
+					<!-- <p class="text_gm_point"><em>!</em>유효하지 않은 값입니다.</p> -->
+				</div>
+			</div><!-- // set_input_wrap -->
+
+			<div class="nickname_wrap">
+				<div class="nickName">
+					<strong>김트랙</strong>
+					<button><span><img src="../../images/ico/ico_edit2.png" alt="닉네임 수정"></span></button>
+				</div>
+				<p class="profile_email">e-mail@email.com</p>
+			</div>
+		</div><!-- // pickProfile_wrap -->
+<style>
+.profile_footer {}
+.profile_footer .item {display:flex; align-items:center; height:60px; padding:0 20px; background-color:#fff; overflow:hidden;;}
+.profile_footer .item + .item {margin-top:12px;}
+.profile_footer .item span,
+.profile_footer .item strong {display:inline-block;}
+.profile_footer .item span {width:32px; height:32px;}
+.profile_footer .item strong {margin-left:8px; font-size:16px; line-height:22px;;}
+.profile_footer div:last-of-type {text-align:right;}
+.profile_footer div:last-of-type button {display:inline-block; width:auto;}
+.profile_footer div:last-of-type button span {display:block; color:#999; border-bottom:1px solid #999; font-size:13px;}
+</style>
+		<div class="profile_footer">
+			<div class="item">
+				<span class="img"><img src="../../images/ico/file-account 1.png" alt="ㅇㅇㅇㅇ"></span>
+				<strong>계정 관리</strong>
+			</div>
+			<div class="item">
+				<span class="img"><img src="../../images/ico/bell.png" alt="ㅇㅇㅇㅇ"></span>
+				<strong>계정 관리</strong>
+			</div>
+			<div class="item">
+				<span class="img"><img src="../../images/ico/message.png" alt="ㅇㅇㅇㅇ"></span>
+				<strong>계정 관리</strong>
+			</div>
+			<div class="">
+				<button type="button"><span>로그아웃</span></button>
+			</div>
+		</div>
+
+
+
+
+
+<style>
+.linkadd_wrap div.tit {color:#666; font-size:16px; line-height:24px; font-weight:400; text-align:center;}
+.linkadd_wrap .network_sel_wrap {display:grid; grid-template-columns:auto auto auto; justify-content:space-around; flex-wrap:wrap; row-gap:16px; width:100%;}
+.linkadd_wrap .network_sel_wrap .item {width:80px; text-align:center;}
+.linkadd_wrap .network_sel_wrap .item.disabled {opacity:0.5;}
+.linkadd_wrap .network_sel_wrap .item span.yet {}
+</style>
+
+		<div class="linkadd_wrap">
+			<div class="tit">거래소를 선택해주세요.</div>
+			<div class="network_sel_wrap">
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+							<input type="checkbox" id="set_checkbox1">
+							<label for="set_checkbox1"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Ethereum</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_Polygon.png" alt="폴리곤"></span>
+							<input type="checkbox" id="set_checkbox2">
+							<label for="set_checkbox2"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Polygon</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_BNBChain.png" alt="비엔비체인"></span>
+							<input type="checkbox" id="set_checkbox3">
+							<label for="set_checkbox3"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">BNB Chain</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_Klaytn.png" alt="클레이튼"></span>
+							<input type="checkbox" id="set_checkbox4">
+							<label for="set_checkbox4"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Klaytn</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+							<input type="checkbox" id="set_checkbox5">
+							<label for="set_checkbox5"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Solana</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+							<input type="checkbox" id="set_checkbox6">
+							<label for="set_checkbox6"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Bitcoin</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+							<input type="checkbox" id="set_checkbox11">
+							<label for="set_checkbox11"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Ethereum</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_Polygon.png" alt="폴리곤"></span>
+							<input type="checkbox" id="set_checkbox21">
+							<label for="set_checkbox21"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Polygon</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_BNBChain.png" alt="비엔비체인"></span>
+							<input type="checkbox" id="set_checkbox31">
+							<label for="set_checkbox31"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">BNB Chain</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_Klaytn.png" alt="클레이튼"></span>
+							<input type="checkbox" id="set_checkbox41">
+							<label for="set_checkbox41"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Klaytn</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_solana.png" alt="솔라나"></span>
+							<input type="checkbox" id="set_checkbox51">
+							<label for="set_checkbox51"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Solana</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_bitcoin.png" alt="비트코인"></span>
+							<input type="checkbox" id="set_checkbox61">
+							<label for="set_checkbox61"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Bitcoin</p>
+					</div>
+				</div>
+				<div class="item disabled">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+							<input type="checkbox" id="set_checkbox12">
+							<label for="set_checkbox12"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Ethereum</p>
+						<span class="yet">(예정)</span>
+					</div>
+				</div>
+				<div class="item disabled">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+							<input type="checkbox" id="set_checkbox12">
+							<label for="set_checkbox12"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Ethereum</p>
+						<span class="yet">(예정)</span>
+					</div>
+				</div>
+				<div class="item disabled">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon coin">
+							<span class="img"><img src="../../images/ico/ico_coin_ethereum.png" alt="이더리움"></span>
+							<input type="checkbox" id="set_checkbox12">
+							<label for="set_checkbox12"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">Ethereum</p>
+						<span class="yet">(예정)</span>
+					</div>
+				</div>
+			</div><!-- // network_sel_wrap -->
+		</div><!-- // linkadd_wrap (거래소 추가) -->
+
+
+
+<style>
+.contact_header {}
+.contact_header .contactItem {display:flex; align-items:center; width:100%;}
+.contact_header .contactItem div.icon {width:60px; height:60px;}
+.contact_header .contactItem div.txt {}
+.contact_header .contactItem div.txt div.ip_address {display:flex; align-items:center;}
+.contact_header .contactItem div.txt div.ip_address p {padding-right:8px; color:#999; font-size:16px; line-height:28px; font-family:'Montserrat';}
+.contact_header .contactItem div.txt div.ip_address button {width:16px; height:16px; opacity:0.5;}
+
+.set_input_wrap {}
+.set_input_wrap .input_wrap_tit {display:flex; justify-content:space-between; align-items:center; width:100%; padding-bottom:8px;}
+.set_input_wrap .input_wrap_tit.ko {}
+.set_input_wrap .input_wrap_tit.en {font-family:'Montserrat';}
+.set_input_wrap .input_wrap_tit strong.tit {font-size:14px; line-height:20px; font-weight:400;}
+.set_input_wrap .input_wrap_tit div {color:#666;}
+.set_input_wrap .input_wrap_tit div span {font-size:14px;}
+.set_input_wrap .input_wrap_tit div span.limit {color:#ccc;}
+
+.contact_input_form {}
+.contact_input_form .item {}
+.contact_input_form .item + .item {margin-top:28px;}
+.contact_input_form .item input {background-color:transparent;}
+
+.contact_input_form_guide {margin-top:40px;}
+</style>
+		<div class="contact_header">
+			<div class="contactItem">
+				<div class="icon">
+					<span><img src="../../images/ico/ico_coin_bitcoin.png" alt=""></span>
+				</div>
+				<div class="txt">
+					<p>
+						<strong>Upbit</strong>
+					</p>
+					<div class="ip_address">
+						<p>IP 주소 : 172.111.11.000</p>
+						<button type="button"><span><img src="../../images/ico/ico_copy.png" alt="복사하기"></span></button>
+					</div>
+				</div>
+			</div><!-- // contactItem -->
+		</div><!-- // contact_header -->
+
+		<div class="contact_input_form">
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">Access Key</strong>
+						<!-- <div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div> -->
+					</div>
+					<div class="row_guide">
+						<div class="set_input">
+							<input type="text" placeholder="Access Key" title="Access Key">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<!-- <p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p> -->
+					</div>
+				</div><!-- // set_input_wrap -->
+			</div>
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">Secret Key</strong>
+						<!-- <div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div> -->
+					</div>
+					<div class="row_guide">
+						<div class="set_input">
+							<input type="text" placeholder="place holder" title="place holder">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<!-- <p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p> -->
+					</div>
+				</div><!-- // set_input_wrap -->
+			</div>
+
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">Access Key</strong>
+						<!-- <div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div> -->
+					</div>
+					<div class="row_guide">
+						<div class="set_input active">
+							<input type="text" placeholder="Access Key" title="Access Key">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<!-- <p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p> -->
+					</div>
+				</div><!-- // set_input_wrap -->
+			</div>
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">Secret Key</strong>
+						<!-- <div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div> -->
+					</div>
+					<div class="row_guide">
+						<div class="set_input active">
+							<input type="text" placeholder="place holder" title="place holder">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<!-- <p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p> -->
+					</div>
+				</div><!-- // set_input_wrap -->
+			</div>
+
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">이름</strong>
+						<div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div>
+					</div>
+					<div class="row_guide">
+						<div class="set_input type_error">
+							<input type="text" placeholder="김트랙" title="김트랙">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p>
+					</div>
+				</div><!-- // set_input_wrap -->
+			</div>
+
+			<div class="item">
+				<div class="set_input_wrap">
+					<div class="input_wrap_tit">
+						<strong class="tit">이름</strong>
+						<div class="">
+							<span>0</span>
+							<span class="limit">/300</span>
+						</div>
+					</div>
+					<div class="row_guide">
+						<div class="set_input type_error">
+							<input type="text" placeholder="김트랙" title="김트랙">
+							<button type="button" class="btn_input_del" style="display: block;">삭제</button>
+						</div>
+						<p class="text_gm_point">
+							유효하지 않은 값 입니다.<br />
+							키 값을 다시 한 번 확인해주세요.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- // contact_input_form -->
+
+		<div class="contact_input_form_guide">
+			<button type="button" class="btn line small"><span>거래소 추가 가이드</span></button>
+		</div>
+		
+	</div><!-- // pick_home -->
+
+	<div class="layer dim"></div>
+
+	<div class="layer footer" style="display:none;">
+		
+		<div class="layer_inner">
+			<div class="layer_header">
+				<div class="layer_tit"><strong>네트워크 선택</strong></div>
+				<div class="txt_content">
+					<p class="txt">네트워크를 선택하세요.<br />(복수선택가능)</p>
+				</div><!-- // layer_con -->
+			</div>
+			<!-- // layer_header -->
+
+			<div class="layer_section">
+				<div class="addNetwork_wrap">
+
+					<div class="addNetword_list">
+						
+						<div class="item">
+							<div class="networkItem">
+								<div class="icon">
+									<span><img src="../../images/ico/ico_coin_usdc.png" alt=""></span>
+								</div>
+								<div class="txt">
+									<p>Bitcoin</p>
+								</div>
+								<div class="tools">
+									<div class="ipt_checkbox small">
+										<input type="checkbox" id="set_checkbox222">
+										<label for="set_checkbox222"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- // addNetword_list -->
+
+				</div><!-- // addNetwork_wrap -->
+			</div>
+			<!-- // layer_section -->
+
+			<div class="layer_footer">
+				<!-- <p>layer_footer</p> -->
+				<div class="btnGroup">
+					<div><button class="btn fill popup"><span>확인</span></button></div>
+				</div>
+			</div>		
+			<!-- // layer_footer -->	
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer footer -->
+
+<style>
+.addNetword_list {}
+.addNetword_list .item {}
+.addNetword_list .item + .item {margin-top:12px;}
+
+.networkItem {display:flex; justify-content:space-between; align-items:center; width:100%;}
+.networkItem div.icon {}
+.networkItem div.icon span {display:inline-block; width:48px; height:48px;}
+.networkItem div.txt {flex:1; max-width:100%; text-align:left;}
+.networkItem div.txt p {padding-left:12px; color:#222; font-size:15px; line-height:20px; font-family:'Montserrat'; font-weight:500;}
+.networkItem div.tools {}
+.networkItem div.tools {}
+</style>
+
+
+
+
+
+
+<style>
+.addWallet_list .item {width:48px; height:48px;}
+.addWallet_list .item + .item {margin-left:20px;}
+</style>
+
+<div class="layer footer" style="display:none;">
+		
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="layer_tit"><strong>Wallet A</strong></div>
+			<div class="txt_content">
+				<p class="txt">지갑이 추가 되었습니다.</p>
+			</div><!-- // layer_con -->
+		</div>
+		<!-- // layer_header -->
+
+		<div class="layer_section">
+
+			<div class="addWallet_wrap scroll-wrapper">
+				<div class="addWallet_list scroll">
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_solana.png" alt="solana"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_1inch.png" alt="1inch"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_bitcoin.png" alt="bitcoin"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_ethereum.png" alt="ethereum"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_solana.png" alt="solana"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_1inch.png" alt="1inch"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_bitcoin.png" alt="bitcoin"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_ethereum.png" alt="ethereum"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_solana.png" alt="solana"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_1inch.png" alt="1inch"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_bitcoin.png" alt="bitcoin"></div>
+					</div>
+					<div class="item">
+						<div><img src="../../images/ico/ico_coin_ethereum.png" alt="ethereum"></div>
+					</div>
+				</div><!-- // addWallet_list -->
+
+			</div><!-- // addWallet_wrap -->
+		</div>
+		<!-- // layer_section -->
+
+		<div class="layer_footer">
+			<!-- <p>layer_footer</p> -->
+			<div class="btnGroup">
+				<div><button class="btn fill popup"><span>확인</span></button></div>
+			</div>
+		</div>		
+		<!-- // layer_footer -->	
+	</div><!-- // layer_inner -->
+
+	<div class="btnClose">
+		<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+	</div>
+</div><!-- // layer footer -->
+
+
+
+
+<style>
+.addWallet_list {}
+
+/* pick - home 카테고리 선택 */
+.category_sel_wrap {display:grid; grid-template-columns:auto auto auto; justify-content:space-around; flex-wrap:wrap; row-gap:16px; width:100%;}
+.category_sel_wrap .item {width:80px; text-align:center;}
+.category_sel_wrap .item.disabled {opacity:0.5;}
+.category_sel_wrap .item span.yet {}
+
+
+
+</style>
+
+<div class="layer footer" style="display:none;">
+		
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="layer_tit"><strong>카테고리</strong></div>
+			<div class="txt_content">
+				<p class="txt">지갑이 추가 되었습니다.</p>
+			</div><!-- // layer_con -->
+		</div>
+		<!-- // layer_header -->
+
+		<div class="layer_section">
+
+			<div class="category_sel_wrap">
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_general_News.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox1">
+							<label for="cate_checkbox1"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">일반 뉴스</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_edu.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox2">
+							<label for="cate_checkbox2"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토 교육</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_news(daily).png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox3">
+							<label for="cate_checkbox3"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토 뉴스<br />(데일리)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_News(weekly).png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox4">
+							<label for="cate_checkbox4"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토 뉴스<br />(위클리)</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_event.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox5">
+							<label for="cate_checkbox5"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토 이벤트</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_trend.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox6">
+							<label for="cate_checkbox6"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토 트랜드</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_crypto investment strategy.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox11">
+							<label for="cate_checkbox11"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">크립토<br />투자 전략</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_report_introduction.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox21">
+							<label for="cate_checkbox21"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">리포트 소개</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ipt_checkbox_icon_item">
+						<div class="ipt_checkbox_icon category">
+							<span class="img"><img src="../../images/home/ico_crypto_interest.png" alt="아이콘"></span>
+							<input type="checkbox" id="cate_checkbox31">
+							<label for="cate_checkbox31"></label>
+							<span class="checkmark"></span>
+						</div>
+						<p class="txt">흥미</p>
+					</div>
+				</div>
+			</div><!-- // category_sel_wrap -->
+		</div>
+		<!-- // layer_section -->
+
+		<div class="layer_footer">
+			<!-- <p>layer_footer</p> -->
+			<div class="btnGroup">
+				<div><button class="btn fill popup"><span>확인</span></button></div>
+			</div>
+		</div>		
+		<!-- // layer_footer -->	
+	</div><!-- // layer_inner -->
+
+	<div class="btnClose">
+		<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+	</div>
+</div><!-- // layer footer -->
+
+
+
+
+
+
+
+
+<style>
+.filter_wrap {}
+.filter_wrap dl {display:flex; justify-content:space-between; align-items:center; width:100%;}
+.filter_wrap dl dt {color:#999; font-size:16px; line-height:24px; font-weight:500;}
+.filter_wrap dl dd {}
+.filter_wrap dl input[type="date"] {border:0; background-color:transparent;}
+.filter_wrap dl select {border:0; background-color:transparent;}
+</style>
+<div class="layer footer active">
+		
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="layer_tit"><strong>콘텐츠 필터</strong></div>
+		</div>
+		<!-- // layer_header -->
+
+		<div class="layer_section">
+
+			<div class="filter_wrap">
+				<dl>
+					<dt>날짜</dt>
+					<dd><input type="date"></dd>
+				</dl>
+				<dl>
+					<dt>카테고리</dt>
+					<dd>
+						<select name="" id="">
+							<option value="1개 선택">1개 선택</option>
+							<option value="2개 선택">2개 선택</option>
+							<option value="3개 선택">3개 선택</option>
+						</select>
+					</dd>
+				</dl>
+			</div><!-- // filter_wrap -->
+
+		</div>
+		<!-- // layer_section -->
+
+		<!-- <div class="layer_footer">
+			<div class="btnGroup">
+				<div><button class="btn fill popup"><span>확인</span></button></div>
+			</div>
+		</div>		 -->
+		<!-- // layer_footer -->	
+	</div><!-- // layer_inner -->
+
+	<div class="btnClose">
+		<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+	</div>
+</div><!-- // layer footer -->
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+<script>
+let footer_wrap = document.querySelector(".layer.footer.active");
+let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	footer_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	footer_wrap.classList.remove("scrollH")
+}
+</script>
+
+</body>
+</html>

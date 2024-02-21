@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../../css/reset.css">
+
+	<link rel="stylesheet" href="../../css/pick.css">
+	
+<style>
+body {padding:2em;}
+
+body > button.btn {margin-top:20px;}
+
+
+/* 버튼 공통(color,height) */
+button.btn {height:60px; border:1px solid transparent; border-radius:8px;}
+button.btn.small {height:46px;}
+button.btn.popup {height:48px}
+button.btn.fill {background-color:var(--color-primary); color:#fff;}
+button.btn.fill:disabled {background-color:#ccc;}
+
+button.btn.line {background-color:#fff; color:var(--color-primary); border-color:var(--color-primary);}
+button.btn.line:disabled {border-color:#ccc; color:#666;}
+
+button.btn span {display:block; font-size:16px; line-height:24px; font-weight:bold;}
+button.btn.small span {font-size:15px; line-height:22px;}
+body {font-family:'Noto Sans KR'; font-weight:400;}
+</style>
+</head>
+<body>
+
+	<div class="btnGroup">
+		<div></div>
+		<div></div>
+	</div>
+
+
+	<button class="btn"><span>버튼명</span></button>
+	<button class="btn fill"><span>버튼명</span></button>
+	<button class="btn fill" disabled><span>버튼명</span></button>
+	<button class="btn line"><span>버튼명</span></button>
+	<button class="btn line" disabled><span>버튼명</span></button>
+
+
+
+
+
+	<div class="layer dim"></div>
+
+	<div class="layer alert">
+		
+		<div class="layer_inner">
+			<div class="layer_tit"><strong>타이틀</strong></div>
+			<div class="txt_content">
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역</p>
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역</p>
+			</div><!-- // layer_con -->
+
+			<div class="btnGroup">
+				<div class="btn"><button class="btn fill popup"><span>예</span></button></div>
+			</div>
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+
+
+	<div class="layer alert">
+		
+		<div class="layer_inner">
+			<div class="layer_tit"><strong>타이틀</strong></div>
+			<div class="txt_content">
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역</p>
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역</p>
+			</div><!-- // layer_con -->
+
+			<div class="btnGroup">
+				<div><button class="btn line popup"><span>아니오</span></button></div>
+				<div><button class="btn fill popup"><span>예</span></button></div>
+			</div>
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+
+
+
+	<div class="layer alert">
+		
+		<div class="layer_inner">
+			<div class="layer_tit"><strong>타이틀</strong></div>
+			<div class="txt_content">
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역</p>
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역</p>
+			</div><!-- // layer_con -->
+
+			<div class="btnGroup">
+				<div><button class="btn line popup"><span>아니오</span></button></div>
+				<div><button class="btn fill popup"><span>예</span></button></div>
+			</div>
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+	
+
+
+	<div class="layer footer active">
+		
+		<div class="layer_inner">
+			<div class="layer_tit"><strong>타이틀</strong></div>
+			<div class="txt_content">
+				<p class="txt">텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역</p>
+			</div><!-- // layer_con -->
+
+			<div class="btnGroup">
+				<div><button class="btn fill popup"><span>예</span></button></div>
+			</div>
+		</div><!-- // layer_inner -->
+
+		<div class="btnClose">
+			<button type="button"><img src="../images/icon_close.png" alt="닫기"></button>
+		</div>
+	</div><!-- // layer alert -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../js/temp.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

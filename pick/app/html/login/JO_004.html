@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+
+
+</head>
+<body>
+
+	<div class="wrap">
+
+		<div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>약관 동의</h1>
+						<div class="tools-btn">
+							<!-- <button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button> -->
+							<!-- <button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button> -->
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="agree_wrap">
+				<div class="tit">서비스 이용 약관에<br />동의해 주세요.</div>
+				
+				<div class="agree_form">
+					<div><label><input type="checkbox" class="agree all"><span class="checkmark"></span><span class="txt">전체 동의하기</span></label></div>
+			
+					<ul>
+						<li><label><input type="checkbox" class="agree item 1" required><span class="checkmark"></span><span class="txt">서비스 이용 약관 동의<em>(필수)</em></span></label><button type="button" class="btn_popup full"><span><img src="../../images/ico/ico_right_arrow.png" alt="보기"> </span></button></li>
+						<li><label><input type="checkbox" class="agree item 2" required><span class="checkmark"></span><span class="txt">개인정보 처리방침 동의<em>(필수)</em></span></label><button type="button"><span><img src="../../images/ico/ico_right_arrow.png" alt="보기"> </span></button></li>
+						<li><label><input type="checkbox" class="agree item 3"><span class="checkmark"></span><span class="txt">마케팅 정보 수신 동의<em>(선택</em></span></label><button type="button"><span><img src="../../images/ico/ico_right_arrow.png" alt="보기"> </span></button></li>
+					</ul>
+				</div><!-- // agree_form -->
+			</div><!-- // agree_wrap -->
+
+		</div>
+		<!-- // container_wrap -->
+
+		<div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill" disabled><span>확인하고 동의하기</span></button>
+			</div>
+		</div>
+	</div><!-- // wrap -->
+
+
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../../js/temp.js"></script> -->
+
+
+
+
+
+<script>
+let footer_wrap = document.querySelector(".layer.footer.active");
+let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	footer_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	footer_wrap.classList.remove("scrollH")
+}
+
+</script>
+
+
+</body>
+</html>

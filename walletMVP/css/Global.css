@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* Noto Sans KR */
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src:local(※),
+		url('../fonts/NotoSansKR-Light.woff2') format('woff2'),
+		url('../fonts/NotoSansKR-Light.woff') format('woff');
+	text-rendering: optimizeLegibility;
+	font-display:block;
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src:local(※),
+		url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+		url('../fonts/NotoSansKR-Regular.woff') format('woff');
+	text-rendering: optimizeLegibility;
+	font-display:block;
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src:local(※),
+		url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
+		url('../fonts/NotoSansKR-Medium.woff') format('woff');
+	text-rendering: optimizeLegibility;
+	font-display:block;
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src:local(※),
+		url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+		url('../fonts/NotoSansKR-Bold.woff') format('woff');
+	text-rendering: optimizeLegibility;
+	font-display:block;
+}
+
+/* Gmarket Sans */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('../fonts/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('../fonts/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

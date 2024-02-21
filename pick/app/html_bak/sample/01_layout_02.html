@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick_layout2.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="header_wrap">
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div>
+						<h1>타이틀</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+							<button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div><!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<section class="container">
+	
+				<div class="content_wrap divide"><!-- section_bottom이 있을 경우 divide가 추가 되어야 함..-->
+	
+					<div class="section_top">
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+						test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />test<br />
+					</div><!-- // section_top -->
+					
+					<div class="section_bottom">
+						<p>footer_wrap</p>
+						<div class="btnGroup">
+							<div><button type="button" class="btn line"><span>아니요</span></button></div>
+							<div><button type="button" class="btn fill"><span>예</span></button></div>
+						</div>
+					</div><!-- // section_bottom -->
+
+				</div><!-- // content_wrap -->
+
+			</section><!-- // container -->
+					
+		</div><!-- // container_wrap -->
+
+
+		<div class="app_footer_wrap">
+			<div class="nav_btn_group">
+				<div><button type="button" class="btn1"><span><img src="../../images/ico_nav_1.png" alt=""></span></button></div>
+				<div><button type="button" class="btn2"><span><img src="../../images/ico_nav_2.png" alt=""></span></button></div>
+				<div><button type="button" class="btn3"><span><img src="../../images/ico_nav_3.png" alt=""></span></button></div>
+				<div><button type="button" class="btn4"><span><img src="../../images/ico_nav_4.png" alt=""></span></button></div>
+				<div><button type="button" class="btn5"><span><img src="../../images/ico_nav_5.png" alt=""></span></button></div>
+			</div>
+		</div>
+	</div><!-- // wrap -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+let app_footer_wrap = document.querySelector(".app_footer_wrap");
+if(app_footer_wrap) {
+	let section_bottom = document.querySelector(".section_bottom");
+	if(section_bottom) {
+		section_bottom.style.paddingBottom = "116px"
+	} else {
+		let section_top = document.querySelector(".section_top");
+		section_top.style.paddingBottom = "116px"
+	}
+}
+</script>
+
+</body>
+</html>

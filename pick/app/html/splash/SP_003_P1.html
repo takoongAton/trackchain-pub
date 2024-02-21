@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+</head>
+<body>
+
+	<div class="wrap">
+
+		<div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<div class="util-btn">
+							<!-- <button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button> -->
+						</div>
+						<h1>잠금번호 인증</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+							<!-- <button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button> -->
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="password_page_wrap">
+
+				<div class="lockChkWrap">
+					<div class="txt_wrap">
+						<p class="tit">잠금번호 6자리를<br />
+							입력해주세요.</p>
+						<p class="errorTxt">잠금번호가 일치하지 않습니다.</p>
+					</div>
+					
+					<div class="lockNum">
+						<span class="error"></span>
+						<span class="error"></span>
+						<span class="error"></span>
+						<span class="error"></span>
+						<span class="error"></span>
+						<span class="error"></span>
+						<!-- <span></span>
+						<span class="active"></span>
+						<span class="error"></span> -->
+					</div>
+				</div><!-- // lockChkWrap -->
+	
+				<div class="keypad_wrap">
+					<div class="keypad">
+						<div><button type="button" class="number">5</button></div>
+						<div><button type="button" class="number">0</button></div>
+						<div><button type="button" class="number">3</button></div>
+						<div><button type="button" class="number">2</button></div>
+						<div><button type="button" class="number">4</button></div>
+						<div><button type="button" class="number">7</button></div>
+						<div><button type="button" class="number">6</button></div>
+						<div><button type="button" class="number">1</button></div>
+						<div><button type="button" class="number">9</button></div>
+						<div><!-- <button type="button"></button> --></div>
+						<div><button type="button" class="number">8</button></div>
+						
+						<div><button type="button" class="del"><span><img src="../../images/profile/ico_del_keypad.png" alt="삭제"></span></button></div>
+						<!-- <div><button type="button" class="number">0</button></div>
+						<div><button type="button" class="close"><span>취소</span></button></div>
+						<div class="submit"><button><span>입력완료</span></button></div> -->
+						<!-- <div><button type="button"></button></div> -->
+					</div>
+				</div>
+			</div>
+			<!-- // password_page_wrap -->
+
+			
+
+		</div>
+		<!-- // container_wrap -->
+
+		<!-- <div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div> -->
+	</div><!-- // wrap -->
+
+
+
+
+
+<div class="layer dim" style="display:none;"></div>
+
+<div class="layer alert" style="display:none;">
+	<div class="layer_inner">
+		<div class="layer_header">
+			<!-- <div class="layer_tit"><strong>Title</strong></div> -->
+			<div class="txt_content">
+				<p class="txt">
+					PICK 서비스를<br />
+					탈퇴 하시겠습니까?
+				</p>
+			</div>
+		</div>
+		
+		<div class="layer_section"><!-- // 삭제 -->
+
+		</div><!-- // layer_section -->
+
+		<div class="layer_footer">
+			<div class="btnGroup">
+				<!-- <div class="btn"><button class="btn line popup"><span>아니오</span></button></div> -->
+				<div class="btn"><button class="btn fill popup"><span>예</span></button></div>
+			</div>
+		</div>
+	</div><!-- // layer_inner -->
+
+	<!-- <div class="btnClose">
+		<button type="button"><img src="../../images/icon_close.png" alt="닫기"></button>
+	</div> -->
+</div>
+
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+
+
+<script>
+let footer_wrap = document.querySelector(".layer.footer.active");
+let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	footer_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	footer_wrap.classList.remove("scrollH")
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=block&subset=korean" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/redart.css" />
+	<link rel="stylesheet" href="../../css/swiper.min.css" />
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<h1>
+						<img src="../../images/common/logo_redart.svg" alt="redart.">
+						<!-- <svg width="89" height="24" viewBox="0 0 89 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M86.75 18.8984C87.3594 18.8984 87.8868 19.1239 88.3321 19.5748C88.7774 20.0257 89 20.5596 89 21.1767C89 21.7937 88.7774 22.3276 88.3321 22.7785C87.8868 23.2294 87.3594 23.4549 86.75 23.4549C86.1406 23.4549 85.6133 23.2294 85.168 22.7785C84.7227 22.3276 84.5 21.7937 84.5 21.1767C84.5 20.5596 84.7227 20.0257 85.168 19.5748C85.6133 19.1239 86.1406 18.8984 86.75 18.8984Z" fill="#FF3D37"/>
+							<path d="M9.20664 7.62183C9.7395 7.62183 10.2033 7.7296 10.598 7.94514C11.0124 8.16067 11.3282 8.44479 11.5453 8.79749C11.7821 9.1306 11.9005 9.51269 11.9005 9.94377C11.9005 10.4336 11.7427 10.8647 11.4269 11.237C11.1309 11.6093 10.7263 11.7954 10.2131 11.7954C9.7987 11.7954 9.43359 11.6681 9.11783 11.4134C8.80206 11.139 8.64417 10.7569 8.64417 10.2671C8.64417 9.89478 8.74285 9.58127 8.94021 9.32654C9.1573 9.05222 9.39412 8.83668 9.65069 8.67993C9.51254 8.48398 9.30531 8.38601 9.02902 8.38601C8.41721 8.38601 7.85475 8.57216 7.34163 8.94445C6.8285 9.29715 6.39432 9.75762 6.03908 10.3259C5.68384 10.8941 5.40754 11.5015 5.21019 12.1481C5.01283 12.7752 4.91415 13.363 4.91415 13.9116V20.1427C4.91415 21.1028 5.19045 21.7494 5.74305 22.0825C6.31538 22.396 7.08506 22.5528 8.05211 22.5528V23.17C7.59819 23.1504 6.95678 23.1308 6.12789 23.1112C5.299 23.072 4.42076 23.0524 3.49319 23.0524C2.82218 23.0524 2.15118 23.072 1.48017 23.1112C0.828893 23.1308 0.335504 23.1504 0 23.17V22.5528C0.809158 22.5528 1.38149 22.4058 1.71699 22.1119C2.07223 21.818 2.24985 21.2596 2.24985 20.4366V11.237C2.24985 10.3553 2.09197 9.70863 1.7762 9.29715C1.46043 8.86607 0.868364 8.65053 0 8.65053V8.03331C0.631538 8.09209 1.24334 8.12149 1.83541 8.12149C2.40774 8.12149 2.95047 8.09209 3.46359 8.03331C3.99645 7.95493 4.47997 7.84716 4.91415 7.71V11.384C5.13124 10.8157 5.43715 10.2475 5.83186 9.67924C6.2463 9.09141 6.73969 8.60155 7.31202 8.20966C7.88435 7.81777 8.51589 7.62183 9.20664 7.62183Z" fill="black"/>
+							<path d="M19.7982 7.62183C21.5349 7.62183 22.8868 8.15088 23.8538 9.20898C24.8406 10.2475 25.334 11.8738 25.334 14.088H14.884L14.8544 13.5296H22.4921C22.5315 12.5694 22.4526 11.6877 22.2552 10.8843C22.0579 10.0613 21.7421 9.40492 21.3079 8.91506C20.8935 8.4252 20.3507 8.18027 19.6797 8.18027C18.7719 8.18027 17.9627 8.63094 17.2523 9.53228C16.5615 10.4336 16.1471 11.864 16.0089 13.8235L16.0977 13.941C16.0583 14.235 16.0287 14.5583 16.0089 14.911C15.9892 15.2637 15.9793 15.6164 15.9793 15.9691C15.9793 17.3015 16.1964 18.4478 16.6306 19.4079C17.0648 20.368 17.6272 21.1028 18.318 21.6123C19.0285 22.1021 19.7587 22.347 20.5086 22.347C21.1007 22.347 21.6632 22.2589 22.196 22.0825C22.7289 21.8866 23.2223 21.5731 23.6762 21.142C24.1301 20.7109 24.5248 20.1329 24.8603 19.4079L25.4524 19.643C25.2353 20.2896 24.8801 20.9167 24.3867 21.5241C23.8933 22.1315 23.2716 22.6312 22.5217 23.0231C21.7717 23.3954 20.9033 23.5815 19.9166 23.5815C18.4956 23.5815 17.272 23.2582 16.2458 22.6116C15.2392 21.965 14.4597 21.0734 13.9071 19.9369C13.3742 18.7809 13.1078 17.4582 13.1078 15.9691C13.1078 14.2447 13.3841 12.7654 13.9367 11.5309C14.4893 10.2769 15.2688 9.31675 16.2754 8.65053C17.2819 7.96473 18.4561 7.62183 19.7982 7.62183Z" fill="black"/>
+							<path d="M41.0492 0.126953V19.9663C41.0492 20.8481 41.2071 21.5045 41.5228 21.9356C41.8583 22.347 42.4504 22.5528 43.299 22.5528V23.17C42.6872 23.1112 42.0754 23.0818 41.4636 23.0818C40.8913 23.0818 40.3387 23.1112 39.8058 23.17C39.2927 23.2288 38.8191 23.3366 38.3849 23.4933V3.65395C38.3849 2.7722 38.227 2.12559 37.9112 1.7141C37.5955 1.28303 37.0034 1.06749 36.135 1.06749V0.450261C36.7666 0.509044 37.3784 0.538436 37.9704 0.538436C38.5428 0.538436 39.0855 0.509044 39.5986 0.450261C40.1315 0.371884 40.615 0.264115 41.0492 0.126953ZM34.8325 7.62183C35.7008 7.62183 36.51 7.82757 37.26 8.23905C38.0296 8.65054 38.5428 9.35594 38.7993 10.3553L38.4145 10.6492C38.1382 9.8262 37.704 9.22857 37.1119 8.85628C36.5396 8.48398 35.8587 8.29783 35.0693 8.29783C33.9049 8.29783 32.928 8.89547 32.1386 10.0907C31.3689 11.286 30.9939 13.1279 31.0137 15.6164C31.0137 17.2035 31.1617 18.5261 31.4577 19.5842C31.7735 20.6227 32.2274 21.4065 32.8195 21.9356C33.4313 22.445 34.1713 22.6997 35.0397 22.6997C35.8686 22.6997 36.6185 22.347 37.2896 21.6416C37.9606 20.9363 38.3651 19.8977 38.5033 18.5261L38.8585 18.9376C38.7006 20.4268 38.2171 21.5731 37.408 22.3764C36.6185 23.1798 35.543 23.5815 34.1812 23.5815C32.9576 23.5815 31.882 23.2876 30.9544 22.6997C30.0466 22.1119 29.346 21.2302 28.8526 20.0545C28.379 18.8788 28.1421 17.3995 28.1421 15.6164C28.1421 13.8333 28.448 12.3539 29.0598 11.1782C29.6914 9.98296 30.5104 9.09141 31.5169 8.50358C32.5432 7.91574 33.6483 7.62183 34.8325 7.62183Z" fill="black"/>
+							<path d="M48.9845 23.3758C48.1753 23.3758 47.4747 23.2288 46.8827 22.9349C46.2906 22.6214 45.8367 22.1903 45.5209 21.6416C45.2249 21.093 45.0769 20.4562 45.0769 19.7312C45.0769 18.869 45.2742 18.1636 45.6689 17.615C46.0834 17.0663 46.6064 16.6255 47.2379 16.2924C47.8694 15.9593 48.5306 15.6849 49.2213 15.4694C49.9318 15.2343 50.6028 15.0187 51.2343 14.8228C51.8659 14.6072 52.379 14.3623 52.7737 14.088C53.1882 13.8137 53.3954 13.4512 53.3954 13.0005V11.1782C53.3954 10.3553 53.2671 9.72823 53.0105 9.29715C52.7737 8.86607 52.4481 8.58195 52.0336 8.44479C51.6192 8.28804 51.1554 8.20966 50.6423 8.20966C50.1489 8.20966 49.616 8.27824 49.0437 8.4154C48.4911 8.55256 48.0471 8.83668 47.7115 9.26776C48.0865 9.34614 48.4122 9.54208 48.6885 9.85559C48.9648 10.1691 49.1029 10.5708 49.1029 11.0607C49.1029 11.5505 48.945 11.9424 48.6292 12.2363C48.3135 12.5106 47.9089 12.6478 47.4155 12.6478C46.8432 12.6478 46.4189 12.4714 46.1426 12.1188C45.886 11.7465 45.7577 11.335 45.7577 10.8843C45.7577 10.3748 45.886 9.96336 46.1426 9.64985C46.3991 9.33634 46.7248 9.04242 47.1195 8.7681C47.5734 8.45459 48.1556 8.19007 48.8661 7.97453C49.5963 7.73939 50.4153 7.62183 51.3232 7.62183C52.1323 7.62183 52.8231 7.7198 53.3954 7.91574C53.9677 8.09209 54.4414 8.35662 54.8163 8.70932C55.3295 9.17958 55.665 9.75762 55.8229 10.4434C55.9807 11.1096 56.0597 11.913 56.0597 12.8535V21.0244C56.0597 21.5143 56.1288 21.867 56.2669 22.0825C56.4248 22.2981 56.6616 22.4058 56.9774 22.4058C57.1945 22.4058 57.4017 22.3568 57.5991 22.2589C57.7964 22.1609 58.0332 22.0041 58.3095 21.7886L58.6352 22.2883C58.2207 22.6018 57.826 22.8663 57.451 23.0818C57.0761 23.2778 56.5728 23.3758 55.9413 23.3758C55.3689 23.3758 54.8953 23.2778 54.5203 23.0818C54.1453 22.8859 53.8592 22.6018 53.6618 22.2295C53.4842 21.8376 53.3954 21.3477 53.3954 20.7599C52.8625 21.6416 52.2211 22.2981 51.4712 22.7291C50.741 23.1602 49.9121 23.3758 48.9845 23.3758ZM50.0502 22.2001C50.7015 22.2001 51.3034 22.0139 51.856 21.6416C52.4283 21.2694 52.9415 20.7109 53.3954 19.9663V14.2056C53.1586 14.5387 52.8132 14.8228 52.3593 15.0579C51.9053 15.2735 51.412 15.4988 50.8791 15.7339C50.3462 15.9495 49.8331 16.214 49.3397 16.5275C48.8661 16.8214 48.4714 17.2133 48.1556 17.7032C47.8398 18.193 47.6819 18.8298 47.6819 19.6136C47.6819 20.3974 47.8892 21.0244 48.3036 21.4947C48.7378 21.965 49.32 22.2001 50.0502 22.2001Z" fill="black"/>
+							<path d="M68.7313 7.62183C69.2642 7.62183 69.7279 7.7296 70.1227 7.94514C70.5371 8.16067 70.8529 8.44479 71.07 8.79749C71.3068 9.1306 71.4252 9.51269 71.4252 9.94377C71.4252 10.4336 71.2673 10.8647 70.9515 11.237C70.6555 11.6093 70.2509 11.7954 69.7378 11.7954C69.3234 11.7954 68.9583 11.6681 68.6425 11.4134C68.3267 11.139 68.1688 10.7569 68.1688 10.2671C68.1688 9.89478 68.2675 9.58127 68.4649 9.32654C68.682 9.05222 68.9188 8.83668 69.1753 8.67993C69.0372 8.48398 68.83 8.38601 68.5537 8.38601C67.9419 8.38601 67.3794 8.57216 66.8663 8.94445C66.3532 9.29715 65.919 9.75762 65.5637 10.3259C65.2085 10.8941 64.9322 11.5015 64.7348 12.1481C64.5375 12.7752 64.4388 13.363 64.4388 13.9116V20.1427C64.4388 21.1028 64.7151 21.7494 65.2677 22.0825C65.84 22.396 66.6097 22.5528 67.5768 22.5528V23.17C67.1228 23.1504 66.4814 23.1308 65.6526 23.1112C64.8237 23.072 63.9454 23.0524 63.0179 23.0524C62.3468 23.0524 61.6758 23.072 61.0048 23.1112C60.3536 23.1308 59.8602 23.1504 59.5247 23.17V22.5528C60.3338 22.5528 60.9062 22.4058 61.2417 22.1119C61.5969 21.818 61.7745 21.2596 61.7745 20.4366V11.237C61.7745 10.3553 61.6166 9.70863 61.3009 9.29715C60.9851 8.86607 60.393 8.65053 59.5247 8.65053V8.03331C60.1562 8.09209 60.768 8.12149 61.3601 8.12149C61.9324 8.12149 62.4751 8.09209 62.9883 8.03331C63.5211 7.95493 64.0046 7.84716 64.4388 7.71V11.384C64.6559 10.8157 64.9618 10.2475 65.3565 9.67924C65.771 9.09141 66.2644 8.60155 66.8367 8.20966C67.409 7.81777 68.0406 7.62183 68.7313 7.62183Z" fill="black"/>
+							<path d="M77.4735 3.15429V8.0627H81.8548V8.65053H77.4735V20.0251C77.4735 20.946 77.6413 21.5927 77.9768 21.965C78.3123 22.3373 78.7761 22.5234 79.3682 22.5234C79.9602 22.5234 80.4733 22.2883 80.9075 21.818C81.3417 21.3281 81.7167 20.515 82.0324 19.3785L82.6245 19.5254C82.4272 20.6619 82.0325 21.6221 81.4404 22.4058C80.8681 23.1896 79.9799 23.5815 78.7761 23.5815C78.1051 23.5815 77.5525 23.4933 77.1183 23.317C76.6841 23.1602 76.2993 22.9251 75.9638 22.6116C75.5296 22.1609 75.2237 21.6221 75.0461 20.995C74.8882 20.368 74.8092 19.5352 74.8092 18.4967V8.65053H71.9673V8.0627H74.8092V3.56578C75.3026 3.54618 75.7763 3.50699 76.2302 3.44821C76.6841 3.38943 77.0986 3.29146 77.4735 3.15429Z" fill="black"/>
+						</svg> -->
+					</h1>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- // header_wrap(최종 개발시 삭제) -->
+
+	<div class="container_wrap" id="container_wrap">
+		<div class="page_default">
+
+			
+			<div class="gallery_swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slide-inner">
+							<div class="item">
+								<a href="#g">
+									<span class="img"><img src="../../images/temp/sam_gallery_01.png" alt="이미지"></span>
+									<div class="txt_wrap">
+										<div class="txt_inner">
+											<span class="type">2023 소장품 기획전</span>
+											<div class="tit">
+												회화 아닌<br />
+												(Not Paintings)
+											</div>
+											<p class="txt">회화라는 거대 서사를 내려놓고 새로운 관점으로<br />
+												현대미술을 조명하고자 기획되었다.</p>
+										</div>
+										<!-- // txt_inner -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- // slide-inner -->
+					</div>
+					<!-- // swiper-slide -->
+
+
+					<div class="swiper-slide">
+						<div class="slide-inner">
+							<div class="item">
+								<a href="#g">
+									<span class="img"><img src="../../images/temp/sam_gallery_02.png" alt="이미지"></span>
+									<div class="txt_wrap">
+										<div class="txt_inner">
+											<span class="type">2023 소장품 기획전</span>
+											<div class="tit">
+												회화 아닌<br />
+												(Not Paintings)
+											</div>
+											<p class="txt">회화라는 거대 서사를 내려놓고 새로운 관점으로<br />
+												현대미술을 조명하고자 기획되었다.</p>
+										</div>
+										<!-- // txt_inner -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- // slide-inner -->
+					</div>
+					<!-- // swiper-slide -->
+
+					<div class="swiper-slide">
+						<div class="slide-inner">
+							<div class="item">
+								<a href="#g">
+									<span class="img"><img src="../../images/temp/sam_gallery_03.png" alt="이미지"></span>
+									<div class="txt_wrap">
+										<div class="txt_inner">
+											<span class="type">2023 소장품 기획전</span>
+											<div class="tit">
+												회화 아닌<br />
+												(Not Paintings)
+											</div>
+											<p class="txt">회화라는 거대 서사를 내려놓고 새로운 관점으로<br />
+												현대미술을 조명하고자 기획되었다.</p>
+										</div>
+										<!-- // txt_inner -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- // slide-inner -->
+					</div>
+					<!-- // swiper-slide -->
+
+					<div class="swiper-slide">
+						<div class="slide-inner">
+							<div class="item">
+								<a href="#g">
+									<span class="img"><img src="../../images/temp/sam_gallery_04.png" alt="이미지"></span>
+									<div class="txt_wrap">
+										<div class="txt_inner">
+											<span class="type">2023 소장품 기획전</span>
+											<div class="tit">
+												회화 아닌<br />
+												(Not Paintings)
+											</div>
+											<p class="txt">회화라는 거대 서사를 내려놓고 새로운 관점으로<br />
+												현대미술을 조명하고자 기획되었다.</p>
+										</div>
+										<!-- // txt_inner -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- // slide-inner -->
+					</div>
+					<!-- // swiper-slide -->
+
+				</div>
+				<!-- // swiper-wrapper -->
+
+				<div class="swiper-pagination"></div>
+			</div><!-- // gallery_swiper-container -->
+			
+
+
+			<div class="gallery_now_wrap">
+
+				<div class="title" id="gallery_tit"><strong>Exhibition</strong><span class="dot">.</span></div>
+
+				<div class="tabbar">
+					<ul class="tab fill">
+						<li class="on"><span>전체</span></li>
+						<li><span>Garden1</span></li>
+						<li><span>Garden2</span></li>
+						<li><span>Blossom&복낙원</span></li>
+						<li><span>Blossom&Flowerby KENZO</span></li>
+						<li><span>Garden1</span></li>
+						<li><span>Garden1</span></li>
+						<li><span>Garden1</span></li>
+						<li><span>Garden1</span></li>
+					</ul>
+				</div>
+
+				<div class="sort_wrap">
+					<p><span>총</span> <strong class="count">41</strong><span>개</span></p>
+					<div class="sort">전시순</div>
+				</div>
+
+				<div class="gallery_list">
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+					
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+					
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_3.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+					
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_1.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_4.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="gallery_item">
+						<div class="img_bg"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="img"><img src="../../images/02_gallery/img_sam_328x328_2.png" alt="작품이미지"></div>
+						<div class="info">
+							<span class="state">예약모집중</span>
+							<span class="subtit">여름#2</span>
+							<p class="txt">#1 Share z Happiness</p>
+						</div>
+					</div>
+
+					<div class="loader_wrap">
+						<span class="loader"></span>
+					</div>
+
+				</div>
+				<!-- // gallery_list -->
+
+				
+
+			</div>
+			<!-- // gallery_now_wrap -->
+			
+
+		</div>
+		<!-- // page_default -->
+		<!-- <div class="page_center"></div> -->
+	</div>
+	<!-- // container_wrap -->
+
+
+	<!-- <div class="footer_wrap">
+		<div class="btnGroup">
+			<div>
+				<button type="button" class="btn line" disabled=""><span>취소</span></button>
+			</div>
+			<div>
+				<button type="button" class="btn fill"><span>확인</span></button>
+			</div>
+		</div>
+	</div> -->
+	<!-- // footer_wrap -->
+
+</div><!-- // wrap -->
+
+
+
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- <script src="../../js/slick.js"></script> -->
+<!-- <script src="../../js/temp.js"></script> -->
+<script src="../../js/swiper.min.js"></script>
+<!-- <script src="../../js/cdnjs.cloudflare.com_ajax_libs_Swiper_4.0.7_js_swiper.min.js"></script> -->
+
+<script>
+
+
+
+var interleaveOffset = 0.94;
+
+var swiperOptions = {
+	loop:true,
+	speed:400,
+	grabCursor:true,
+	pagination:{
+		el:".swiper-pagination",
+		type:"fraction",
+	},
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	on:{
+		progress:function() {
+			let swiper = this;
+			for (let i = 0; i < swiper.slides.length; i++) {
+				let slideProgress = swiper.slides[i].progress;
+				let innerOffset = swiper.width * interleaveOffset;
+				let innerTranslate = slideProgress * innerOffset;
+				swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+				swiper.slides[i].querySelector(".slide-inner div.txt_wrap").style.transform = "translate3d(" + (innerTranslate) * -1.4 + "px, 0, 0)";
+			}
+		},
+		touchStart:function() {
+			let swiper = this;
+			for (let i = 0; i < swiper.slides.length; i++) {
+				swiper.slides[i].style.transition = "";
+			}
+			console.log(swiper.touches.diff)
+			if(swiper.touches.diff <= 0) {
+				console.log("000")
+			} else {
+				console.log("111")
+			}
+		},
+		setTransition:function(speed) {
+			let swiper = this;
+			for (let i = 0; i < swiper.slides.length; i++) {
+				swiper.slides[i].style.transition = speed + "ms";
+				swiper.slides[i].querySelector(".slide-inner").style.transition = speed + "ms";
+				swiper.slides[i].querySelector(".slide-inner div.txt_wrap").style.transition = (speed * 1.1) + "ms";
+			}
+		}
+	}
+};
+
+var swiper = new Swiper(".gallery_swiper-container", swiperOptions);
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>트랙체인 - wallet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+
+<link rel="shortcut icon" type="image/x-icon" href="./images/omnion_favicon.ico"><!-- 주소창에 표시되는 파비콘 -->
+<link rel="apple-touch-icon-precomposed" href="./images/omnion_icon_web.png"><!-- 홈화면에 추가시 보이는 아이콘 -->
+
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#009DDF; text-decoration:underline;}
+a:hover {color:#009DDF; text-decoration:none;}
+a.active {color:red; font-weight:bold;}
+table {width:100%; border-collapse:collapse; border:1px solid #BC4D1B;}
+tr.line1 {border-top:2px solid #BC4D1B;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #BC4D1B; background-color:var(--main-color); font-weight:normal;}
+td {padding:4px 4px 4px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.em {color:#ca0404;}
+.ing {color:#009DDF;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#FF6D2B;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>트랙체인 - wallet</h1>
+
+
+<table class="menulist">
+	<colgroup>
+		<col width="10%">
+		<col width="15%">
+		<col width="20%">
+		<col width="20%">
+		<col width="20%">
+		<col width="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 2</th>
+			<th scope="col">Depth 3</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+		<tr class="line1">
+			<td></td>
+			<td>Splash</td>
+			<td>Splash</td>
+			<td></td>
+			<td><a target="_blank" href="./html/splash.html">splash.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Welcome</td>
+			<td></td>
+			<td><a target="_blank" href="./html/welcome.html">welcome.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td>비밀번호 설정 / 재확인</td>
+			<td>비밀번호 설정</td>
+			<td><a target="_blank" href="./html/lock_set.html">lock_set.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비밀번호 확인</td>
+			<td><a target="_blank" href="./html/lock_check.html">lock_check.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비밀번호 오류</td>
+			<td><a target="_blank" href="./html/lock_error.html">lock_error.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>생체인증 설정</td>
+			<td><a target="_blank" href="./html/lock_check_bio_set.html">lock_check_bio_set.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>지갑 생성 (안내/동의)</td>
+			<td>지갑 생성 안내</td>
+			<td><a target="_blank" href="./html/create.html">create.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>복구코드 안내</td>
+			<td><a target="_blank" href="./html/mnemonic.html">mnemonic.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>복구코드 확인</td>
+			<td><a target="_blank" href="./html/mnemonic_check.html">mnemonic_check.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>지갑 생성 (생성 완료)</td>
+			<td><a target="_blank" href="./html/create_complete.html">create_complete.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>지갑 복구 (복구 안내/복구 코드 입력)</td>
+			<td>지갑 복구 안내</td>
+			<td><a target="_blank" href="./html/recovery.html">recovery.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>복구코드 입력</td>
+			<td><a target="_blank" href="./html/recovery_check.html">recovery_check.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>지갑 복구 완료</td>
+			<td><a target="_blank" href="./html/recovery_complete.html">recovery_complete.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr>
+			<td>-</td>
+			<td>홈 - Wallet</td>
+			<td>메인</td>
+			<td></td>
+			<td><a target="_blank" href="./html/home.html">home.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>자산 목록 관리</td>
+			<td><a target="_blank" href="./html/home_assets.html">home_assets.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>보내기 (코인/토큰)</td>
+			<td>보내기</td>
+			<td><a target="_blank" href="./html/send.html">send.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보내기 상세</td>
+			<td><a target="_blank" href="./html/send_detail.html">send_detail.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보내기 완료</td>
+			<td><a target="_blank" href="./html/send_complete.html">send_complete.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>보내기(NFT)</td>
+			<td>보내기</td>
+			<td><a target="_blank" href="./html/send_nft_detail.html">send_nft_detail.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>NFT 선택</td>
+			<td><a target="_blank" href="./html/send_nft_select.html">send_nft_select.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보내기 완료</td>
+			<td><a target="_blank" href="./html/send_nft_complete.html">send_nft_complete.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>받기 (코인/토큰/NFT)</td>
+			<td>받기</td>
+			<td><a target="_blank" href="./html/receive.html">receive.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>받기 상세</td>
+			<td><a target="_blank" href="./html/receive_detail.html">receive_detail.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>자산 세부 / 거래내역</td>
+			<td>이더리움</td>
+			<td><a target="_blank" href="./html/history.html">history.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>세부 내역</td>
+			<td><a target="_blank" href="./html/history_detail.html">history_detail.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>NFT 목록</td>
+			<td>NFT 목록</td>
+			<td><a target="_blank" href="./html/nft_list.html">nft_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>NFT 상세</td>
+			<td>Opensea로 direct</td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td>Web3 App</td>
+			<td>Web3 Apps</td>
+			<td></td>
+			<td><a target="_blank" href="./html/dapp_list.html">dapp_list.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td>Settings</td>
+			<td>Settings</td>
+			<td></td>
+			<td><a target="_blank" href="./html/settings.html">settings.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>비밀번호 확인</td>
+			<td></td>
+			<td><a target="_blank" href="./html/lock_check.html">lock_check.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>복구코드 백업 = (니모닉 안내 / 백업확인)</td>
+			<td>복구코드 안내</td>
+			<td><a target="_blank" href="./html/mnemonic.html">mnemonic.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>복구코드 확인</td>
+			<td><a target="_blank" href="./html/mnemonic_check.html">mnemonic_check.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>-</td>
+			<td>서비스 이용 약관</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/terms.html">terms.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td>개인정보처리방침</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/privacy.html">privacy.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td>Error Page</td>
+			<td>Error_400</td>
+			<td></td>
+			<td><a target="_blank" href="./html/error_400.html">error_400.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>Error_404</td>
+			<td></td>
+			<td><a target="_blank" href="./html/error_404.html">error_404.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>Error_500</td>
+			<td></td>
+			<td><a target="_blank" href="./html/error_500.html">error_500.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>Error_연결실패</td>
+			<td></td>
+			<td><a target="_blank" href="./html/error_failure.html">error_failure.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<!-- <tr>
+			<td>-</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./html/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+		
+		<!-- <tr>
+			<td>화면아이디</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./ㅇㅇㅇㅇ/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+
+
+		
+
+
+
+		
+<!--
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+	</tbody>
+</table>
+</body>
+<!-- //html body -->
+</html>

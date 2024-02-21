@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>레드아트</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<!-- <link rel="stylesheet" href="../css/Global.css"> -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<!-- <link rel="stylesheet" href="../css/redart.css"> -->
+
+</head>
+<body>
+
+	<div>
+		<img src="../images/03_nft/sam_328x328.png" id="sourceImage" style="width:328px; height:328px;">
+		<div id="colorResult">test</div>
+	</div>
+
+<script>
+// 이미지 요소를 선택합니다.
+const image = document.getElementById('sourceImage');
+
+// 이미지가 로드된 후에 실행되도록 이벤트 리스너를 추가합니다.
+image.addEventListener('load', function () {
+    // 이미지를 Canvas에 그립니다.
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(image, 0, 0, image.width, image.height);
+
+    // 이미지의 픽셀 데이터를 가져옵니다.
+    const imageData = ctx.getImageData(0, 0, 1, 1);
+
+
+    // imageData 객체에서 픽셀 데이터 배열을 추출합니다.
+    const pixelData = imageData.data;
+
+    // 추출된 색상 값을 RGB 형식으로 변환합니다.
+    const color = `rgb(${pixelData[0]}, ${pixelData[1]}, ${pixelData[2]})`;
+
+    // 결과를 console.log로 출력합니다.
+    console.log(`첫 번째 픽셀의 색상: ${color}`);
+	document.querySelector("#colorResult").style.backgroundColor = color
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PICK</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=block" rel="stylesheet" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/pick.css" />
+	<!-- <link rel="stylesheet" href="../../css/Global.css" /> -->
+
+
+</head>
+<body>
+
+	<div class="wrap">
+
+		<div class="header_wrap">
+
+			<header>
+				<div class="inner">
+					<div class="header">
+						<!-- <div class="util-btn">
+							<button type="button" class="h_btn_prev"><span><img src="../../images/ico/ico_back.png" alt="이전"></span></button>
+						</div> -->
+						<h1>마케팅 정보 수신 동의</h1>
+						<div class="tools-btn">
+							<button type="button" class="h_btn_close"><span><img src="../../images/ico/ico_close.png" alt="닫기"></span></button>
+							<!-- <button type="button" class="h_btn_del"><span><img src="../../images/ico/ico_delete-1.png" alt="삭제"></span></button> -->
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		<!-- // header_wrap -->
+
+		<div class="container_wrap">
+
+			<div class="privacy_wrap">
+
+				<div class="privacy_marketing">
+					<!-- <div class="type1">
+						<span class="privacy_icon"><img src="../../images/etc/img_privacy.png" alt="마케팅 정보수신 이미지"></span>
+						<p class="txt">동의하시면 유용한 정보 및 이벤트 등 <br />
+							관련된 안내를 보내드립니다.</p>
+					</div> -->
+					<div class="type2">
+						<div>
+							<p class="txt">동의하시면 유용한 정보 및 이벤트 등 <br />
+								관련된 안내를 보내드립니다.</p>
+							<div>
+								<div class="ipt_switch">
+									<input type="checkbox" id="set_switch1" data-switch="primary">
+									<label for="set_switch1" data-on-label="" data-off-label=""></label>
+								</div>
+							</div>
+						</div>
+						<span class="privacy_icon"><img src="../../images/etc/img_privacy.png" alt="마케팅 정보수신 이미지"></span>
+						
+					</div>
+				</div>
+				<!-- // privacy_marketing -->
+
+				<div class="privacy_txt_wrap">
+					<pre>
+						<div class="txt_group">
+							<strong class="tit">제1조(목적)</strong>
+							<div class="txt">본 약관은 회원(Pick 서비스를 이용하는 모든 사람을 포함합니다. 이하 “회원”라고 합니다.)이 Pick (이하 “회사”라고 합니다.)가 제공하는 위치기반서비스 사업과 관련하여 회사와 회원의 권리, 의무 및 책임사항 등의 필요한 사항을 규정함을 목적으로 합니다.</div>
+						</div>
+
+						<div class="txt_group">
+							<strong class="tit">제 2 조 (이용약관의 효력 및 변경)</strong>
+							<div class="txt">① 본 약관은 온라인에서 Pick 서비스를 통해 본 약관에 동의함으로써 효력이 발생합니다.<br />
+								② 본 약관에 동의한 회원은 본 약관의 내용을 모두 읽고 이를 충분히 이해하였으며, 그 적용에 동의한 것으로 봅니다.<br />
+								③ 회사는 위치정보의 보호 및 이용 등에 관한 법률 등에서의 소비자보호에 관한 법률 등 관련법령을 위배하지 않는 범위에서 중요한 사유가 있다고 판단될 경우 약관을 개정할 수 있습니다.</div>
+						</div>
+					</pre>
+				</div>
+				<!-- // privacy_txt_wrap -->
+
+			</div>
+			<!-- // privacy_wrap -->
+
+		</div>
+		<!-- // container_wrap -->
+
+		<!-- <div class="footer_wrap">
+			<div>
+				<button type="button" class="btn fill"><span>인증 메일 보내기</span></button>
+			</div>
+		</div> -->
+	</div><!-- // wrap -->
+
+
+
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+
+
+
+
+<script>
+let footer_wrap = document.querySelector(".layer.footer.active");
+let footer_headerH = footer_wrap.querySelector(".layer_header").clientHeight;
+let footer_sectionH = footer_wrap.querySelector(".layer_section").clientHeight;
+let footer_footerH = footer_wrap.querySelector(".layer_footer").clientHeight;
+if(footer_wrap.clientHeight < footer_headerH + footer_sectionH + footer_footerH)  {
+	console.log ("스크롤 생겨야함.")
+	footer_wrap.classList.add("scrollH")
+} else {
+	console.log ("스크롤 안생겨야함.")
+	footer_wrap.classList.remove("scrollH")
+}
+</script>
+
+
+</body>
+</html>
